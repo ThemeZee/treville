@@ -12,13 +12,13 @@ get_header(); ?>
 
 			<div class="error-404 not-found type-page">
 
-				<div class="post-content clearfix">
+				<header class="entry-header">
 
-					<header class="entry-header">
+					<h1 class="page-title"><?php esc_html_e( '404: Page not found', 'treville' ); ?></h1>
 
-						<h1 class="page-title"><?php esc_html_e( '404: Page not found', 'treville' ); ?></h1>
+				</header><!-- .entry-header -->
 
-					</header><!-- .entry-header -->
+				<div class="post-content">
 
 					<div class="entry-content clearfix">
 						<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try a search or one of the links below?', 'treville' ); ?></p>

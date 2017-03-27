@@ -29,25 +29,6 @@
 
 			<div class="header-main container clearfix">
 
-				<?php if ( has_nav_menu( 'social' ) ) : ?>
-
-					<div id="header-social-icons" class="header-social-icons social-icons-navigation clearfix">
-						<?php
-							wp_nav_menu( array(
-								'theme_location' => 'social',
-								'container' => false,
-								'menu_class' => 'social-icons-menu',
-								'echo' => true,
-								'fallback_cb' => '',
-								'link_before' => '<span class="screen-reader-text">',
-								'link_after' => '</span>',
-								'depth' => 1,
-							) );
-						?>
-					</div>
-
-				<?php endif; ?>
-
 				<div id="logo" class="site-branding clearfix">
 
 					<?php treville_site_logo(); ?>
@@ -56,31 +37,57 @@
 
 				</div><!-- .site-branding -->
 
-				<nav id="main-navigation" class="primary-navigation navigation clearfix" role="navigation">
+				<div class="main-navigation-wrap">
 
-					<div class="main-navigation-menu-wrap">
-					<?php
-						// Display Main Navigation.
-						wp_nav_menu( array(
-							'theme_location' => 'primary',
-							'container' => false,
-							'menu_class' => 'main-navigation-menu',
-							'echo' => true,
-							'fallback_cb' => 'treville_default_menu',
-						) );
-					?>
-					</div>
+					<nav id="main-navigation" class="primary-navigation navigation clearfix" role="navigation">
 
-				</nav><!-- #main-navigation -->
+						<div class="main-navigation-menu-wrap">
+						<?php
+							// Display Main Navigation.
+							wp_nav_menu( array(
+								'theme_location' => 'primary',
+								'container' => false,
+								'menu_class' => 'main-navigation-menu',
+								'echo' => true,
+								'fallback_cb' => 'treville_default_menu',
+							) );
+						?>
+						</div>
+
+					</nav><!-- #main-navigation -->
+
+				</div>
 
 			</div><!-- .header-main -->
 
-			<?php do_action( 'treville_header_menu' ); ?>
+			<?php if ( has_nav_menu( 'secondary' ) ) : ?>
+
+				<div id="header-navigation-wrap" class="header-navigation-wrap clearfix">
+
+					<nav id="header-navigation" class="secondary-navigation navigation container clearfix" role="navigation">
+						<?php
+							// Display Main Navigation.
+							wp_nav_menu( array(
+								'theme_location' => 'secondary',
+								'container' => false,
+								'menu_class' => 'header-navigation-menu',
+								'echo' => true,
+								'fallback_cb' => '',
+								)
+							);
+						?>
+					</nav><!-- #header-navigation -->
+
+				</div>
+
+			<?php endif; ?>
 
 		</header><!-- #masthead -->
 
-		<?php treville_breadcrumbs(); ?>
-
 		<?php treville_header_image(); ?>
+
+		<?php treville_slider(); ?>
+
+		<?php treville_breadcrumbs(); ?>
 
 		<div id="content" class="site-content container clearfix">

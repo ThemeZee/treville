@@ -86,6 +86,36 @@ if ( ! function_exists( 'treville_header_image' ) ) :
 endif;
 
 
+if ( ! function_exists( 'treville_blog_title' ) ) :
+	/**
+	 * Displays the archive title and archive description for the blog index
+	 */
+	function treville_blog_title() {
+
+		// Get theme options from database.
+		$theme_options = treville_theme_options();
+
+		// Display Blog Title.
+		if ( '' !== $theme_options['blog_title'] ) : ?>
+
+			<header class="page-header clearfix">
+
+				<h1 class="archive-title"><?php echo wp_kses_post( $theme_options['blog_title'] ); ?></h1>
+
+				<?php // Display Blog Description
+				if ( '' !== $theme_options['blog_description'] ) : ?>
+
+					<div class="homepage-description"><?php echo wp_kses_post( $theme_options['blog_description'] ); ?></div>
+
+				<?php endif; ?>
+
+			</header>
+
+		<?php endif;
+	}
+endif;
+
+
 if ( ! function_exists( 'treville_post_image' ) ) :
 	/**
 	 * Displays the featured image on archive posts.
@@ -130,20 +160,13 @@ endif;
 
 if ( ! function_exists( 'treville_entry_meta' ) ) :
 	/**
-	 * Displays the date, author and categories of a post
+	 * Displays the date and author of a post
 	 */
 	function treville_entry_meta() {
 
 		$postmeta = treville_meta_date();
 		$postmeta .= treville_meta_author();
-
-		// Display categories on comments on single posts.
-		if ( is_single() ) {
-
-			$postmeta .= treville_meta_category();
-			$postmeta .= treville_meta_comments();
-
-		}
+		$postmeta .= treville_meta_comments();
 
 		echo '<div class="entry-meta">' . $postmeta . '</div>';
 	}
@@ -185,18 +208,6 @@ if ( ! function_exists( 'treville_meta_author' ) ) :
 endif;
 
 
-if ( ! function_exists( 'treville_meta_category' ) ) :
-	/**
-	 * Displays the category of posts
-	 */
-	function treville_meta_category() {
-
-		return '<span class="meta-category"> ' . get_the_category_list( ', ' ) . '</span>';
-
-	}
-endif;
-
-
 if ( ! function_exists( 'treville_meta_comments' ) ) :
 	/**
 	 * Displays the post comments
@@ -214,6 +225,24 @@ if ( ! function_exists( 'treville_meta_comments' ) ) :
 		ob_end_clean();
 
 		return '<span class="meta-comments"> ' . $comments . '</span>';
+	}
+endif;
+
+
+if ( ! function_exists( 'treville_entry_categories' ) ) :
+	/**
+	 * Displays the category of posts
+	 */
+	function treville_entry_categories() {
+		?>
+
+		<div class="entry-categories clearfix">
+			<span class="meta-categories clearfix">
+				<?php echo get_the_category_list( ' ' ); ?>
+			</span>
+		</div><!-- .entry-categories -->
+
+		<?php
 	}
 endif;
 
@@ -338,7 +367,7 @@ function treville_footer_text() {
 
 	<span class="credit-link">
 		<?php printf( esc_html__( 'Powered by %1$s and %2$s.', 'treville' ),
-			'<a href="http://wordpress.org" title="WordPress">WordPress</a>',
+			'<a href="' . esc_url( __( 'http://wordpress.org', 'treville' ) ) . '" title="WordPress">WordPress</a>',
 			'<a href="https://themezee.com/themes/treville/" title="Treville WordPress Theme">Treville</a>'
 		); ?>
 	</span>

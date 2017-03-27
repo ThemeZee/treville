@@ -9,15 +9,15 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
+	<header class="entry-header">
+
+		<?php the_title( '<h1 class="page-title">', '</h1>' ); ?>
+
+	</header><!-- .entry-header -->
+
 	<?php the_post_thumbnail(); ?>
 
-	<div class="post-content clearfix">
-
-		<header class="entry-header">
-
-			<?php the_title( '<h1 class="page-title">', '</h1>' ); ?>
-
-		</header><!-- .entry-header -->
+	<div class="post-content">
 
 		<div class="entry-content clearfix">
 

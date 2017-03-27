@@ -80,7 +80,7 @@
 }
 
 .tzwb-comments-list .tzwb-comment-date {
-	color: #303030;
+	color: #454545;
 	font-size: 12px;
 	font-size: 0.75rem;
 }
@@ -107,7 +107,7 @@
 .tzwb-tabbed-content .tzwb-tabnavi li {
 	position: relative;
 	float: left;
-	margin: 0 3px 3px 0;
+	margin: 0 2px 2px 0;
 	padding: 0;
 	list-style: none;
 }
@@ -115,16 +115,18 @@
 .tzwb-tabbed-content .tzwb-tabnavi li a {
 	display: block;
 	margin: 0;
-	padding: 0.3em 0.8em;
+	padding: 0.4em 0.8em;
 	color: #fff;
 	text-decoration: none;
 	font-size: 14px;
 	font-size: 0.875rem;
+	font-weight: bold;
+	text-transform: uppercase;
 }
 
 .tzwb-tabbed-content .tzwb-tabnavi li a:link,
 .tzwb-tabbed-content .tzwb-tabnavi li a:visited  {
-	background: #303030;
+	background: #454545;
 	color: #fff;
 	-webkit-transition: all 0.2s ease;
 	transition: all 0.2s ease;
@@ -132,12 +134,12 @@
 
 .tzwb-tabbed-content .tzwb-tabnavi li a:hover,
 .tzwb-tabbed-content .tzwb-tabnavi li a:active {
-	background: #ee4455;
+	background: #1177aa;
 	text-decoration: none;
 }
 
 .tzwb-tabbed-content .tzwb-tabnavi li a.current-tab {
-	background: #ee4455;
+	background: #1177aa;
 }
 
 .tzwb-tabbed-content .tzwb-tabcontent {
@@ -160,7 +162,7 @@
 
 .tzwb-social-icons .social-icons-menu li a {
 	padding: 0.75em;
-	background: #ee4455;
+	background: #1177aa;
 }
 
 .tzwb-social-icons .social-icons-menu li a:before {
@@ -168,7 +170,7 @@
 }
 
 .tzwb-social-icons .social-icons-menu li a:hover {
-	background: #303030;
+	background: #454545;
 	text-decoration: none;
 }
 

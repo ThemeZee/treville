@@ -7,18 +7,7 @@
  * @package Treville
  */
 
-get_header();
-
-// Get Theme Options from Database.
-$theme_options = treville_theme_options();
-
-// Display Slider.
-if ( true === $theme_options['slider_blog'] ) :
-
-	get_template_part( 'template-parts/post-slider' );
-
-endif;
-?>
+get_header(); ?>
 
 	<section id="primary" class="content-archive content-area">
 		<main id="main" class="site-main" role="main">
@@ -36,32 +25,17 @@ endif;
 				<?php
 			endif;
 
-			// Display Homepage Title.
-			if ( '' !== $theme_options['blog_title'] ) : ?>
+			treville_blog_title();
 
-				<header class="page-header clearfix">
+			if ( have_posts() ) :
 
-					<h1 class="home-title archive-title"><?php echo wp_kses_post( $theme_options['blog_title'] ); ?></h1>
-					<div class="homepage-description"><?php echo wp_kses_post( $theme_options['blog_description'] ); ?></div>
+				while ( have_posts() ) : the_post();
 
-				</header>
+					get_template_part( 'template-parts/content' );
 
-			<?php endif;
+				endwhile;
 
-			if ( have_posts() ) : ?>
-
-				<div id="post-wrapper" class="post-wrapper clearfix">
-
-					<?php
-					while ( have_posts() ) : the_post();
-
-						get_template_part( 'template-parts/content' );
-
-					endwhile; ?>
-
-				</div>
-
-				<?php treville_pagination();
+				treville_pagination();
 
 			else :
 

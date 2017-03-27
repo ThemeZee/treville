@@ -19,7 +19,7 @@ function treville_slider_scripts() {
 	$theme_options = treville_theme_options();
 
 	// Register and enqueue FlexSlider JS and CSS if necessary.
-	if ( true === $theme_options['slider_blog'] or true === $theme_options['slider_magazine'] or is_page_template( 'template-slider.php' ) ) :
+	if ( true === $theme_options['slider_active'] && is_front_page() ) :
 
 		// FlexSlider JS.
 		wp_enqueue_script( 'jquery-flexslider', get_template_directory_uri() . '/js/jquery.flexslider-min.js', array( 'jquery' ), '2.6.0' );
@@ -43,8 +43,23 @@ add_action( 'wp_enqueue_scripts', 'treville_slider_scripts' );
  * @return int
  */
 function treville_slider_excerpt_length( $length ) {
-	return 25;
+	return 15;
 }
+
+
+if ( ! function_exists( 'treville_slider_meta' ) ) :
+	/**
+	 * Displays the date and author on slider posts
+	 */
+	function treville_slider_meta() {
+
+		$postmeta = treville_meta_date();
+		$postmeta .= treville_meta_author();
+
+		echo '<div class="entry-meta">' . $postmeta . '</div>';
+
+	}
+endif;
 
 
 /**
@@ -71,3 +86,20 @@ function treville_slider_options() {
 
 }
 add_action( 'wp_enqueue_scripts', 'treville_slider_options' );
+
+
+/**
+ * Display Post Slider
+ */
+function treville_slider() {
+
+	// Get theme options from database.
+	$theme_options = treville_theme_options();
+
+	// Display post slider only if activated.
+	if ( true === $theme_options['slider_active'] && is_front_page() ) :
+
+		get_template_part( 'template-parts/post-slider' );
+
+	endif;
+}

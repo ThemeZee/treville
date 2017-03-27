@@ -9,15 +9,17 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
+	<header class="entry-header">
+
+		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+
+		<?php treville_entry_meta(); ?>
+
+	</header><!-- .entry-header -->
+
 	<?php treville_post_image_single(); ?>
 
-	<div class="post-content clearfix">
-
-		<header class="entry-header">
-
-			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-
-		</header><!-- .entry-header -->
+	<div class="post-content">
 
 		<div class="entry-content clearfix">
 
@@ -32,6 +34,8 @@
 
 		<footer class="entry-footer">
 
+			<?php treville_entry_categories(); ?>
+
 			<?php treville_entry_tags(); ?>
 
 		</footer><!-- .entry-footer -->
@@ -39,7 +43,5 @@
 	</div>
 
 	<?php treville_post_navigation(); ?>
-
-	<?php treville_entry_meta(); ?>
 
 </article>

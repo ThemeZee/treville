@@ -35,37 +35,22 @@ function treville_customize_register_slider_settings( $wp_customize ) {
 		'label' => esc_html__( 'Activate Post Slider', 'treville' ),
 		'section' => 'treville_section_slider',
 		'settings' => 'treville_theme_options[slider_activate]',
-		'priority' => 1,
+		'priority' => 10,
 		)
 	) );
-	$wp_customize->add_setting( 'treville_theme_options[slider_magazine]', array(
+	$wp_customize->add_setting( 'treville_theme_options[slider_active]', array(
 		'default'           => false,
 		'type'           	=> 'option',
 		'transport'         => 'refresh',
 		'sanitize_callback' => 'treville_sanitize_checkbox',
 		)
 	);
-	$wp_customize->add_control( 'treville_theme_options[slider_magazine]', array(
-		'label'    => esc_html__( 'Show Slider on Magazine Homepage', 'treville' ),
+	$wp_customize->add_control( 'treville_theme_options[slider_active]', array(
+		'label'    => esc_html__( 'Show Slider on home page', 'treville' ),
 		'section'  => 'treville_section_slider',
-		'settings' => 'treville_theme_options[slider_magazine]',
+		'settings' => 'treville_theme_options[slider_active]',
 		'type'     => 'checkbox',
-		'priority' => 2,
-		)
-	);
-	$wp_customize->add_setting( 'treville_theme_options[slider_blog]', array(
-		'default'           => false,
-		'type'           	=> 'option',
-		'transport'         => 'refresh',
-		'sanitize_callback' => 'treville_sanitize_checkbox',
-		)
-	);
-	$wp_customize->add_control( 'treville_theme_options[slider_blog]', array(
-		'label'    => esc_html__( 'Show Slider on posts page', 'treville' ),
-		'section'  => 'treville_section_slider',
-		'settings' => 'treville_theme_options[slider_blog]',
-		'type'     => 'checkbox',
-		'priority' => 3,
+		'priority' => 20,
 		)
 	);
 
@@ -83,7 +68,7 @@ function treville_customize_register_slider_settings( $wp_customize ) {
 		'section' => 'treville_section_slider',
 		'settings' => 'treville_theme_options[slider_category]',
 		'active_callback' => 'treville_slider_activated_callback',
-		'priority' => 4,
+		'priority' => 30,
 		)
 	) );
 
@@ -101,7 +86,7 @@ function treville_customize_register_slider_settings( $wp_customize ) {
 		'settings' => 'treville_theme_options[slider_limit]',
 		'type'     => 'text',
 		'active_callback' => 'treville_slider_activated_callback',
-		'priority' => 5,
+		'priority' => 40,
 		)
 	);
 
@@ -118,7 +103,7 @@ function treville_customize_register_slider_settings( $wp_customize ) {
 		'section'  => 'treville_section_slider',
 		'settings' => 'treville_theme_options[slider_animation]',
 		'type'     => 'radio',
-		'priority' => 6,
+		'priority' => 50,
 		'active_callback' => 'treville_slider_activated_callback',
 		'choices'  => array(
 			'slide' => esc_html__( 'Slide Effect', 'treville' ),
@@ -141,7 +126,7 @@ function treville_customize_register_slider_settings( $wp_customize ) {
 		'settings' => 'treville_theme_options[slider_speed]',
 		'type'     => 'number',
 		'active_callback' => 'treville_slider_activated_callback',
-		'priority' => 7,
+		'priority' => 60,
 		'input_attrs' => array(
 			'min'   => 1000,
 			'step'  => 100,

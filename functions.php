@@ -36,12 +36,12 @@ if ( ! function_exists( 'treville_setup' ) ) :
 		add_theme_support( 'post-thumbnails' );
 
 		// Set detfault Post Thumbnail size.
-		set_post_thumbnail_size( 900, 500, true );
+		set_post_thumbnail_size( 900, 480, true );
 
 		// Register Navigation Menus.
 		register_nav_menus( array(
-			'primary' => esc_html__( 'Main Navigation', 'treville' ),
-			'social' => esc_html__( 'Social Icons', 'treville' ),
+			'primary'   => esc_html__( 'Main Navigation', 'treville' ),
+			'secondary' => esc_html__( 'Header Bottom', 'treville' ),
 		) );
 
 		// Switch default core markup for search form, comment form, and comments to output valid HTML5.
@@ -79,7 +79,6 @@ if ( ! function_exists( 'treville_setup' ) ) :
 
 		// Add Theme Support for Selective Refresh in Customizer.
 		add_theme_support( 'customize-selective-refresh-widgets' );
-
 	}
 endif;
 add_action( 'after_setup_theme', 'treville_setup' );
@@ -106,7 +105,7 @@ function treville_widgets_init() {
 
 	register_sidebar( array(
 		'name' => esc_html__( 'Sidebar', 'treville' ),
-		'id' => 'sidebar',
+		'id' => 'sidebar-1',
 		'description' => esc_html__( 'Appears on posts and pages except the full width template.', 'treville' ),
 		'before_widget' => '<div class="widget-wrap"><aside id="%1$s" class="widget %2$s clearfix">',
 		'after_widget' => '</aside></div>',
@@ -156,7 +155,6 @@ function treville_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
-
 }
 add_action( 'wp_enqueue_scripts', 'treville_scripts' );
 
@@ -167,7 +165,7 @@ add_action( 'wp_enqueue_scripts', 'treville_scripts' );
 function treville_google_fonts_url() {
 
 	// Set default Fonts.
-	$font_families = array( 'Open Sans:400,400italic,700,700italic', 'Montserrat:400,400italic,700,700italic' );
+	$font_families = array( 'Gudea:400,400italic,700,700italic', 'Magra:400,400italic,700,700italic' );
 
 	// Build Fonts URL.
 	$query_args = array(
@@ -184,6 +182,9 @@ function treville_google_fonts_url() {
  * Add custom sizes for featured images
  */
 function treville_add_image_sizes() {
+
+	// Add Slider Image Size.
+	add_image_size( 'treville-slider-image', 1920, 480, true );
 
 	// Add different thumbnail sizes for Magazine Posts widgets.
 	add_image_size( 'treville-thumbnail-small', 130, 100, true );

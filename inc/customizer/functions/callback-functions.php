@@ -35,9 +35,7 @@ function treville_control_post_content_callback( $control ) {
 function treville_slider_activated_callback( $control ) {
 
 	// Check if Slider is turned on.
-	if ( true === $control->manager->get_setting( 'treville_theme_options[slider_blog]' )->value() ) :
-		return true;
-	elseif ( true === $control->manager->get_setting( 'treville_theme_options[slider_magazine]' )->value() ) :
+	if ( true === $control->manager->get_setting( 'treville_theme_options[slider_active]' )->value() ) :
 		return true;
 	else :
 		return false;

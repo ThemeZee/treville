@@ -26,23 +26,27 @@ if ( $slider_query->have_posts() ) :
 
 ?>
 
-	<div id="post-slider-wrap" class="post-slider-wrap clearfix">
+	<div id="post-slider-container" class="post-slider-container clearfix">
 
-		<div id="post-slider" class="post-slider zeeflexslider">
+		<div id="post-slider-wrap" class="post-slider-wrap clearfix">
 
-			<ul class="zeeslides">
+			<div id="post-slider" class="post-slider zeeflexslider">
 
-			<?php while ( $slider_query->have_posts() ) : $slider_query->the_post();
+				<ul class="zeeslides">
 
-				get_template_part( 'template-parts/content', 'slider' );
+				<?php while ( $slider_query->have_posts() ) : $slider_query->the_post();
 
-			endwhile; ?>
+					get_template_part( 'template-parts/content', 'slider' );
 
-			</ul>
+				endwhile; ?>
+
+				</ul>
+
+			</div>
+
+			<div class="post-slider-controls"></div>
 
 		</div>
-
-		<div class="post-slider-controls"></div>
 
 	</div>
 

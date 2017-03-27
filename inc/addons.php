@@ -21,11 +21,9 @@ function treville_theme_addons_setup() {
 
 	// Add theme support for Infinite Scroll.
 	add_theme_support( 'infinite-scroll', array(
-		'container'      => 'post-wrapper',
+		'container'      => 'main',
 		'footer_widgets' => array( 'footer-left', 'footer-center-left', 'footer-center-right', 'footer-right' ),
-		'wrapper'        => false,
 		'render'         => 'treville_infinite_scroll_render',
-		'posts_per_page' => 6,
 	) );
 
 }

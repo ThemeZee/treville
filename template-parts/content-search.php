@@ -7,26 +7,22 @@
 
 ?>
 
-<div class="post-column clearfix">
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<header class="entry-header">
 
-		<div class="post-content clearfix">
+		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
-			<header class="entry-header">
+	</header><!-- .entry-header -->
 
-				<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+	<div class="post-content">
 
-			</header><!-- .entry-header -->
+		<div class="entry-content entry-excerpt clearfix">
 
-			<div class="entry-content entry-excerpt clearfix">
+			<?php the_excerpt(); ?>
 
-				<?php the_excerpt(); ?>
+		</div><!-- .entry-content -->
 
-			</div><!-- .entry-content -->
+	</div>
 
-		</div>
-
-	</article>
-
-</div>
+</article>

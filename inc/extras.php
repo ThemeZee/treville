@@ -34,10 +34,8 @@ function treville_body_classes( $classes ) {
 	}
 
 	// Add Post Columns classes.
-	if ( is_active_sidebar( 'sidebar' ) ) {
-		$classes[] = 'post-layout-two-columns post-layout-columns';
-	} else {
-		$classes[] = 'post-layout-three-columns post-layout-columns no-sidebar';
+	if ( ! is_active_sidebar( 'sidebar-1' ) ) {
+		$classes[] = 'no-sidebar';
 	}
 
 	// Hide Date?
@@ -48,11 +46,6 @@ function treville_body_classes( $classes ) {
 	// Hide Author?
 	if ( false === $theme_options['meta_author'] ) {
 		$classes[] = 'author-hidden';
-	}
-
-	// Hide Categories?
-	if ( false === $theme_options['meta_category'] ) {
-		$classes[] = 'categories-hidden';
 	}
 
 	// Hide Comments?
@@ -86,9 +79,14 @@ function treville_hide_elements() {
 		$elements[] = '.site-description';
 	}
 
+	// Hide Categories?
+	if ( false === $theme_options['meta_category'] ) {
+		$elements[] = '.type-post .entry-footer .entry-categories';
+	}
+
 	// Hide Post Tags?
 	if ( false === $theme_options['meta_tags'] ) {
-		$elements[] = '.type-post .entry-footer';
+		$elements[] = '.type-post .entry-footer .entry-tags';
 	}
 
 	// Hide Post Navigation?
@@ -130,7 +128,7 @@ function treville_excerpt_length( $length ) {
 	if ( isset( $theme_options['excerpt_length'] ) and $theme_options['excerpt_length'] >= 0 ) :
 		return absint( $theme_options['excerpt_length'] );
 	else :
-		return 20; // Number of words.
+		return 50; // Number of words.
 	endif;
 }
 add_filter( 'excerpt_length', 'treville_excerpt_length' );
@@ -148,8 +146,7 @@ function treville_excerpt_more( $more_text ) {
 		return $more_text;
 	}
 
-	return ' <span class="more-text">&hellip;</span>';
-
+	return '';
 }
 add_filter( 'excerpt_more', 'treville_excerpt_more' );
 

@@ -7,11 +7,7 @@
  * @package Treville
  */
 
-get_header();
-
-// Get Theme Options from Database.
-$theme_options = treville_theme_options();
-?>
+get_header(); ?>
 
 	<section id="primary" class="content-archive content-area">
 		<main id="main" class="site-main" role="main">
@@ -26,15 +22,11 @@ $theme_options = treville_theme_options();
 
 			</header><!-- .page-header -->
 
-			<div id="post-wrapper" class="post-wrapper clearfix">
+			<?php while ( have_posts() ) : the_post();
 
-				<?php while ( have_posts() ) : the_post();
+				get_template_part( 'template-parts/content' );
 
-					get_template_part( 'template-parts/content' );
-
-				endwhile; ?>
-
-			</div>
+			endwhile; ?>
 
 			<?php treville_pagination(); ?>
 

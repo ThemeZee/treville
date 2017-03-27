@@ -9,13 +9,13 @@
 
 <section class="no-results not-found type-page">
 
+	<header class="entry-header">
+
+		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'treville' ); ?></h1>
+
+	</header><!-- .entry-header -->
+
 	<div class="post-content clearfix">
-
-		<header class="entry-header">
-
-			<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'treville' ); ?></h1>
-
-		</header><!-- .entry-header -->
 
 		<div class="entry-content clearfix">
 

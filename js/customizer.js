@@ -66,17 +66,6 @@
 		} );
 	} );
 
-	// Post Category checkbox.
-	wp.customize( 'treville_theme_options[meta_category]', function( value ) {
-		value.bind( function( newval ) {
-			if ( false === newval ) {
-				$( 'body' ).addClass( 'categories-hidden' );
-			} else {
-				$( 'body' ).removeClass( 'categories-hidden' );
-			}
-		} );
-	} );
-
 	// Post Comments checkbox.
 	wp.customize( 'treville_theme_options[meta_comments]', function( value ) {
 		value.bind( function( newval ) {
@@ -88,13 +77,24 @@
 		} );
 	} );
 
+	// Post Categories checkbox.
+	wp.customize( 'treville_theme_options[meta_category]', function( value ) {
+		value.bind( function( newval ) {
+			if ( false === newval ) {
+				hideElement( '.type-post .entry-footer .entry-categories' );
+			} else {
+				showElement( '.type-post .entry-footer .entry-categories' );
+			}
+		} );
+	} );
+
 	// Post Tags checkbox.
 	wp.customize( 'treville_theme_options[meta_tags]', function( value ) {
 		value.bind( function( newval ) {
 			if ( false === newval ) {
-				hideElement( '.type-post .entry-footer' );
+				hideElement( '.type-post .entry-footer .entry-tags' );
 			} else {
-				showElement( '.type-post .entry-footer' );
+				showElement( '.type-post .entry-footer .entry-tags' );
 			}
 		} );
 	} );
