@@ -89,9 +89,16 @@ html[xmlns] .zeeflexslider .zeeslides {
 	max-height: 2000px;
 }
 
+.post-slider .zeeslide .slide-image-wrap {
+	margin: 0;
+	padding: 0;
+	background: #e5e5e5;
+}
+
 .post-slider .zeeslide .slide-image {
-	margin: 0 auto;
-	max-width: 1920px;
+	margin: auto;
+	padding: 0;
+	max-width: 100%;
 	max-height: 480px;
 	width: auto;
 	height: auto;
