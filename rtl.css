@@ -64,27 +64,27 @@ li > ol {
 	margin: 0.25em 0 0 1em;
 }
 
-.primary-navigation {
+.secondary-navigation {
 	float: right;
 }
 
-.main-navigation-menu {
+.top-navigation-menu {
 	float: right;
 }
 
-.main-navigation-menu li {
+.top-navigation-menu li {
 	float: right;
 }
 
-.main-navigation-menu > .menu-item-has-children > a:after {
+.top-navigation-menu > .menu-item-has-children > a:after {
 	margin: 0.4em 0.3em 0 0;
 }
 
-.main-navigation-menu ul .menu-item-has-children > a:after {
+.top-navigation-menu ul .menu-item-has-children > a:after {
 	margin: 0.3em 0.3em 0 0;
 }
 
-.main-navigation-menu li ul ul {
+.top-navigation-menu li ul ul {
 	right: 100%;
 	left: auto;
 }
@@ -372,64 +372,64 @@ li > ol {
 		margin: 1em 4em 1em 1em;
 	}
 
-	.main-navigation-menu ul,
+	.top-navigation-menu ul,
 	.mega-menu-item .mega-menu-content,
 	.mega-menu-item .mega-menu-content .mega-menu-widget {
 		right: auto;
 		left: auto;
 	}
 
-	.main-navigation-menu li ul ul {
+	.top-navigation-menu li ul ul {
 		right: auto;
 		left: auto;
 	}
 
-	.main-navigation-toggle {
+	.top-navigation-toggle {
 		right: 2em;
 		left: auto;
 	}
 
-	.main-navigation-toggle:after {
+	.top-navigation-toggle:after {
 		float: right;
 	}
 
-	.primary-navigation {
+	.secondary-navigation {
 		width: 100%;
 	}
 
-	.main-navigation-menu {
+	.top-navigation-menu {
 		float: right;
 	}
 
-	.main-navigation-menu li {
+	.top-navigation-menu li {
 		width: 100%;
 	}
 
-	.main-navigation-menu a {
+	.top-navigation-menu a {
 		clear: right;
 	}
 
-	.main-navigation-menu ul a {
+	.top-navigation-menu ul a {
 		padding-right: 2em;
 		padding-left: 0;
 	}
 
-	.main-navigation-menu ul li ul a {
+	.top-navigation-menu ul li ul a {
 		padding-right: 4em;
 		padding-left: 0;
 	}
 
-	.main-navigation-menu ul li ul li ul a {
+	.top-navigation-menu ul li ul li ul a {
 		padding-right: 6em;
 		padding-left: 0;
 	}
 
-	.main-navigation-menu ul li ul li ul li ul a {
+	.top-navigation-menu ul li ul li ul li ul a {
 		padding-right: 8em;
 		padding-left: 0;
 	}
 
-	.main-navigation-menu .submenu-dropdown-toggle {
+	.top-navigation-menu .submenu-dropdown-toggle {
 		float: left;
 	}
 
@@ -516,7 +516,7 @@ li > ol {
 		margin: 0.75em 3em 0.75em 0.75em;
 	}
 
-	.main-navigation-toggle {
+	.top-navigation-toggle {
 		right: 1.5em;
 		left: auto;
 	}

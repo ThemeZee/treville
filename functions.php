@@ -40,8 +40,8 @@ if ( ! function_exists( 'treville_setup' ) ) :
 
 		// Register Navigation Menus.
 		register_nav_menus( array(
+			'secondary' => esc_html__( 'Top Navigation', 'treville' ),
 			'primary'   => esc_html__( 'Main Navigation', 'treville' ),
-			'secondary' => esc_html__( 'Header Bottom', 'treville' ),
 		) );
 
 		// Switch default core markup for search form, comment form, and comments to output valid HTML5.

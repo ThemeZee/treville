@@ -96,9 +96,9 @@
 	$( document ).ready( function() {
 
 		/* Variables */
-		var main_menu = $('.main-navigation-menu'),
-			header_menu = $('.header-navigation-menu'),
-			menu_wrap = $('.main-navigation-menu-wrap');
+		var top_menu = $('.top-navigation-menu'),
+			main_menu = $('.main-navigation-menu'),
+			menu_wrap = $('.top-navigation-menu-wrap');
 
 		/* Add Listener for screen size */
 		if(typeof matchMedia == 'function') {
@@ -111,37 +111,37 @@
 			if (mq.matches) {
 
 				/* Reset desktop navigation menu dropdown animation on smaller screens */
+				top_menu.resetDropdownAnimation();
 				main_menu.resetDropdownAnimation();
-				header_menu.resetDropdownAnimation();
 
 				/* Copy header navigation items to main navigation on mobile screens */
-				header_menu.appendTo( menu_wrap ).addClass('mobile-header-menu');
+				main_menu.appendTo( menu_wrap ).addClass('mobile-header-menu');
 
 			} else {
 
 				/* Add dropdown animation for desktop navigation menu */
+				top_menu.addDropdownAnimation();
 				main_menu.addDropdownAnimation();
-				header_menu.addDropdownAnimation();
 
 				/* Copy Header Navigation back to original spot */
-				$('.mobile-header-menu').removeClass('mobile-header-menu').appendTo( $('#header-navigation') );
+				$('.mobile-header-menu').removeClass('mobile-header-menu').appendTo( $('#main-navigation') );
 
 			}
 
 		}
 
 		/* Add Menu Toggle Button for mobile navigation */
-		$("#main-navigation").before('<button id=\"main-navigation-toggle\" class=\"main-navigation-toggle\"></button>');
+		$("#top-navigation").before('<button id=\"top-navigation-toggle\" class=\"top-navigation-toggle\"></button>');
 
 		/* Add dropdown slide animation for mobile devices */
-		$('#main-navigation-toggle').on('click', function(){
+		$('#top-navigation-toggle').on('click', function(){
 			menu_wrap.slideToggle();
 			$( this ).toggleClass('active');
 		});
 
 		/* Add submenus for mobile navigation menu */
+		top_menu.addMobileSubmenu();
 		main_menu.addMobileSubmenu();
-		header_menu.addMobileSubmenu();
 
 	} );
 

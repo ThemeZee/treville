@@ -37,46 +37,43 @@
 
 				</div><!-- .site-branding -->
 
-				<div class="main-navigation-wrap">
+				<?php if ( has_nav_menu( 'secondary' ) ) : ?>
 
-					<nav id="main-navigation" class="primary-navigation navigation clearfix" role="navigation">
+					<div class="top-navigation-wrap">
 
-						<div class="main-navigation-menu-wrap">
+						<nav id="top-navigation" class="secondary-navigation navigation clearfix" role="navigation">
+
+							<?php
+								// Display Top Navigation.
+								wp_nav_menu( array(
+									'theme_location' => 'secondary',
+									'container_class' => 'top-navigation-menu-wrap',
+									'menu_class' => 'top-navigation-menu',
+								) );
+							?>
+
+						</nav><!-- #top-navigation -->
+
+					</div>
+
+				<?php endif; ?>
+
+			</div><!-- .header-main -->
+
+			<?php if ( has_nav_menu( 'primary' ) ) : ?>
+
+				<div id="main-navigation-wrap" class="main-navigation-wrap clearfix">
+
+					<nav id="main-navigation" class="primary-navigation navigation container clearfix" role="navigation">
 						<?php
 							// Display Main Navigation.
 							wp_nav_menu( array(
 								'theme_location' => 'primary',
 								'container' => false,
 								'menu_class' => 'main-navigation-menu',
-								'echo' => true,
-								'fallback_cb' => 'treville_default_menu',
 							) );
 						?>
-						</div>
-
 					</nav><!-- #main-navigation -->
-
-				</div>
-
-			</div><!-- .header-main -->
-
-			<?php if ( has_nav_menu( 'secondary' ) ) : ?>
-
-				<div id="header-navigation-wrap" class="header-navigation-wrap clearfix">
-
-					<nav id="header-navigation" class="secondary-navigation navigation container clearfix" role="navigation">
-						<?php
-							// Display Main Navigation.
-							wp_nav_menu( array(
-								'theme_location' => 'secondary',
-								'container' => false,
-								'menu_class' => 'header-navigation-menu',
-								'echo' => true,
-								'fallback_cb' => '',
-								)
-							);
-						?>
-					</nav><!-- #header-navigation -->
 
 				</div>
 

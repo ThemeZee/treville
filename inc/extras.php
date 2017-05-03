@@ -5,17 +5,6 @@
  * @package Treville
  */
 
-if ( ! function_exists( 'treville_default_menu' ) ) :
-	/**
-	 * Display default page as navigation if no custom menu was set
-	 */
-	function treville_default_menu() {
-
-		echo '<ul id="menu-main-navigation" class="main-navigation-menu menu">' . wp_list_pages( 'title_li=&echo=0' ) . '</ul>';
-
-	}
-endif;
-
 
 /**
  * Adds custom classes to the array of body classes.
