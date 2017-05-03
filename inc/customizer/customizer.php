@@ -69,7 +69,7 @@ function treville_customize_register_options( $wp_customize ) {
 
 	// Add Display Tagline Setting.
 	$wp_customize->add_setting( 'treville_theme_options[site_description]', array(
-		'default'           => false,
+		'default'           => true,
 		'type'           	=> 'option',
 		'transport'         => 'postMessage',
 		'sanitize_callback' => 'treville_sanitize_checkbox',

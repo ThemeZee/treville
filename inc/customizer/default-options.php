@@ -32,7 +32,7 @@ function treville_default_options() {
 
 	$default_options = array(
 		'site_title'						=> true,
-		'site_description'					=> false,
+		'site_description'					=> true,
 		'layout' 							=> 'right-sidebar',
 		'blog_title'						=> '',
 		'blog_description'					=> '',
