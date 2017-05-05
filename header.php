@@ -67,6 +67,7 @@
 				<div id="main-navigation-wrap" class="main-navigation-wrap clearfix">
 
 					<nav id="main-navigation" class="primary-navigation navigation container clearfix" role="navigation">
+
 						<?php
 							// Display Main Navigation.
 							wp_nav_menu( array(
@@ -74,7 +75,10 @@
 								'container' => false,
 								'menu_class' => 'main-navigation-menu',
 							) );
+
+							do_action( 'treville_header_search' );
 						?>
+
 					</nav><!-- #main-navigation -->
 
 				</div>

@@ -35,7 +35,7 @@ function treville_customize_register_general_settings( $wp_customize ) {
 		'section'  => 'treville_section_general',
 		'settings' => 'treville_theme_options[layout]',
 		'type'     => 'radio',
-		'priority' => 1,
+		'priority' => 10,
 		'choices'  => array(
 			'left-sidebar' => esc_html__( 'Left Sidebar', 'treville' ),
 			'right-sidebar' => esc_html__( 'Right Sidebar', 'treville' ),
@@ -56,7 +56,7 @@ function treville_customize_register_general_settings( $wp_customize ) {
 		'section'  => 'treville_section_general',
 		'settings' => 'treville_theme_options[blog_title]',
 		'type'     => 'text',
-		'priority' => 3,
+		'priority' => 30,
 		)
 	);
 
@@ -73,7 +73,7 @@ function treville_customize_register_general_settings( $wp_customize ) {
 		'section'  => 'treville_section_general',
 		'settings' => 'treville_theme_options[blog_description]',
 		'type'     => 'textarea',
-		'priority' => 4,
+		'priority' => 40,
 		)
 	);
 
