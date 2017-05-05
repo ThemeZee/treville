@@ -37,9 +37,9 @@
 
 				</div><!-- .site-branding -->
 
-				<?php if ( has_nav_menu( 'secondary' ) ) : ?>
+				<div class="header-area">
 
-					<div class="top-navigation-wrap">
+					<?php if ( has_nav_menu( 'secondary' ) ) : ?>
 
 						<nav id="top-navigation" class="secondary-navigation navigation clearfix" role="navigation">
 
@@ -54,9 +54,11 @@
 
 						</nav><!-- #top-navigation -->
 
-					</div>
+					<?php endif; ?>
 
-				<?php endif; ?>
+					<?php do_action( 'treville_header_area' ); ?>
+
+				</div>
 
 			</div><!-- .header-main -->
 

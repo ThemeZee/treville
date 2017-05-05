@@ -98,6 +98,7 @@
 		/* Variables */
 		var top_menu = $('.top-navigation-menu'),
 			main_menu = $('.main-navigation-menu'),
+			social_menu = $('.header-area .social-icons-menu'),
 			menu_wrap = $('.top-navigation-menu-wrap');
 
 		/* Add Listener for screen size */
@@ -117,6 +118,9 @@
 				/* Copy header navigation items to main navigation on mobile screens */
 				main_menu.appendTo( menu_wrap ).addClass('mobile-header-menu');
 
+				/* Copy social icons to main navigation on mobile screens */
+				social_menu.appendTo( menu_wrap ).addClass('mobile-header-social-icons');
+
 			} else {
 
 				/* Add dropdown animation for desktop navigation menu */
@@ -125,6 +129,9 @@
 
 				/* Copy Header Navigation back to original spot */
 				$('.mobile-header-menu').removeClass('mobile-header-menu').appendTo( $('#main-navigation') );
+
+				/* Copy Social Icons back to original spot */
+				$('.mobile-header-social-icons').removeClass('mobile-header-social-icons').appendTo( $('.header-area .social-icons-navigation') );
 
 			}
 

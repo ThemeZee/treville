@@ -766,9 +766,13 @@ textarea {
 /*--------------------------------------------------------------
 ## 10.1 - Top Navigation
 --------------------------------------------------------------*/
-.secondary-navigation {
+.header-area {
 	float: right;
 	margin: 1em 0;
+}
+
+.secondary-navigation {
+	float: left;
 }
 
 .top-navigation-toggle {
@@ -2234,9 +2238,13 @@ object {
 	/*** Mobile Main Navigation ***/
 
 	/* Reset */
-	.secondary-navigation {
+	.header-area {
 		float: none;
 		margin: 0;
+	}
+
+	.secondary-navigation {
+		float: none;
 	}
 
 	.top-navigation-menu li {
@@ -2660,8 +2668,7 @@ object {
 
 	.site-description {
 		float: none;
-		display: block;
-		margin: 0;
+		display: none;
 	}
 
 	.top-navigation-toggle {
