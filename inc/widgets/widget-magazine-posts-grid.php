@@ -68,12 +68,12 @@ class Treville_Magazine_Posts_Grid_Widget extends WP_Widget {
 		echo $args['before_widget'];
 		?>
 
-		<div class="widget-magazine-posts-grid widget-magazine-posts clearfix">
+		<div class="widget-magazine-grid widget-magazine-posts clearfix">
 
 			<?php // Display Title.
 			$this->widget_title( $args, $settings ); ?>
 
-			<div class="widget-magazine-posts-content <?php echo $class; ?> magazine-grid">
+			<div class="widget-magazine-content <?php echo $class; ?> magazine-grid">
 
 				<?php $this->render( $settings ); ?>
 

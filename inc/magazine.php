@@ -34,6 +34,19 @@ if ( ! function_exists( 'treville_magazine_widget_title' ) ) :
 endif;
 
 
+if ( ! function_exists( 'treville_magazine_entry_meta' ) ) :
+	/**
+	 * Displays the date and author of magazine posts
+	 */
+	function treville_magazine_entry_meta() {
+
+		$postmeta = treville_meta_date();
+
+		echo '<div class="entry-meta">' . $postmeta . '</div>';
+	}
+endif;
+
+
 /**
 * Get Magazine Post IDs
 *
