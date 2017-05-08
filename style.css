@@ -2658,17 +2658,6 @@ object {
 		padding: 0;
 	}
 
-	/* Sidebar */
-	.sidebar {
-		margin-right: 0;
-	}
-
-	.sidebar .widget-wrap {
-		float: none;
-		padding-right: 0;
-		width: 100%;
-	}
-
 	/* Magazine Post Widgets */
 	.widget-magazine-posts .magazine-grid-three-columns .post-column {
 		width: 50%;
@@ -2697,12 +2686,23 @@ object {
 ## 14.8 - Mobile Large ( < 560px )
 --------------------------------------------------------------*/
 @media only screen and (max-width: 35em) {
+	/* Sidebar */
+	.sidebar {
+		margin-right: 0;
+	}
+
+	.sidebar .widget-wrap {
+		float: none;
+		padding-right: 0;
+		width: 100%;
+	}
+
 	.widget-magazine-posts .small-post .entry-title {
 		font-size: 15px;
 		font-size: 0.9375rem;
 	}
 
-	/* Magazine Posts Columns Widget */
+	/* Magazine Columns Widget */
 	.widget-magazine-columns .magazine-column-left,
 	.widget-magazine-columns .magazine-column-right {
 		float: none;
