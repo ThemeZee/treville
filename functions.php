@@ -222,5 +222,5 @@ require get_template_directory() . '/inc/slider.php';
 require get_template_directory() . '/inc/magazine.php';
 
 // Include Widget Files.
-require get_template_directory() . '/inc/widgets/widget-magazine-posts-columns.php';
-require get_template_directory() . '/inc/widgets/widget-magazine-posts-grid.php';
+require get_template_directory() . '/inc/widgets/widget-magazine-columns.php';
+require get_template_directory() . '/inc/widgets/widget-magazine-grid.php';

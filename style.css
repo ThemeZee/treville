@@ -1377,7 +1377,7 @@ textarea {
 }
 
 /* Magazine Grid Widget */
-.widget-magazine-grid .magazine-grid {
+.widget-magazine-posts .magazine-grid {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -1386,7 +1386,7 @@ textarea {
 	margin-right: -1.5em;
 }
 
-.widget-magazine-grid .magazine-grid .post-column {
+.widget-magazine-posts .magazine-grid .post-column {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -1394,15 +1394,15 @@ textarea {
 	padding-right: 1.5em;
 }
 
-.widget-magazine-grid .magazine-grid-two-columns .post-column {
+.widget-magazine-posts .magazine-grid-two-columns .post-column {
 	width: 50%;
 }
 
-.widget-magazine-grid .magazine-grid-three-columns .post-column {
+.widget-magazine-posts .magazine-grid-three-columns .post-column {
 	width: 33.3333333333333%;
 }
 
-.widget-magazine-grid .magazine-grid .post-column .type-post {
+.widget-magazine-posts .magazine-grid .post-column .type-post {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -1412,7 +1412,7 @@ textarea {
 	-webkit-box-direction: normal;
 }
 
-.widget-magazine-grid .magazine-grid .post-column .type-post .post-content {
+.widget-magazine-posts .magazine-grid .post-column .type-post .post-content {
 	flex-grow: 1;
 	-webkit-box-flex: 1;
 	-ms-flex-positive: 1;
@@ -2670,7 +2670,7 @@ object {
 	}
 
 	/* Magazine Post Widgets */
-	.widget-magazine-grid .magazine-grid-three-columns .post-column {
+	.widget-magazine-posts .magazine-grid-three-columns .post-column {
 		width: 50%;
 	}
 
@@ -2790,14 +2790,14 @@ object {
 	}
 
 	/* Magazine Post Widgets */
-	.widget-magazine-grid .magazine-grid-two-columns,
-	.widget-magazine-grid .magazine-grid-three-columns {
+	.widget-magazine-posts .magazine-grid-two-columns,
+	.widget-magazine-posts .magazine-grid-three-columns {
 		display: block;
 		margin-right: 0;
 	}
 
-	.widget-magazine-grid .magazine-grid-two-columns .post-column,
-	.widget-magazine-grid .magazine-grid-three-columns .post-column {
+	.widget-magazine-posts .magazine-grid-two-columns .post-column,
+	.widget-magazine-posts .magazine-grid-three-columns .post-column {
 		display: block;
 		padding-right: 0;
 		width: 100%;
@@ -2928,7 +2928,7 @@ object {
 /* Fix Flexbox issues for Safari 6.1-10.0 */
 @media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0) {
 	@media {
-		.widget-magazine-grid .magazine-grid .post-column,
+		.widget-magazine-posts .magazine-grid .post-column,
 		.sidebar .widget-wrap {
 			margin-right: -1px;
 		}
@@ -2938,7 +2938,7 @@ object {
 /* Fix Flexbox issues for Safari 10.1+ */
 @media not all and (min-resolution:.001dpcm) {
 	@media {
-		.widget-magazine-grid .magazine-grid .post-column,
+		.widget-magazine-posts .magazine-grid .post-column,
 		.sidebar .widget-wrap {
 			margin-right: -1px;
 		}

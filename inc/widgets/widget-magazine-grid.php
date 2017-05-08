@@ -1,6 +1,6 @@
 <?php
 /**
- * Magazine Posts Grid Widget
+ * Magazine Grid Widget
  *
  * Display the latest posts from a selected category in a grid layout.
  * Intented to be used in the Magazine Homepage widget area to built a magazine layouted page.
@@ -11,7 +11,7 @@
 /**
  * Magazine Widget Class
  */
-class Treville_Magazine_Posts_Grid_Widget extends WP_Widget {
+class Treville_Magazine_Grid_Widget extends WP_Widget {
 
 	/**
 	 * Widget Constructor
@@ -20,7 +20,7 @@ class Treville_Magazine_Posts_Grid_Widget extends WP_Widget {
 
 		// Setup Widget.
 		parent::__construct(
-			'treville-magazine-posts-grid', // ID.
+			'treville-magazine-grid', // ID.
 			esc_html__( 'Magazine (Grid)', 'treville' ), // Name.
 			array(
 				'classname' => 'treville-magazine-grid-widget',
@@ -73,7 +73,7 @@ class Treville_Magazine_Posts_Grid_Widget extends WP_Widget {
 			<?php // Display Title.
 			$this->widget_title( $args, $settings ); ?>
 
-			<div class="widget-magazine-content <?php echo $class; ?> magazine-grid">
+			<div class="widget-magazine-content <?php echo $class; ?> magazine-grid clearfix">
 
 				<?php $this->render( $settings ); ?>
 
@@ -230,9 +230,9 @@ class Treville_Magazine_Posts_Grid_Widget extends WP_Widget {
 /**
  * Register Widget
  */
-function treville_register_magazine_posts_grid_widget() {
+function treville_register_magazine_grid_widget() {
 
-	register_widget( 'Treville_Magazine_Posts_Grid_Widget' );
+	register_widget( 'Treville_Magazine_Grid_Widget' );
 
 }
-add_action( 'widgets_init', 'treville_register_magazine_posts_grid_widget' );
+add_action( 'widgets_init', 'treville_register_magazine_grid_widget' );

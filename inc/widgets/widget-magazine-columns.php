@@ -11,7 +11,7 @@
 /**
  * Magazine Widget Class
  */
-class Treville_Magazine_Posts_Columns_Widget extends WP_Widget {
+class Treville_Magazine_Columns_Widget extends WP_Widget {
 
 	/**
 	 * Widget Constructor
@@ -20,7 +20,7 @@ class Treville_Magazine_Posts_Columns_Widget extends WP_Widget {
 
 		// Setup Widget.
 		parent::__construct(
-			'treville-magazine-posts-columns', // ID.
+			'treville-magazine-columns', // ID.
 			esc_html__( 'Magazine (Columns)', 'treville' ), // Name.
 			array(
 				'classname' => 'treville-magazine-columns-widget',
@@ -69,7 +69,7 @@ class Treville_Magazine_Posts_Columns_Widget extends WP_Widget {
 
 		<div class="widget-magazine-columns widget-magazine-posts clearfix">
 
-			<div class="widget-magazine-content clearfix">
+			<div class="widget-magazine-content magazine-columns clearfix">
 
 				<?php echo $this->render( $args, $settings ); ?>
 
@@ -305,9 +305,9 @@ class Treville_Magazine_Posts_Columns_Widget extends WP_Widget {
 /**
  * Register Widget
  */
-function treville_register_magazine_posts_columns_widget() {
+function treville_register_magazine_columns_widget() {
 
-	register_widget( 'Treville_Magazine_Posts_Columns_Widget' );
+	register_widget( 'Treville_Magazine_Columns_Widget' );
 
 }
-add_action( 'widgets_init', 'treville_register_magazine_posts_columns_widget' );
+add_action( 'widgets_init', 'treville_register_magazine_columns_widget' );
