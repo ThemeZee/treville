@@ -26,6 +26,10 @@ For more information about Treville please go to https://themezee.com/themes/tre
 
 == Changelog ==
 
+= 1.0.2 =
+* improved styling of tagline and header area
+* updated Magazine widgets
+
 = 1.0.1 =
 * added own template function to display slider images for better child theme support
 * fixed flexbox layout issues appearing with the latest Safari 10.1 version
