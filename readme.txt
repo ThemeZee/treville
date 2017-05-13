@@ -26,9 +26,12 @@ For more information about Treville please go to https://themezee.com/themes/tre
 
 == Changelog ==
 
-= 1.0.2 =
+= 1.0.3 =
 * improved styling of tagline and header area
 * updated Magazine widgets
+
+= 1.0.2 =
+* fixed small argument numbering issue in Customizer Control
 
 = 1.0.1 =
 * added own template function to display slider images for better child theme support
