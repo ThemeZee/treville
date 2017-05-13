@@ -71,9 +71,6 @@ if ( ! function_exists( 'treville_setup' ) ) :
 			'flex-height' => true,
 		) ) );
 
-		// Add Theme Support for wooCommerce.
-		add_theme_support( 'woocommerce' );
-
 		// Add extra theme styling to the visual editor.
 		add_editor_style( array( 'css/editor-style.css', treville_google_fonts_url() ) );
 

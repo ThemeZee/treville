@@ -2,7 +2,7 @@
  * Themezee Related Posts CSS
  * https://themezee.com/plugins/related-posts/
  *
- * Copyright(C) 2015, ThemeZee.com - support@themezee.com
+ * Copyright(C) 2017, ThemeZee.com - support@themezee.com
  * License: GPL v3
  * License URI: http://www.gnu.org/licenses/gpl-3.0.html
  *
@@ -30,6 +30,31 @@
 	font-family: 'Magra', Tahoma, Arial;
 }
 
+.related-posts article {
+	margin: 0;
+	padding: 0 0 0.5rem;
+	background: none;
+	border: 1px solid rgba(0,0,0,0.1);
+	box-shadow: none;
+}
+
+.related-posts article .wp-post-image {
+	margin: 0;
+}
+
+.related-posts article .entry-header {
+	margin: 0;
+	padding: 0.5rem 1rem 0;
+}
+
+.related-posts article .entry-meta {
+	display: block;
+	margin: 0;
+	padding: 0 1rem;
+	font-size: 12px;
+	font-size: 0.75rem;
+}
+
 /*--------------------------------------------------------------
 # List Layout
 ---------------------------------------------------------------- */
@@ -40,33 +65,40 @@ ul.related-posts-list {
 }
 
 .related-posts-list li {
-	margin: 0 0 2em;
+	margin: 0 0 1.5em;
 	padding: 0;
 	list-style: none;
-}
-
-.related-posts-list li .entry-header {
-	margin-top: 0.25em;
-}
-
-.related-posts-list li .entry-title {
-	font-size: 20px;
-	font-size: 1.25rem;
+	border: 1px solid rgba(0,0,0,0.1);
 }
 
 .related-posts-list li .wp-post-image {
 	float: left;
+	display: block;
 	margin: 0 1em 0 0;
 	padding: 0;
-	max-width: 20%;
+	max-width: 25%;
 	height: auto;
 	border: none;
 }
 
-.related-posts-list li .entry-meta {
-	margin: 0;
+.related-posts-list li .entry-header {
+	display: inline-block;
+	margin-top: 0.5em;
 	padding: 0;
-	border-top: none;
+}
+
+.related-posts-list li .entry-title {
+	display: block;
+	font-size: 20px;
+	font-size: 1.25rem;
+}
+
+.related-posts-list li .entry-meta {
+	display: block;
+	margin: 0 0 0.5em;
+	padding: 0;
+	font-size: 12px;
+	font-size: 0.75rem;
 }
 
 /*--------------------------------------------------------------
@@ -77,14 +109,14 @@ ul.related-posts-list {
 }
 
 .related-posts-columns {
-	margin-right: -1em;
+	margin-right: -1.5em;
 }
 
 .related-posts-columns .related-post-column {
 	float: left;
 	box-sizing: border-box;
-	margin-bottom: 2em;
-	padding-right: 2em;
+	margin-bottom: 1.5em;
+	padding-right: 1.5em;
 }
 
 .related-posts-two-columns .related-post-column {
@@ -112,8 +144,8 @@ ul.related-posts-list {
 }
 
 .related-posts-two-columns .related-post-column .entry-title {
-	font-size: 24px;
-	font-size: 1.5rem;
+	font-size: 18px;
+	font-size: 1.125rem;
 }
 
 .related-posts-three-columns .related-post-column .entry-title {
@@ -126,32 +158,9 @@ ul.related-posts-list {
 	font-size: 0.9375rem;
 }
 
-.related-posts-three-columns .related-post-column .entry-meta,
-.related-posts-four-columns .related-post-column .entry-meta {
-	font-size: 12px;
-	font-size: 0.75rem;
-}
-
-
 .related-posts-four-columns .related-post-column .entry-meta .meta-date,
 .related-posts-four-columns .related-post-column .entry-meta .meta-author  {
 	display: block;
-}
-
-.related-posts-four-columns .related-post-column .entry-meta .meta-date:after {
-	display: none;
-}
-
-.related-posts-columns .related-post-column .wp-post-image {
-	margin: 0 0 0.5em 0;
-	padding: 0;
-	border: none;
-}
-
-.related-posts-columns .related-post-column .entry-meta {
-	margin: 0.3em 0 0;
-	padding: 0;
-	border-top: none;
 }
 
 /*--------------------------------------------------------------
@@ -161,19 +170,17 @@ ul.related-posts-list {
 @media only screen and (max-width: 80em) {
 	/* Columns */
 	.related-posts-two-columns .related-post-column .entry-title {
-		font-size: 22px;
-		font-size: 1.375rem;
+		font-size: 17px;
+		font-size: 1.0625rem;
 	}
-
 }
 
 @media only screen and (max-width: 70em) {
 	/* Columns */
 	.related-posts-two-columns .related-post-column .entry-title {
-		font-size: 20px;
-		font-size: 1.25rem;
+		font-size: 16px;
+		font-size: 1rem;
 	}
-
 }
 
 @media only screen and (max-width: 50em) {
@@ -187,14 +194,10 @@ ul.related-posts-list {
 	}
 
 	.related-posts-two-columns .related-post-column .entry-title,
+	.related-posts-three-columns .related-post-column .entry-title,
 	.related-posts-four-columns .related-post-column .entry-title {
-		font-size: 18px;
-		font-size: 1.125rem;
-	}
-
-	.related-posts-two-columns .related-post-column .entry-meta {
-		font-size: 12px;
-		font-size: 0.75rem;
+		font-size: 15px;
+		font-size: 0.9375rem;
 	}
 
 	.related-posts-four-columns .related-post-column .entry-meta .meta-date,
@@ -202,17 +205,9 @@ ul.related-posts-list {
 		display: inline;
 	}
 
-	.related-posts-four-columns .related-post-column .entry-meta .meta-date:after {
-		display: inline-block;
-	}
-
 	/* List */
-	.related-posts-list li .wp-post-image {
-		max-width: 25%;
-	}
-
 	.related-posts-list li .entry-header {
-		margin-top: 0;
+		margin-top: 0.25em;
 	}
 
 	.related-posts-list li .entry-title {
@@ -222,12 +217,19 @@ ul.related-posts-list {
 }
 
 @media only screen and (max-width: 40em) {
-	.related-posts-two-columns .related-post-column .entry-title,
-	.related-posts-four-columns .related-post-column .entry-title {
+	/* List */
+	.related-posts-list li .wp-post-image {
+		max-width: 30%;
+	}
+
+	.related-posts-list li .entry-header {
+		margin-top: 0.25em;
+	}
+
+	.related-posts-list li .entry-title {
 		font-size: 16px;
 		font-size: 1rem;
 	}
-
 }
 
 @media only screen and (max-width: 35em) {
@@ -242,6 +244,33 @@ ul.related-posts-list {
 		width: 100%;
 	}
 
+	.related-posts-three-columns .related-post-column .entry-title {
+		font-size: 17px;
+		font-size: 1.0625rem;
+	}
+
+	/* List */
+	.related-posts-list li .wp-post-image {
+		float: none;
+		margin: 0;
+		max-width: 100%;
+	}
+
+	.related-posts-list li .entry-header {
+		margin: 0;
+		padding: 0.5rem 1rem;
+	}
+
+	.related-posts-list li .entry-title {
+		font-size: 17px;
+		font-size: 1.0625rem;
+	}
+
+	.related-posts-list li .entry-meta {
+		display: block;
+		margin: -0.5rem 0 0;
+		padding: 0 1rem 0.5rem;
+	}
 }
 
 @media only screen and (max-width: 25em) {
@@ -258,13 +287,15 @@ ul.related-posts-list {
 		width: 100%;
 	}
 
-	/* List */
-	.related-posts-list li .wp-post-image {
-		float: none;
-		margin: 0 0 0.5em 0;
-		max-width: 100%;
+	.related-posts-three-columns .related-post-column .entry-title {
+		font-size: 15px;
+		font-size: 0.9375rem;
 	}
 
+	.related-posts-list li .entry-title {
+		font-size: 15px;
+		font-size: 0.9375rem;
+	}
 }
 
 @media only screen and (max-width: 20em) {
@@ -277,5 +308,4 @@ ul.related-posts-list {
 	.related-posts-four-columns .related-post-column .entry-meta .meta-date:after {
 		display: none;
 	}
-
 }

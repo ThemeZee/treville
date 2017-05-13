@@ -14,10 +14,18 @@ function treville_theme_addons_setup() {
 	add_theme_support( 'treville-pro' );
 
 	// Add theme support for ThemeZee Plugins.
-	add_theme_support( 'themezee-widget-bundle' );
 	add_theme_support( 'themezee-breadcrumbs' );
-	add_theme_support( 'themezee-related-posts' );
 	add_theme_support( 'themezee-mega-menu', array( 'primary', 'secondary' ) );
+
+	// Add theme support for Widget Bundle.
+	add_theme_support( 'themezee-widget-bundle', array(
+		'thumbnail_size' => array( 90, 70 ),
+	) );
+
+	// Add theme support for Related Posts.
+	add_theme_support( 'themezee-related-posts', array(
+		'thumbnail_size' => array( 450, 240 ),
+	) );
 
 	// Add theme support for Infinite Scroll.
 	add_theme_support( 'infinite-scroll', array(
@@ -25,6 +33,9 @@ function treville_theme_addons_setup() {
 		'footer_widgets' => array( 'footer-left', 'footer-center-left', 'footer-center-right', 'footer-right' ),
 		'render'         => 'treville_infinite_scroll_render',
 	) );
+
+	// Add Theme Support for wooCommerce.
+	add_theme_support( 'woocommerce' );
 
 }
 add_action( 'after_setup_theme', 'treville_theme_addons_setup' );
@@ -71,3 +82,25 @@ function treville_infinite_scroll_render() {
 	}
 
 }
+
+
+/**
+ * Set wrapper start for wooCommerce
+ */
+function treville_wrapper_start() {
+	echo '<section id="primary" class="content-area">';
+	echo '<main id="main" class="site-main" role="main">';
+}
+remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10 );
+add_action( 'woocommerce_before_main_content', 'treville_wrapper_start', 10 );
+
+
+/**
+ * Set wrapper end for wooCommerce
+ */
+function treville_wrapper_end() {
+	echo '</main><!-- #main -->';
+	echo '</section><!-- #primary -->';
+}
+remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10 );
+add_action( 'woocommerce_after_main_content', 'treville_wrapper_end', 10 );
