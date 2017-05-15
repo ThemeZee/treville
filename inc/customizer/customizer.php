@@ -108,7 +108,7 @@ function treville_customize_partial_blogdescription() {
  * Embed JS file to make Theme Customizer preview reload changes asynchronously.
  */
 function treville_customize_preview_js() {
-	wp_enqueue_script( 'treville-customizer-preview', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20170327', true );
+	wp_enqueue_script( 'treville-customizer-preview', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20170515', true );
 }
 add_action( 'customize_preview_init', 'treville_customize_preview_js' );
 
@@ -117,7 +117,7 @@ add_action( 'customize_preview_init', 'treville_customize_preview_js' );
  * Embed CSS styles for the theme options in the Customizer
  */
 function treville_customize_preview_css() {
-	wp_enqueue_style( 'treville-customizer-css', get_template_directory_uri() . '/css/customizer.css', array(), '20170327' );
+	wp_enqueue_style( 'treville-customizer-css', get_template_directory_uri() . '/css/customizer.css', array(), '20170515' );
 }
 add_action( 'customize_controls_print_styles', 'treville_customize_preview_css' );
 
