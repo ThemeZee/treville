@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Treville\n"
 "Report-Msgid-Bugs-To: https://themezee.com/\n"
-"POT-Creation-Date: 2017-03-27 16:30+0200\n"
+"POT-Creation-Date: 2017-05-17 11:25+0200\n"
 "PO-Revision-Date: 2016-09-16 10:21+0100\n"
 "Last-Translator: \n"
 "Language-Team: ThemeZee <support@themezee.com>\n"
@@ -45,26 +45,26 @@ msgid "Comments are closed."
 msgstr ""
 
 #: functions.php:43
-msgid "Main Navigation"
+msgid "Top Navigation"
 msgstr ""
 
 #: functions.php:44
-msgid "Header Bottom"
+msgid "Main Navigation"
 msgstr ""
 
-#: functions.php:107
+#: functions.php:104
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:109
+#: functions.php:106
 msgid "Appears on posts and pages except the full width template."
 msgstr ""
 
-#: functions.php:117
+#: functions.php:114
 msgid "Magazine Homepage"
 msgstr ""
 
-#: functions.php:119
+#: functions.php:116
 msgid ""
 "Appears on Magazine Homepage template only. You can use the Magazine Posts "
 "widgets here."
@@ -133,7 +133,9 @@ msgid "Rate this theme"
 msgstr ""
 
 #: inc/customizer/functions/custom-controls.php:65
-#: inc/widgets/widget-magazine-posts-grid.php:201
+#: inc/widgets/widget-magazine-columns.php:256
+#: inc/widgets/widget-magazine-columns.php:277
+#: inc/widgets/widget-magazine-grid.php:201
 msgid "All Categories"
 msgstr ""
 
@@ -383,38 +385,69 @@ msgstr ""
 msgid "rate it"
 msgstr ""
 
-#: inc/widgets/widget-magazine-posts-grid.php:24
+#: inc/widgets/widget-magazine-columns.php:24
+msgid "Magazine (Columns)"
+msgstr ""
+
+#: inc/widgets/widget-magazine-columns.php:27
+msgid ""
+"Displays your posts from two selected categories. Please use this widget "
+"ONLY in the Magazine Homepage widget area."
+msgstr ""
+
+#: inc/widgets/widget-magazine-columns.php:247
+msgid "Left Category Title:"
+msgstr ""
+
+#: inc/widgets/widget-magazine-columns.php:253
+msgid "Left Category:"
+msgstr ""
+
+#: inc/widgets/widget-magazine-columns.php:268
+msgid "Right Category Title:"
+msgstr ""
+
+#: inc/widgets/widget-magazine-columns.php:274
+msgid "Right Category:"
+msgstr ""
+
+#: inc/widgets/widget-magazine-columns.php:289
+#: inc/widgets/widget-magazine-grid.php:221
+msgid "Number of posts:"
+msgstr ""
+
+#: inc/widgets/widget-magazine-columns.php:297
+msgid "Highlight first post (big image + excerpt)"
+msgstr ""
+
+#: inc/widgets/widget-magazine-grid.php:24
 msgid "Magazine (Grid)"
 msgstr ""
 
-#: inc/widgets/widget-magazine-posts-grid.php:27
+#: inc/widgets/widget-magazine-grid.php:27
 msgid ""
 "Displays your posts from a selected category in a grid layout. Please use "
 "this widget ONLY in the Magazine Homepage widget area."
 msgstr ""
 
-#: inc/widgets/widget-magazine-posts-grid.php:192
+#: inc/widgets/widget-magazine-grid.php:192
 msgid "Title:"
 msgstr ""
 
-#: inc/widgets/widget-magazine-posts-grid.php:198
+#: inc/widgets/widget-magazine-grid.php:198
 msgid "Category:"
 msgstr ""
 
-#: inc/widgets/widget-magazine-posts-grid.php:213
+#: inc/widgets/widget-magazine-grid.php:213
 msgid "Grid Layout:"
 msgstr ""
 
-#: inc/widgets/widget-magazine-posts-grid.php:215
+#: inc/widgets/widget-magazine-grid.php:215
 msgid "Two Columns Grid"
 msgstr ""
 
-#: inc/widgets/widget-magazine-posts-grid.php:216
+#: inc/widgets/widget-magazine-grid.php:216
 msgid "Three Columns Grid"
-msgstr ""
-
-#: inc/widgets/widget-magazine-posts-grid.php:221
-msgid "Number of posts:"
 msgstr ""
 
 #: search.php:20
