@@ -28,7 +28,7 @@ For more information about Treville please go to https://themezee.com/themes/tre
 
 = 1.0.3 =
 * improved styling of tagline and header area
-* updated Magazine widgets
+* added Magazine Column widget
 
 = 1.0.2 =
 * fixed small argument numbering issue in Customizer Control

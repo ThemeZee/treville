@@ -66,8 +66,8 @@ if ( ! function_exists( 'treville_setup' ) ) :
 		// Set up the WordPress core custom header feature.
 		add_theme_support( 'custom-header', apply_filters( 'treville_custom_header_args', array(
 			'header-text' => false,
-			'width'	=> 2500,
-			'height' => 500,
+			'width'	=> 1920,
+			'height' => 480,
 			'flex-height' => true,
 		) ) );
 
@@ -88,7 +88,7 @@ add_action( 'after_setup_theme', 'treville_setup' );
  * @global int $content_width
  */
 function treville_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'treville_content_width', 840 );
+	$GLOBALS['content_width'] = apply_filters( 'treville_content_width', 900 );
 }
 add_action( 'after_setup_theme', 'treville_content_width', 0 );
 
