@@ -7,18 +7,7 @@
  * @package Treville
  */
 
-get_header();
-
-// Get Theme Options from Database.
-$theme_options = treville_theme_options();
-
-// Display Slider.
-if ( true === $theme_options['slider_magazine'] ) :
-
-	get_template_part( 'template-parts/post-slider' );
-
-endif;
-?>
+get_header(); ?>
 
 	<section id="primary" class="content-magazine content-single content-area">
 		<main id="main" class="site-main" role="main">
