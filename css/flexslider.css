@@ -70,7 +70,8 @@ html[xmlns] .zeeflexslider .zeeslides {
  * ====================================================================================================================*/
 .post-slider-container {
 	overflow: hidden;
-	margin: 0;
+	margin: 0 auto;
+	max-width: 2560px;
 }
 
 .post-slider-wrap {
@@ -99,7 +100,7 @@ html[xmlns] .zeeflexslider .zeeslides {
 	margin: auto;
 	padding: 0;
 	max-width: 100%;
-	max-height: 480px;
+	max-height: 640px;
 	width: auto;
 	height: auto;
 	vertical-align: top;

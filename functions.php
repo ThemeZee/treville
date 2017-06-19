@@ -181,7 +181,7 @@ function treville_google_fonts_url() {
 function treville_add_image_sizes() {
 
 	// Add Slider Image Size.
-	add_image_size( 'treville-slider-image', 1920, 480, true );
+	add_image_size( 'treville-slider-image', 2560, 640, true );
 
 	// Add different thumbnail sizes for Magazine Posts widgets.
 	add_image_size( 'treville-thumbnail-small', 130, 100, true );
