@@ -143,7 +143,7 @@ function treville_scripts() {
 	wp_script_add_data( 'html5shiv', 'conditional', 'lt IE 9' );
 
 	// Register and enqueue navigation.js.
-	wp_enqueue_script( 'treville-jquery-navigation', get_template_directory_uri() . '/js/navigation.js', array( 'jquery' ), '20170105' );
+	wp_enqueue_script( 'treville-jquery-navigation', get_template_directory_uri() . '/js/navigation.js', array( 'jquery' ), '20170619' );
 
 	// Register and Enqueue Google Fonts.
 	wp_enqueue_style( 'treville-default-fonts', treville_google_fonts_url(), array(), null );

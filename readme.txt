@@ -26,6 +26,13 @@ For more information about Treville please go to https://themezee.com/themes/tre
 
 == Changelog ==
 
+= 1.0.4 =
+* increased slider image size to 2560 x 640 pixel
+* fixed alignment of site logo in MS Edge
+* ignore sticky posts in Magazine widgets
+* fixed PHP warning on Magazine Homepage template
+* fixed mobile navigation menu if top navigation position is empty
+
 = 1.0.3 =
 * improved styling of tagline and header area
 * added Magazine Column widget

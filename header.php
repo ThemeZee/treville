@@ -37,7 +37,7 @@
 
 				</div><!-- .site-branding -->
 
-				<div class="header-area">
+				<div id="header-navigation" class="header-area">
 
 					<?php if ( has_nav_menu( 'secondary' ) ) : ?>
 
@@ -54,7 +54,12 @@
 
 						</nav><!-- #top-navigation -->
 
-					<?php endif; ?>
+					<?php else :
+
+						// Create empty wrapper for mobile menu.
+						echo '<div class="top-navigation-menu-wrap"></div>';
+
+					endif; ?>
 
 					<?php do_action( 'treville_header_area' ); ?>
 

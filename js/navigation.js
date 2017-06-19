@@ -138,12 +138,12 @@
 		}
 
 		/* Add Menu Toggle Button for mobile navigation */
-		$("#top-navigation").before('<button id=\"top-navigation-toggle\" class=\"top-navigation-toggle\"></button>');
+		$( '#header-navigation' ).prepend( '<button id=\"top-navigation-toggle\" class=\"top-navigation-toggle\"></button>' );
 
 		/* Add dropdown slide animation for mobile devices */
-		$('#top-navigation-toggle').on('click', function(){
+		$( '#top-navigation-toggle' ).on( 'click', function() {
 			menu_wrap.slideToggle();
-			$( this ).toggleClass('active');
+			$( this ).toggleClass( 'active' );
 		});
 
 		/* Add submenus for mobile navigation menu */
