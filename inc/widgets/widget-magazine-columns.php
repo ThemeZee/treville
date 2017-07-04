@@ -24,7 +24,7 @@ class Treville_Magazine_Columns_Widget extends WP_Widget {
 			esc_html__( 'Magazine (Columns)', 'treville' ), // Name.
 			array(
 				'classname' => 'treville-magazine-columns-widget',
-				'description' => esc_html__( 'Displays your posts from two selected categories. Please use this widget ONLY in the Magazine Homepage widget area.', 'treville' ),
+				'description' => esc_html__( 'Displays your posts from two selected categories.', 'treville' ),
 				'customize_selective_refresh' => true,
 			) // Args.
 		);
@@ -36,12 +36,12 @@ class Treville_Magazine_Columns_Widget extends WP_Widget {
 	private function default_settings() {
 
 		$defaults = array(
-			'category_one'			=> 0,
-			'category_two'			=> 0,
-			'category_one_title'	=> '',
-			'category_two_title'	=> '',
-			'number'				=> 4,
-			'highlight_post'		=> true,
+			'category_one'       => 0,
+			'category_two'       => 0,
+			'category_one_title' => esc_html__( 'Left Category', 'treville' ),
+			'category_two_title' => esc_html__( 'Right Category', 'treville' ),
+			'number'             => 4,
+			'highlight_post'     => true,
 		);
 
 		return $defaults;

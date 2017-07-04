@@ -26,6 +26,10 @@ For more information about Treville please go to https://themezee.com/themes/tre
 
 == Changelog ==
 
+= 1.1 =
+* added improved Magazine Widget Customizer Control
+* added default widget titles for Magazine widgets
+
 = 1.0.4 =
 * increased slider image size to 2560 x 640 pixel
 * fixed alignment of site logo in MS Edge
