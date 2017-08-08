@@ -17,7 +17,7 @@
 
 	</header><!-- .entry-header -->
 
-	<?php treville_post_image(); ?>
+	<?php treville_post_image_archives(); ?>
 
 	<div class="post-content">
 
