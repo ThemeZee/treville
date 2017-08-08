@@ -18,14 +18,14 @@ function treville_customize_register_general_settings( $wp_customize ) {
 	$wp_customize->add_section( 'treville_section_general', array(
 		'title'    => esc_html__( 'General Settings', 'treville' ),
 		'priority' => 10,
-		'panel' => 'treville_options_panel',
+		'panel'    => 'treville_options_panel',
 	) );
 
 	// Add Settings and Controls for Layout.
 	$wp_customize->add_setting( 'treville_theme_options[layout]', array(
 		'default'           => 'right-sidebar',
-		'type'           	=> 'option',
-		'transport'         => 'refresh',
+		'type'              => 'option',
+		'transport'         => 'postMessage',
 		'sanitize_callback' => 'treville_sanitize_select',
 	) );
 
