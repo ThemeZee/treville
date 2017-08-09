@@ -22,20 +22,25 @@ get_header(); ?>
 
 			</header><!-- .page-header -->
 
-			<?php while ( have_posts() ) : the_post();
+			<div id="post-wrapper" class="post-wrapper clearfix">
 
-				if ( 'post' === get_post_type() ) :
+				<?php while ( have_posts() ) : the_post();
 
-					get_template_part( 'template-parts/content' );
+					if ( 'post' === get_post_type() ) :
 
-				else :
+						get_template_part( 'template-parts/content' );
 
-					get_template_part( 'template-parts/content', 'search' );
+					else :
 
-				endif;
+						get_template_part( 'template-parts/content', 'search' );
 
-			endwhile;
+					endif;
 
+				endwhile; ?>
+
+			</div>
+
+			<?php
 			treville_pagination();
 
 		else :

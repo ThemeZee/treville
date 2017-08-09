@@ -22,11 +22,15 @@ get_header(); ?>
 
 			</header><!-- .page-header -->
 
-			<?php while ( have_posts() ) : the_post();
+			<div id="post-wrapper" class="post-wrapper clearfix">
 
-				get_template_part( 'template-parts/content' );
+				<?php while ( have_posts() ) : the_post();
 
-			endwhile; ?>
+					get_template_part( 'template-parts/content' );
+
+				endwhile; ?>
+
+			</div>
 
 			<?php treville_pagination(); ?>
 

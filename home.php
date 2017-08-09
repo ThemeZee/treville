@@ -18,14 +18,19 @@ get_header(); ?>
 
 			treville_blog_title();
 
-			if ( have_posts() ) :
+			if ( have_posts() ) : ?>
 
-				while ( have_posts() ) : the_post();
+				<div id="post-wrapper" class="post-wrapper clearfix">
 
-					get_template_part( 'template-parts/content' );
+					<?php while ( have_posts() ) : the_post();
 
-				endwhile;
+						get_template_part( 'template-parts/content' );
 
+					endwhile; ?>
+
+				</div>
+
+				<?php
 				treville_pagination();
 
 			else :
