@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Treville\n"
 "Report-Msgid-Bugs-To: https://themezee.com/\n"
-"POT-Creation-Date: 2017-07-04 16:25+0200\n"
+"POT-Creation-Date: 2017-08-09 16:24+0200\n"
 "PO-Revision-Date: 2016-09-16 10:21+0100\n"
 "Last-Translator: \n"
 "Language-Team: ThemeZee <support@themezee.com>\n"
@@ -11,7 +11,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.12\n"
+"X-Generator: Poedit 2.0.3\n"
 "X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
 "_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
 "esc_html_x:1,2c\n"
@@ -31,11 +31,11 @@ msgid ""
 "of the links below?"
 msgstr ""
 
-#: comments.php:29 inc/template-tags.php:221
+#: comments.php:29 inc/template-tags.php:252
 msgid "One comment"
 msgstr ""
 
-#: comments.php:29 inc/template-tags.php:221
+#: comments.php:29 inc/template-tags.php:252
 #, php-format
 msgid "% comments"
 msgstr ""
@@ -44,27 +44,27 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: functions.php:43
+#: functions.php:44
 msgid "Top Navigation"
 msgstr ""
 
-#: functions.php:44
+#: functions.php:45
 msgid "Main Navigation"
 msgstr ""
 
-#: functions.php:104
+#: functions.php:105
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:106
+#: functions.php:107
 msgid "Appears on posts and pages except the full width template."
 msgstr ""
 
-#: functions.php:114
+#: functions.php:115
 msgid "Magazine Homepage"
 msgstr ""
 
-#: functions.php:116
+#: functions.php:117
 msgid ""
 "Appears on blog index and Magazine Homepage template. You can use the "
 "Magazine widgets here."
@@ -74,61 +74,61 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: inc/back-compat.php:41 inc/back-compat.php:51 inc/back-compat.php:64
+#: inc/back-compat.php:42 inc/back-compat.php:52 inc/back-compat.php:65
 #, php-format
 msgid ""
 "%1$s requires at least WordPress version %2$s. You are running version %3$s. "
 "Please upgrade and try again."
 msgstr ""
 
-#: inc/customizer/customizer.php:33 inc/theme-info.php:77
+#: inc/customizer/customizer.php:34 inc/theme-info.php:77
 msgid "Theme Options"
 msgstr ""
 
-#: inc/customizer/customizer.php:39
+#: inc/customizer/customizer.php:40
 msgid "Background"
 msgstr ""
 
-#: inc/customizer/customizer.php:64
+#: inc/customizer/customizer.php:65
 msgid "Display Site Title"
 msgstr ""
 
-#: inc/customizer/customizer.php:81
+#: inc/customizer/customizer.php:82
 msgid "Display Tagline"
 msgstr ""
 
-#: inc/customizer/customizer.php:136 inc/theme-info.php:46
+#: inc/customizer/customizer.php:137 inc/theme-info.php:46
 msgid "Theme Links"
 msgstr ""
 
-#: inc/customizer/customizer.php:139 inc/theme-info.php:47
+#: inc/customizer/customizer.php:140 inc/theme-info.php:47
 msgid "https://themezee.com/themes/treville/"
 msgstr ""
 
-#: inc/customizer/customizer.php:140 inc/theme-info.php:47
+#: inc/customizer/customizer.php:141 inc/theme-info.php:47
 msgid "Theme Page"
 msgstr ""
 
-#: inc/customizer/customizer.php:146 inc/theme-info.php:48
+#: inc/customizer/customizer.php:147 inc/theme-info.php:48
 msgid "Theme Demo"
 msgstr ""
 
-#: inc/customizer/customizer.php:151 inc/theme-info.php:49
+#: inc/customizer/customizer.php:152 inc/theme-info.php:49
 #: inc/theme-info.php:70
 msgid "https://themezee.com/docs/treville-documentation/"
 msgstr ""
 
-#: inc/customizer/customizer.php:152 inc/theme-info.php:49
+#: inc/customizer/customizer.php:153 inc/theme-info.php:49
 #: inc/theme-info.php:64
 msgid "Theme Documentation"
 msgstr ""
 
-#: inc/customizer/customizer.php:157 inc/theme-info.php:50
+#: inc/customizer/customizer.php:158 inc/theme-info.php:50
 #: inc/theme-info.php:153
 msgid "https://wordpress.org/support/theme/treville/reviews/?filter=5"
 msgstr ""
 
-#: inc/customizer/customizer.php:158 inc/theme-info.php:50
+#: inc/customizer/customizer.php:159 inc/theme-info.php:50
 msgid "Rate this theme"
 msgstr ""
 
@@ -178,72 +178,92 @@ msgstr ""
 msgid "Add Magazine Widget"
 msgstr ""
 
+#: inc/customizer/sections/customizer-blog.php:19
+msgid "Blog Settings"
+msgstr ""
+
+#: inc/customizer/sections/customizer-blog.php:33
+msgid "Blog Title"
+msgstr ""
+
+#: inc/customizer/sections/customizer-blog.php:55
+msgid "Blog Description"
+msgstr ""
+
+#: inc/customizer/sections/customizer-blog.php:71
+msgid "Magazine Widgets"
+msgstr ""
+
+#: inc/customizer/sections/customizer-blog.php:87
+msgid "Display Magazine widgets on blog index"
+msgstr ""
+
 #: inc/customizer/sections/customizer-general.php:19
 msgid "General Settings"
 msgstr ""
 
-#: inc/customizer/sections/customizer-general.php:34
+#: inc/customizer/sections/customizer-general.php:33
 msgid "Theme Layout"
 msgstr ""
 
-#: inc/customizer/sections/customizer-general.php:40
+#: inc/customizer/sections/customizer-general.php:39
 msgid "Left Sidebar"
 msgstr ""
 
-#: inc/customizer/sections/customizer-general.php:41
+#: inc/customizer/sections/customizer-general.php:40
 msgid "Right Sidebar"
-msgstr ""
-
-#: inc/customizer/sections/customizer-general.php:55
-msgid "Blog Title"
-msgstr ""
-
-#: inc/customizer/sections/customizer-general.php:72
-msgid "Blog Description"
 msgstr ""
 
 #: inc/customizer/sections/customizer-post.php:19
 msgid "Post Settings"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:34
+#: inc/customizer/sections/customizer-post.php:33
 msgid "Excerpt Length"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:52
+#: inc/customizer/sections/customizer-post.php:43
 msgid "Post Meta"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:67
+#: inc/customizer/sections/customizer-post.php:59
 msgid "Display post date"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:83
+#: inc/customizer/sections/customizer-post.php:75
 msgid "Display post author"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:99
+#: inc/customizer/sections/customizer-post.php:91
 msgid "Display post comments"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:115
+#: inc/customizer/sections/customizer-post.php:107
 msgid "Display post categories"
 msgstr ""
 
+#: inc/customizer/sections/customizer-post.php:117
+msgid "Single Posts"
+msgstr ""
+
 #: inc/customizer/sections/customizer-post.php:133
-msgid "Single Post Features"
-msgstr ""
-
-#: inc/customizer/sections/customizer-post.php:149
-msgid "Display featured image on single posts"
-msgstr ""
-
-#: inc/customizer/sections/customizer-post.php:165
 msgid "Display post tags on single posts"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:181
+#: inc/customizer/sections/customizer-post.php:149
 msgid "Display post navigation on single posts"
+msgstr ""
+
+#: inc/customizer/sections/customizer-post.php:159
+msgid "Featured Images"
+msgstr ""
+
+#: inc/customizer/sections/customizer-post.php:175
+msgid "Display on blog and archives"
+msgstr ""
+
+#: inc/customizer/sections/customizer-post.php:191
+msgid "Display on single posts"
 msgstr ""
 
 #: inc/customizer/sections/customizer-slider.php:19
@@ -286,56 +306,56 @@ msgstr ""
 msgid "More Features"
 msgstr ""
 
-#: inc/magazine.php:39
+#: inc/magazine.php:47
 msgid ""
 "Please go to Customize &#8594; Widgets and add at least one widget to the "
 "Magazine Homepage widget area."
 msgstr ""
 
-#: inc/magazine.php:60
+#: inc/magazine.php:68
 #, php-format
 msgid "View all posts from category %s"
 msgstr ""
 
-#: inc/template-tags.php:202
+#: inc/template-tags.php:233
 #, php-format
 msgid "View all posts by %s"
 msgstr ""
 
-#: inc/template-tags.php:221
+#: inc/template-tags.php:252
 msgid "Leave a comment"
 msgstr ""
 
-#: inc/template-tags.php:281
+#: inc/template-tags.php:312
 msgid "Continue reading &raquo;"
 msgstr ""
 
-#: inc/template-tags.php:300
+#: inc/template-tags.php:331
 msgctxt "post navigation"
 msgid "Previous Post"
 msgstr ""
 
-#: inc/template-tags.php:301
+#: inc/template-tags.php:332
 msgctxt "post navigation"
 msgid "Next Post"
 msgstr ""
 
-#: inc/template-tags.php:354
+#: inc/template-tags.php:385
 msgctxt "pagination"
 msgid "Previous Posts"
 msgstr ""
 
-#: inc/template-tags.php:355
+#: inc/template-tags.php:386
 msgctxt "pagination"
 msgid "Next Posts"
 msgstr ""
 
-#: inc/template-tags.php:369
+#: inc/template-tags.php:400
 #, php-format
 msgid "Powered by %1$s and %2$s."
 msgstr ""
 
-#: inc/template-tags.php:370
+#: inc/template-tags.php:401
 msgid "http://wordpress.org"
 msgstr ""
 
