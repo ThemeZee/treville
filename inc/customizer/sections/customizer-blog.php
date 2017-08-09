@@ -14,7 +14,7 @@
  */
 function treville_customize_register_blog_settings( $wp_customize ) {
 
-	// Add Sections for Post Settings.
+	// Add Section for Blog Settings.
 	$wp_customize->add_section( 'treville_section_blog', array(
 		'title'    => esc_html__( 'Blog Settings', 'treville' ),
 		'priority' => 25,

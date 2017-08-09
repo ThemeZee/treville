@@ -14,17 +14,17 @@
  */
 function treville_customize_register_post_settings( $wp_customize ) {
 
-	// Add Sections for Post Settings.
+	// Add Section for Post Settings.
 	$wp_customize->add_section( 'treville_section_post', array(
 		'title'    => esc_html__( 'Post Settings', 'treville' ),
 		'priority' => 30,
-		'panel' => 'treville_options_panel',
+		'panel'    => 'treville_options_panel',
 	) );
 
 	// Add Setting and Control for Excerpt Length.
 	$wp_customize->add_setting( 'treville_theme_options[excerpt_length]', array(
 		'default'           => 50,
-		'type'           	=> 'option',
+		'type'              => 'option',
 		'transport'         => 'postMessage',
 		'sanitize_callback' => 'absint',
 	) );
@@ -37,26 +37,20 @@ function treville_customize_register_post_settings( $wp_customize ) {
 		'priority' => 10,
 	) );
 
-	// Add Post Meta Settings.
-	$wp_customize->add_setting( 'treville_theme_options[post_meta_headline]', array(
-		'default'           => '',
-		'type'           	=> 'option',
-		'transport'         => 'refresh',
-		'sanitize_callback' => 'esc_attr',
-	) );
-
+	// Add Post Details Headline.
 	$wp_customize->add_control( new Treville_Customize_Header_Control(
 		$wp_customize, 'treville_theme_options[post_meta_headline]', array(
-			'label' => esc_html__( 'Post Meta', 'treville' ),
-			'section' => 'treville_section_post',
-			'settings' => 'treville_theme_options[post_meta_headline]',
+			'label'    => esc_html__( 'Post Meta', 'treville' ),
+			'section'  => 'treville_section_post',
+			'settings' => array(),
 			'priority' => 20,
 		)
 	) );
 
+	// Add Meta Date setting and control.
 	$wp_customize->add_setting( 'treville_theme_options[meta_date]', array(
 		'default'           => true,
-		'type'           	=> 'option',
+		'type'              => 'option',
 		'transport'         => 'postMessage',
 		'sanitize_callback' => 'treville_sanitize_checkbox',
 	) );
@@ -69,9 +63,10 @@ function treville_customize_register_post_settings( $wp_customize ) {
 		'priority' => 30,
 	) );
 
+	// Add Meta Author setting and control.
 	$wp_customize->add_setting( 'treville_theme_options[meta_author]', array(
 		'default'           => true,
-		'type'           	=> 'option',
+		'type'              => 'option',
 		'transport'         => 'postMessage',
 		'sanitize_callback' => 'treville_sanitize_checkbox',
 	) );
@@ -84,9 +79,10 @@ function treville_customize_register_post_settings( $wp_customize ) {
 		'priority' => 40,
 	) );
 
+	// Add Meta Comments setting and control.
 	$wp_customize->add_setting( 'treville_theme_options[meta_comments]', array(
 		'default'           => true,
-		'type'           	=> 'option',
+		'type'              => 'option',
 		'transport'         => 'postMessage',
 		'sanitize_callback' => 'treville_sanitize_checkbox',
 	) );
@@ -99,9 +95,10 @@ function treville_customize_register_post_settings( $wp_customize ) {
 		'priority' => 50,
 	) );
 
+	// Add Meta Category setting and control.
 	$wp_customize->add_setting( 'treville_theme_options[meta_category]', array(
 		'default'           => true,
-		'type'           	=> 'option',
+		'type'              => 'option',
 		'transport'         => 'postMessage',
 		'sanitize_callback' => 'treville_sanitize_checkbox',
 	) );
@@ -114,26 +111,20 @@ function treville_customize_register_post_settings( $wp_customize ) {
 		'priority' => 60,
 	) );
 
-	// Add Single Post Settings.
-	$wp_customize->add_setting( 'treville_theme_options[single_post_headline]', array(
-		'default'           => '',
-		'type'           	=> 'option',
-		'transport'         => 'refresh',
-		'sanitize_callback' => 'esc_attr',
-	) );
-
+	// Add Single Posts Headline.
 	$wp_customize->add_control( new Treville_Customize_Header_Control(
 		$wp_customize, 'treville_theme_options[single_post_headline]', array(
-			'label' => esc_html__( 'Single Post Features', 'treville' ),
-			'section' => 'treville_section_post',
-			'settings' => 'treville_theme_options[single_post_headline]',
+			'label'    => esc_html__( 'Single Posts', 'treville' ),
+			'section'  => 'treville_section_post',
+			'settings' => array(),
 			'priority' => 70,
 		)
 	) );
 
+	// Add Meta Tags setting and control.
 	$wp_customize->add_setting( 'treville_theme_options[meta_tags]', array(
 		'default'           => true,
-		'type'           	=> 'option',
+		'type'              => 'option',
 		'transport'         => 'postMessage',
 		'sanitize_callback' => 'treville_sanitize_checkbox',
 	) );
@@ -146,9 +137,10 @@ function treville_customize_register_post_settings( $wp_customize ) {
 		'priority' => 80,
 	) );
 
+	// Add Post Navigation setting and control.
 	$wp_customize->add_setting( 'treville_theme_options[post_navigation]', array(
 		'default'           => true,
-		'type'           	=> 'option',
+		'type'              => 'option',
 		'transport'         => 'postMessage',
 		'sanitize_callback' => 'treville_sanitize_checkbox',
 	) );
