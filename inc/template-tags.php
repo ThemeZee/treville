@@ -88,24 +88,33 @@ endif;
 
 if ( ! function_exists( 'treville_blog_title' ) ) :
 	/**
-	 * Displays the archive title and archive description for the blog index
+	 * Displays the blog title and description on the blog index (home.php)
 	 */
 	function treville_blog_title() {
 
 		// Get theme options from database.
 		$theme_options = treville_theme_options();
 
+		// Set blog title and descripton.
+		$blog_title = $theme_options['blog_title'];
+		$blog_description = $theme_options['blog_description'];
+
 		// Display Blog Title.
-		if ( '' !== $theme_options['blog_title'] ) : ?>
+		if ( '' !== $blog_title || '' !== $blog_description || is_customize_preview() ) : ?>
 
-			<header class="page-header clearfix">
+			<header class="page-header blog-header clearfix">
 
-				<h1 class="archive-title"><?php echo wp_kses_post( $theme_options['blog_title'] ); ?></h1>
+				<?php // Display Blog Title.
+				if ( '' !== $blog_title || is_customize_preview() ) : ?>
 
-				<?php // Display Blog Description
-				if ( '' !== $theme_options['blog_description'] ) : ?>
+					<h2 class="archive-title blog-title"><?php echo wp_kses_post( $blog_title ); ?></h2>
 
-					<div class="homepage-description"><?php echo wp_kses_post( $theme_options['blog_description'] ); ?></div>
+				<?php endif;
+
+				// Display Blog Description.
+				if ( '' !== $blog_description || is_customize_preview() ) : ?>
+
+					<div class="blog-description"><?php echo wp_kses_post( $blog_description ); ?></div>
 
 				<?php endif; ?>
 

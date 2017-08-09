@@ -1787,13 +1787,13 @@ body.date-hidden.author-hidden.comments-hidden .content-area .type-post .entry-m
 	font-family: 'Magra', Tahoma, Arial;
 }
 
-.homepage-description,
+.blog-description,
 .archive-description {
 	border-top: 1px solid rgba(0,0,0,0.1);
 	padding: 0.75em 1em;
 }
 
-.homepage-description:empty {
+.blog-description:empty {
 	display: none;
 }
 

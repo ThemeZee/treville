@@ -18,14 +18,14 @@ function treville_customize_register_blog_settings( $wp_customize ) {
 	$wp_customize->add_section( 'treville_section_blog', array(
 		'title'    => esc_html__( 'Blog Settings', 'treville' ),
 		'priority' => 25,
-		'panel' => 'treville_options_panel',
+		'panel'    => 'treville_options_panel',
 	) );
 
 	// Add Blog Title setting and control.
 	$wp_customize->add_setting( 'treville_theme_options[blog_title]', array(
 		'default'           => '',
-		'type'           	=> 'option',
-		'transport'         => 'refresh',
+		'type'              => 'option',
+		'transport'         => 'postMessage',
 		'sanitize_callback' => 'wp_kses_post',
 	) );
 
@@ -37,11 +37,17 @@ function treville_customize_register_blog_settings( $wp_customize ) {
 		'priority' => 10,
 	) );
 
+	$wp_customize->selective_refresh->add_partial( 'treville_theme_options[blog_title]', array(
+		'selector'         => '.blog-header .blog-title',
+		'render_callback'  => 'treville_customize_partial_blog_title',
+		'fallback_refresh' => false,
+	) );
+
 	// Add Blog Description setting and control.
 	$wp_customize->add_setting( 'treville_theme_options[blog_description]', array(
 		'default'           => '',
-		'type'           	=> 'option',
-		'transport'         => 'refresh',
+		'type'              => 'option',
+		'transport'         => 'postMessage',
 		'sanitize_callback' => 'wp_kses_post',
 	) );
 
@@ -51,6 +57,12 @@ function treville_customize_register_blog_settings( $wp_customize ) {
 		'settings' => 'treville_theme_options[blog_description]',
 		'type'     => 'textarea',
 		'priority' => 20,
+	) );
+
+	$wp_customize->selective_refresh->add_partial( 'treville_theme_options[blog_description]', array(
+		'selector'         => '.blog-header .blog-description',
+		'render_callback'  => 'treville_customize_partial_blog_description',
+		'fallback_refresh' => false,
 	) );
 
 	// Add Magazine Widgets Headline.
@@ -80,3 +92,19 @@ function treville_customize_register_blog_settings( $wp_customize ) {
 	) );
 }
 add_action( 'customize_register', 'treville_customize_register_blog_settings' );
+
+/**
+ * Render the blog title for the selective refresh partial.
+ */
+function treville_customize_partial_blog_title() {
+	$theme_options = treville_theme_options();
+	echo wp_kses_post( $theme_options['blog_title'] );
+}
+
+/**
+ * Render the blog description for the selective refresh partial.
+ */
+function treville_customize_partial_blog_description() {
+	$theme_options = treville_theme_options();
+	echo wp_kses_post( $theme_options['blog_description'] );
+}
