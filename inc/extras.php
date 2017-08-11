@@ -83,6 +83,9 @@ function treville_hide_elements() {
 		$elements[] = '.type-post .post-navigation';
 	}
 
+	// Allow plugins to add own elements.
+	$elements = apply_filters( 'treville_hide_elements', $elements );
+
 	// Return early if no elements are hidden.
 	if ( empty( $elements ) ) {
 		return;
