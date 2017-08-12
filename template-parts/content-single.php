@@ -35,12 +35,13 @@
 		<footer class="entry-footer">
 
 			<?php treville_entry_categories(); ?>
-
 			<?php treville_entry_tags(); ?>
 
 		</footer><!-- .entry-footer -->
 
 	</div>
+
+	<?php do_action( 'treville_author_bio' ); ?>
 
 	<?php treville_post_navigation(); ?>
 
