@@ -26,6 +26,11 @@ For more information about Treville please go to https://themezee.com/themes/tre
 
 == Changelog ==
 
+= 1.2.1 =
+* added action hook for author bio
+* added filter to allow plugins to add own elements to be hidden
+* fixed RTL layout styling
+
 = 1.2 =
 * added new section for Blog Settings in Customizer
 * added setting to disable Magazine widgets on blog index
