@@ -117,6 +117,15 @@ add_action( 'customize_preview_init', 'treville_customize_preview_js' );
 
 
 /**
+ * Embed JS for Customizer Controls.
+ */
+function treville_customizer_controls_js() {
+	wp_enqueue_script( 'treville-customizer-controls', get_template_directory_uri() . '/assets/js/customizer-controls.js', array(), '20180608', true );
+}
+add_action( 'customize_controls_enqueue_scripts', 'treville_customizer_controls_js' );
+
+
+/**
  * Embed CSS styles for the theme options in the Customizer
  */
 function treville_customize_preview_css() {

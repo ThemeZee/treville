@@ -24,7 +24,7 @@ get_header(); ?>
 
 					<?php while ( have_posts() ) : the_post();
 
-						get_template_part( 'template-parts/content' );
+						get_template_part( 'template-parts/content', esc_attr( treville_get_option( 'blog_layout' ) ) );
 
 					endwhile; ?>
 

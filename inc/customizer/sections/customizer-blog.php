@@ -65,13 +65,60 @@ function treville_customize_register_blog_settings( $wp_customize ) {
 		'fallback_refresh' => false,
 	) );
 
+	// Add Settings and Controls for blog layout.
+	$wp_customize->add_setting( 'treville_theme_options[blog_layout]', array(
+		'default'           => 'excerpt',
+		'type'              => 'option',
+		'transport'         => 'postMessage',
+		'sanitize_callback' => 'treville_sanitize_select',
+	) );
+
+	$wp_customize->add_control( 'treville_theme_options[blog_layout]', array(
+		'label'    => esc_html__( 'Blog Layout', 'treville' ),
+		'section'  => 'treville_section_blog',
+		'settings' => 'treville_theme_options[blog_layout]',
+		'type'     => 'radio',
+		'priority' => 30,
+		'choices'  => array(
+			'index'   => esc_html__( 'Display full posts', 'treville' ),
+			'excerpt' => esc_html__( 'Display post excerpts', 'treville' ),
+		),
+	) );
+
+	// Add Setting and Control for Excerpt Length.
+	$wp_customize->add_setting( 'treville_theme_options[excerpt_length]', array(
+		'default'           => 50,
+		'type'              => 'option',
+		'transport'         => 'postMessage',
+		'sanitize_callback' => 'absint',
+	) );
+
+	$wp_customize->add_control( 'treville_theme_options[excerpt_length]', array(
+		'label'    => esc_html__( 'Excerpt Length', 'treville' ),
+		'section'  => 'treville_section_blog',
+		'settings' => 'treville_theme_options[excerpt_length]',
+		'type'     => 'text',
+		'priority' => 40,
+	) );
+
+	// Add Partial for Blog Layout and Excerpt Length.
+	$wp_customize->selective_refresh->add_partial( 'treville_blog_layout_partial', array(
+		'selector'         => '.site-main .post-wrapper',
+		'settings'         => array(
+			'treville_theme_options[blog_layout]',
+			'treville_theme_options[excerpt_length]',
+		),
+		'render_callback'  => 'treville_customize_partial_blog_layout',
+		'fallback_refresh' => false,
+	) );
+
 	// Add Magazine Widgets Headline.
 	$wp_customize->add_control( new Treville_Customize_Header_Control(
 		$wp_customize, 'treville_theme_options[blog_magazine_widgets_title]', array(
 			'label'    => esc_html__( 'Magazine Widgets', 'treville' ),
 			'section'  => 'treville_section_blog',
 			'settings' => array(),
-			'priority' => 30,
+			'priority' => 50,
 		)
 	) );
 
@@ -88,7 +135,7 @@ function treville_customize_register_blog_settings( $wp_customize ) {
 		'section'  => 'treville_section_blog',
 		'settings' => 'treville_theme_options[blog_magazine_widgets]',
 		'type'     => 'checkbox',
-		'priority' => 40,
+		'priority' => 60,
 	) );
 }
 add_action( 'customize_register', 'treville_customize_register_blog_settings' );
@@ -107,4 +154,14 @@ function treville_customize_partial_blog_title() {
 function treville_customize_partial_blog_description() {
 	$theme_options = treville_theme_options();
 	echo wp_kses_post( $theme_options['blog_description'] );
+}
+
+/**
+ * Render the blog layout for the selective refresh partial.
+ */
+function treville_customize_partial_blog_layout() {
+	while ( have_posts() ) {
+		the_post();
+		get_template_part( 'template-parts/content', esc_attr( treville_get_option( 'blog_layout' ) ) );
+	}
 }

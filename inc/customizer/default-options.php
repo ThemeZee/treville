@@ -8,6 +8,25 @@
  */
 
 /**
+* Get a single theme option
+*
+* @return mixed
+*/
+function treville_get_option( $option_name = '' ) {
+
+	// Get all Theme Options from Database.
+	$theme_options = treville_theme_options();
+
+	// Return single option.
+	if ( isset( $theme_options[ $option_name ] ) ) {
+		return $theme_options[ $option_name ];
+	}
+
+	return false;
+}
+
+
+/**
  * Get saved user settings from database or theme defaults
  *
  * @return array
@@ -19,7 +38,6 @@ function treville_theme_options() {
 
 	// Return theme options.
 	return $theme_options;
-
 }
 
 
@@ -36,8 +54,9 @@ function treville_default_options() {
 		'layout'                => 'right-sidebar',
 		'blog_title'            => '',
 		'blog_description'      => '',
-		'blog_magazine_widgets' => true,
+		'blog_layout'           => 'excerpt',
 		'excerpt_length'        => 50,
+		'blog_magazine_widgets' => true,
 		'meta_date'             => true,
 		'meta_author'           => true,
 		'meta_comments'         => true,

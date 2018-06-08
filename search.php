@@ -28,7 +28,7 @@ get_header(); ?>
 
 					if ( 'post' === get_post_type() ) :
 
-						get_template_part( 'template-parts/content' );
+						get_template_part( 'template-parts/content', esc_attr( treville_get_option( 'blog_layout' ) ) );
 
 					else :
 
