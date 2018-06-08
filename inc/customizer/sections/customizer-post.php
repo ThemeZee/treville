@@ -79,6 +79,16 @@ function treville_customize_register_post_settings( $wp_customize ) {
 		'priority' => 40,
 	) );
 
+	// Add Single Posts Headline.
+	$wp_customize->add_control( new Treville_Customize_Header_Control(
+		$wp_customize, 'treville_theme_options[single_post_headline]', array(
+			'label'    => esc_html__( 'Single Posts', 'treville' ),
+			'section'  => 'treville_section_post',
+			'settings' => array(),
+			'priority' => 50,
+		)
+	) );
+
 	// Add Meta Category setting and control.
 	$wp_customize->add_setting( 'treville_theme_options[meta_category]', array(
 		'default'           => true,
@@ -92,17 +102,7 @@ function treville_customize_register_post_settings( $wp_customize ) {
 		'section'  => 'treville_section_post',
 		'settings' => 'treville_theme_options[meta_category]',
 		'type'     => 'checkbox',
-		'priority' => 50,
-	) );
-
-	// Add Single Posts Headline.
-	$wp_customize->add_control( new Treville_Customize_Header_Control(
-		$wp_customize, 'treville_theme_options[single_post_headline]', array(
-			'label'    => esc_html__( 'Single Posts', 'treville' ),
-			'section'  => 'treville_section_post',
-			'settings' => array(),
-			'priority' => 60,
-		)
+		'priority' => 60,
 	) );
 
 	// Add Meta Tags setting and control.
@@ -114,7 +114,7 @@ function treville_customize_register_post_settings( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( 'treville_theme_options[meta_tags]', array(
-		'label'    => esc_html__( 'Display post tags on single posts', 'treville' ),
+		'label'    => esc_html__( 'Display post tags', 'treville' ),
 		'section'  => 'treville_section_post',
 		'settings' => 'treville_theme_options[meta_tags]',
 		'type'     => 'checkbox',
@@ -130,7 +130,7 @@ function treville_customize_register_post_settings( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( 'treville_theme_options[post_navigation]', array(
-		'label'    => esc_html__( 'Display post navigation on single posts', 'treville' ),
+		'label'    => esc_html__( 'Display post navigation', 'treville' ),
 		'section'  => 'treville_section_post',
 		'settings' => 'treville_theme_options[post_navigation]',
 		'type'     => 'checkbox',

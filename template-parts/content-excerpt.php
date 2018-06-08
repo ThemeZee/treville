@@ -24,14 +24,9 @@
 		<div class="entry-content entry-excerpt clearfix">
 
 			<?php the_excerpt(); ?>
+			<?php treville_more_link(); ?>
 
 		</div><!-- .entry-content -->
-
-		<footer class="entry-footer">
-
-			<?php treville_entry_categories(); ?>
-
-		</footer><!-- .entry-footer -->
 
 	</div>
 

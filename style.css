@@ -1490,9 +1490,11 @@ textarea {
 	padding: 0.5em 1em;
 	background: #1177aa;
 	color: #fff;
+	text-transform: uppercase;
 	text-decoration: none;
-	font-size: 15px;
-	font-size: 0.9375rem;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
 }
 
 .more-link:link,

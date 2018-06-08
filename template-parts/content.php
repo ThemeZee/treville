@@ -27,12 +27,6 @@
 
 		</div><!-- .entry-content -->
 
-		<footer class="entry-footer">
-
-			<?php treville_entry_categories(); ?>
-
-		</footer><!-- .entry-footer -->
-
 	</div>
 
 </article>
