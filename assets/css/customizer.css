@@ -10,7 +10,8 @@
 	margin-bottom: 4px;
 }
 
-#customize-control-treville_theme_options-site_description {
+#customize-control-treville_theme_options-site_description,
+#customize-control-treville_theme_options-excerpt_length {
 	margin-bottom: 16px;
 }
 

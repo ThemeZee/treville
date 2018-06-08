@@ -112,13 +112,29 @@ function treville_customize_register_blog_settings( $wp_customize ) {
 		'fallback_refresh' => false,
 	) );
 
+	// Add Setting and Control for Read More Text.
+	$wp_customize->add_setting( 'treville_theme_options[read_more_text]', array(
+		'default'           => esc_html__( 'Continue reading', 'treville' ),
+		'type'              => 'option',
+		'transport'         => 'postMessage',
+		'sanitize_callback' => 'sanitize_text_field',
+	) );
+
+	$wp_customize->add_control( 'treville_theme_options[read_more_text]', array(
+		'label'    => esc_html__( 'Read More Text', 'treville' ),
+		'section'  => 'treville_section_blog',
+		'settings' => 'treville_theme_options[read_more_text]',
+		'type'     => 'text',
+		'priority' => 50,
+	) );
+
 	// Add Magazine Widgets Headline.
 	$wp_customize->add_control( new Treville_Customize_Header_Control(
 		$wp_customize, 'treville_theme_options[blog_magazine_widgets_title]', array(
 			'label'    => esc_html__( 'Magazine Widgets', 'treville' ),
 			'section'  => 'treville_section_blog',
 			'settings' => array(),
-			'priority' => 50,
+			'priority' => 60,
 		)
 	) );
 
@@ -135,7 +151,7 @@ function treville_customize_register_blog_settings( $wp_customize ) {
 		'section'  => 'treville_section_blog',
 		'settings' => 'treville_theme_options[blog_magazine_widgets]',
 		'type'     => 'checkbox',
-		'priority' => 60,
+		'priority' => 70,
 	) );
 }
 add_action( 'customize_register', 'treville_customize_register_blog_settings' );

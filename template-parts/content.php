@@ -23,7 +23,7 @@
 
 		<div class="entry-content entry-excerpt clearfix">
 
-			<?php the_content( esc_html__( 'Continue reading &raquo;', 'treville' ) ); ?>
+			<?php the_content( esc_html( treville_get_option( 'read_more_text' ) ) ); ?>
 
 		</div><!-- .entry-content -->
 

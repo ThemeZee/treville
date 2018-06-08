@@ -26,6 +26,12 @@ For more information about Treville please go to https://themezee.com/themes/tre
 
 == Changelog ==
 
+= 1.4 =
+* added new setting for Blog Layout (full posts vs excerpts)
+* added new setting to change Read More Text
+* changed display of categories to only show on single posts
+* added Continue Reading button to posts on blog and archives
+
 = 1.3 =
 * added default theme fonts as local fonts
 * use local fonts instead of Google fonts for GDPR compliance

@@ -56,6 +56,7 @@ function treville_default_options() {
 		'blog_description'      => '',
 		'blog_layout'           => 'excerpt',
 		'excerpt_length'        => 50,
+		'read_more_text'        => esc_html__( 'Continue reading', 'treville' ),
 		'blog_magazine_widgets' => true,
 		'meta_date'             => true,
 		'meta_author'           => true,
