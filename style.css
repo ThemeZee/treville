@@ -2016,6 +2016,11 @@ body.date-hidden.author-hidden.comments-hidden .content-area .type-post .entry-m
 	margin-bottom: 0.5em;
 }
 
+.comment-form input[type="checkbox"] + label {
+	display: inline;
+	padding: 0 5px;
+}
+
 /* Comment Reply */
 .comment .comment-respond {
 	margin-top: 1.5em;
