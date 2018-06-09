@@ -10,15 +10,15 @@
 	margin-bottom: 4px;
 }
 
-#customize-control-treville_theme_options-site_description,
-#customize-control-treville_theme_options-excerpt_length {
+#customize-control-treville_theme_options-site_description {
 	margin-bottom: 16px;
 }
 
-#customize-control-treville_theme_options-blog_title,
 #customize-control-treville_theme_options-blog_description,
+#customize-control-treville_theme_options-blog_layout,
+#customize-control-treville_theme_options-excerpt_length,
+#customize-control-treville_theme_options-read_more_text,
 #customize-control-treville_theme_options-blog_magazine_widgets_title,
-#customize-control-treville_theme_options-post_meta_headline,
 #customize-control-treville_theme_options-single_post_headline,
 #customize-control-treville_theme_options-featured_images,
 #customize-control-treville_theme_options-slider_category,
@@ -35,13 +35,18 @@
 	margin-bottom: 0;
 }
 
+#customize-control-treville_theme_options-blog_layout {
+	padding: 0;
+}
+
 #customize-control-treville_theme_options-blog_description textarea {
-	height: 5em;
+	height: 4em;
 }
 
 #customize-control-treville_theme_options-upgrade div {
 	margin: 4px 0 32px;
 }
+
 #customize-control-treville_theme_options-upgrade div .customize-control-title {
 	margin-bottom: 4px;
 }
