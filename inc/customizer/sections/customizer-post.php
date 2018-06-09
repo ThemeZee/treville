@@ -24,7 +24,7 @@ function treville_customize_register_post_settings( $wp_customize ) {
 	// Add Post Details Headline.
 	$wp_customize->add_control( new Treville_Customize_Header_Control(
 		$wp_customize, 'treville_theme_options[post_meta_headline]', array(
-			'label'    => esc_html__( 'Post Meta', 'treville' ),
+			'label'    => esc_html__( 'Post Details', 'treville' ),
 			'section'  => 'treville_section_post',
 			'settings' => array(),
 			'priority' => 10,
@@ -40,7 +40,7 @@ function treville_customize_register_post_settings( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( 'treville_theme_options[meta_date]', array(
-		'label'    => esc_html__( 'Display post date', 'treville' ),
+		'label'    => esc_html__( 'Display date', 'treville' ),
 		'section'  => 'treville_section_post',
 		'settings' => 'treville_theme_options[meta_date]',
 		'type'     => 'checkbox',
@@ -56,7 +56,7 @@ function treville_customize_register_post_settings( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( 'treville_theme_options[meta_author]', array(
-		'label'    => esc_html__( 'Display post author', 'treville' ),
+		'label'    => esc_html__( 'Display author', 'treville' ),
 		'section'  => 'treville_section_post',
 		'settings' => 'treville_theme_options[meta_author]',
 		'type'     => 'checkbox',
@@ -72,7 +72,7 @@ function treville_customize_register_post_settings( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( 'treville_theme_options[meta_comments]', array(
-		'label'    => esc_html__( 'Display post comments', 'treville' ),
+		'label'    => esc_html__( 'Display comments', 'treville' ),
 		'section'  => 'treville_section_post',
 		'settings' => 'treville_theme_options[meta_comments]',
 		'type'     => 'checkbox',
@@ -98,7 +98,7 @@ function treville_customize_register_post_settings( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( 'treville_theme_options[meta_category]', array(
-		'label'    => esc_html__( 'Display post categories', 'treville' ),
+		'label'    => esc_html__( 'Display categories', 'treville' ),
 		'section'  => 'treville_section_post',
 		'settings' => 'treville_theme_options[meta_category]',
 		'type'     => 'checkbox',
@@ -114,7 +114,7 @@ function treville_customize_register_post_settings( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( 'treville_theme_options[meta_tags]', array(
-		'label'    => esc_html__( 'Display post tags', 'treville' ),
+		'label'    => esc_html__( 'Display tags', 'treville' ),
 		'section'  => 'treville_section_post',
 		'settings' => 'treville_theme_options[meta_tags]',
 		'type'     => 'checkbox',
@@ -130,7 +130,7 @@ function treville_customize_register_post_settings( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( 'treville_theme_options[post_navigation]', array(
-		'label'    => esc_html__( 'Display post navigation', 'treville' ),
+		'label'    => esc_html__( 'Display previous/next post navigation', 'treville' ),
 		'section'  => 'treville_section_post',
 		'settings' => 'treville_theme_options[post_navigation]',
 		'type'     => 'checkbox',
@@ -156,7 +156,7 @@ function treville_customize_register_post_settings( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( 'treville_theme_options[post_image_archives]', array(
-		'label'    => esc_html__( 'Display on blog and archives', 'treville' ),
+		'label'    => esc_html__( 'Display images on blog and archives', 'treville' ),
 		'section'  => 'treville_section_post',
 		'settings' => 'treville_theme_options[post_image_archives]',
 		'type'     => 'checkbox',
@@ -178,7 +178,7 @@ function treville_customize_register_post_settings( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( 'treville_theme_options[post_image_single]', array(
-		'label'    => esc_html__( 'Display on single posts', 'treville' ),
+		'label'    => esc_html__( 'Display image on single posts', 'treville' ),
 		'section'  => 'treville_section_post',
 		'settings' => 'treville_theme_options[post_image_single]',
 		'type'     => 'checkbox',

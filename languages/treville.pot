@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Treville\n"
 "Report-Msgid-Bugs-To: https://themezee.com/\n"
-"POT-Creation-Date: 2018-06-08 11:50+0200\n"
+"POT-Creation-Date: 2018-06-09 13:06+0200\n"
 "PO-Revision-Date: 2016-09-16 10:21+0100\n"
 "Last-Translator: \n"
 "Language-Team: ThemeZee <support@themezee.com>\n"
@@ -244,19 +244,19 @@ msgid "Post Settings"
 msgstr ""
 
 #: inc/customizer/sections/customizer-post.php:27
-msgid "Post Meta"
+msgid "Post Details"
 msgstr ""
 
 #: inc/customizer/sections/customizer-post.php:43
-msgid "Display post date"
+msgid "Display date"
 msgstr ""
 
 #: inc/customizer/sections/customizer-post.php:59
-msgid "Display post author"
+msgid "Display author"
 msgstr ""
 
 #: inc/customizer/sections/customizer-post.php:75
-msgid "Display post comments"
+msgid "Display comments"
 msgstr ""
 
 #: inc/customizer/sections/customizer-post.php:85
@@ -264,15 +264,15 @@ msgid "Single Posts"
 msgstr ""
 
 #: inc/customizer/sections/customizer-post.php:101
-msgid "Display post categories"
+msgid "Display categories"
 msgstr ""
 
 #: inc/customizer/sections/customizer-post.php:117
-msgid "Display post tags"
+msgid "Display tags"
 msgstr ""
 
 #: inc/customizer/sections/customizer-post.php:133
-msgid "Display post navigation"
+msgid "Display previous/next post navigation"
 msgstr ""
 
 #: inc/customizer/sections/customizer-post.php:143
@@ -280,11 +280,11 @@ msgid "Featured Images"
 msgstr ""
 
 #: inc/customizer/sections/customizer-post.php:159
-msgid "Display on blog and archives"
+msgid "Display images on blog and archives"
 msgstr ""
 
 #: inc/customizer/sections/customizer-post.php:181
-msgid "Display on single posts"
+msgid "Display image on single posts"
 msgstr ""
 
 #: inc/customizer/sections/customizer-slider.php:19
