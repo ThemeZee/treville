@@ -26,6 +26,10 @@ For more information about Treville please go to https://themezee.com/themes/tre
 
 == Changelog ==
 
+= 1.4.1 =
+* updated text strings in post settings and language file
+* updated styling of controls in Customizer
+
 = 1.4 =
 * added new setting for Blog Layout (full posts vs excerpts)
 * added new setting to change Read More Text
