@@ -26,6 +26,11 @@ For more information about Treville please go to https://themezee.com/themes/tre
 
 == Changelog ==
 
+= 1.5 =
+* added styling for Gutenberg blocks
+* added custom color palette for Gutenberg
+* added editor styling for WordPress 5.0
+
 = 1.4.1 =
 * updated text strings in post settings and language file
 * updated styling of controls in Customizer
