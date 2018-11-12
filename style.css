@@ -4,7 +4,7 @@ Theme URI: https://themezee.com/themes/treville/
 Author: ThemeZee
 Author URI: https://themezee.com
 Description: An elegant Blogging & Magazine WordPress Theme with subtle colors and great typography. Treville supports two navigation menus, advanced post settings and a post slider with fullscreen images!
-Version: 1.5
+Version: 1.5.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: treville
@@ -1522,6 +1522,10 @@ textarea {
 
 .more-link:after {
 	content: " \00BB";
+}
+
+.entry-content > .more-link {
+	text-decoration: none;
 }
 
 /* Page Links | wp_link_pages() */
