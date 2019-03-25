@@ -403,10 +403,12 @@ function treville_footer_text() {
 	?>
 
 	<span class="credit-link">
-		<?php printf( esc_html__( 'Powered by %1$s and %2$s.', 'treville' ),
-			'<a href="' . esc_url( __( 'http://wordpress.org', 'treville' ) ) . '" title="WordPress">WordPress</a>',
+		<?php
+		// translators: Theme Name
+		printf( esc_html__( 'WordPress Theme: %s by ThemeZee.', 'treville' ),
 			'<a href="https://themezee.com/themes/treville/" title="Treville WordPress Theme">Treville</a>'
-		); ?>
+		);
+		?>
 	</span>
 
 	<?php

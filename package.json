@@ -2,6 +2,10 @@
   "name": "treville",
   "version": "1.0.0",
   "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+	"export": "git archive HEAD -9 --prefix treville/ --format=zip > ../../treville.zip"
+  },
   "devDependencies": {
     "autoprefixer": "^6.4.0",
     "gulp": "^3.9.1",
