@@ -106,6 +106,9 @@ if ( ! function_exists( 'treville_setup' ) ) :
 				'color' => '#454545',
 			),
 		) );
+
+		// Add support for responsive embed blocks.
+		add_theme_support( 'responsive-embeds' );
 	}
 endif;
 add_action( 'after_setup_theme', 'treville_setup' );
