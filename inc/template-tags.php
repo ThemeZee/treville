@@ -404,9 +404,10 @@ function treville_footer_text() {
 
 	<span class="credit-link">
 		<?php
-		// translators: Theme Name
-		printf( esc_html__( 'WordPress Theme: %s by ThemeZee.', 'treville' ),
-			'<a href="https://themezee.com/themes/treville/" title="Treville WordPress Theme">Treville</a>'
+		// translators: Theme Name and Link to ThemeZee.
+		printf( esc_html__( 'WordPress Theme: %1$s by %2$s.', 'treville' ),
+			esc_html__( 'Treville', 'treville' ),
+			'<a href="https://themezee.com/" target="_blank" rel="nofollow">ThemeZee</a>'
 		);
 		?>
 	</span>
