@@ -221,6 +221,19 @@ add_action( 'after_setup_theme', 'treville_add_image_sizes' );
 
 
 /**
+ * Make custom image sizes available in Gutenberg.
+ */
+function treville_add_image_size_names( $sizes ) {
+	return array_merge( $sizes, array(
+		'post-thumbnail'           => esc_html__( 'Treville Single Post', 'treville' ),
+		'treville-thumbnail-large' => esc_html__( 'Treville Magazine Post', 'treville' ),
+		'treville-thumbnail-small' => esc_html__( 'Treville Thumbnail', 'treville' ),
+	) );
+}
+add_filter( 'image_size_names_choose', 'treville_add_image_size_names' );
+
+
+/**
  * Include Files
  */
 
