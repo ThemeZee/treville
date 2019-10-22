@@ -47,7 +47,8 @@ function treville_theme_info_page() {
 				<a href="<?php echo esc_url( __( 'https://themezee.com/themes/treville/', 'treville' ) . '?utm_source=theme-info&utm_medium=textlink&utm_campaign=treville&utm_content=theme-page' ); ?>" target="_blank"><?php esc_html_e( 'Theme Page', 'treville' ); ?></a>
 				<a href="http://preview.themezee.com/?demo=treville&utm_source=theme-info&utm_campaign=treville" target="_blank"><?php esc_html_e( 'Theme Demo', 'treville' ); ?></a>
 				<a href="<?php echo esc_url( __( 'https://themezee.com/docs/treville-documentation/', 'treville' ) . '?utm_source=theme-info&utm_medium=textlink&utm_campaign=treville&utm_content=documentation' ); ?>" target="_blank"><?php esc_html_e( 'Theme Documentation', 'treville' ); ?></a>
-				<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/treville/reviews/?filter=5', 'treville' ) ); ?>" target="_blank"><?php esc_html_e( 'Rate this theme', 'treville' ); ?></a>
+				<a href="<?php echo esc_url( __( 'https://themezee.com/changelogs/?action=themezee-changelog&type=theme&slug=treville', 'treville' ) ); ?>" target="_blank"><?php esc_html_e( 'Theme Changelog', 'treville' ); ?></a>
+				<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/treville/reviews/', 'treville' ) ); ?>" target="_blank"><?php esc_html_e( 'Rate this theme', 'treville' ); ?></a>
 			</p>
 		</div>
 		<hr>
@@ -150,7 +151,7 @@ function treville_theme_info_page() {
 				<?php printf( esc_html__( '%1$s is proudly brought to you by %2$s. If you like this theme, %3$s :)', 'treville' ),
 					$theme->display( 'Name' ),
 					'<a target="_blank" href="' . __( 'https://themezee.com/', 'treville' ) . '?utm_source=theme-info&utm_medium=footer&utm_campaign=treville" title="ThemeZee">ThemeZee</a>',
-					'<a target="_blank" href="' . __( 'https://wordpress.org/support/theme/treville/reviews/?filter=5', 'treville' ) . '" title="' . esc_attr__( 'Review Treville', 'treville' ) . '">' . esc_html__( 'rate it', 'treville' ) . '</a>'
+					'<a target="_blank" href="' . __( 'https://wordpress.org/support/theme/treville/reviews/', 'treville' ) . '" title="' . esc_attr__( 'Review Treville', 'treville' ) . '">' . esc_html__( 'rate it', 'treville' ) . '</a>'
 				); ?>
 			</p>
 

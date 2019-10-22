@@ -43,13 +43,13 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 				</p>
 
 				<p>
-					<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/treville/', 'treville' ) ); ?>" target="_blank">
-						<?php esc_html_e( 'Support Forum', 'treville' ); ?>
+					<a href="<?php echo esc_url( __( 'https://themezee.com/changelogs/?action=themezee-changelog&type=theme&slug=treville/', 'treville' ) ); ?>" target="_blank">
+						<?php esc_html_e( 'Theme Changelog', 'treville' ); ?>
 					</a>
 				</p>
 
 				<p>
-					<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/treville/reviews/?filter=5', 'treville' ) ); ?>" target="_blank">
+					<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/treville/reviews/', 'treville' ) ); ?>" target="_blank">
 						<?php esc_html_e( 'Rate this theme', 'treville' ); ?>
 					</a>
 				</p>
