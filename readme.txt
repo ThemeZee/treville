@@ -26,6 +26,9 @@ For more information about Treville please go to https://themezee.com/themes/tre
 
 == Changelog ==
 
+= 1.6.5 - 2020-01-28 =
+* fixed display of comments meta even if comments are disabled
+
 = 1.6.4 - 2019-11-18 =
 * fixed styling of captions in Image and Gallery block
 * improved styling of Latest Posts and Table block
