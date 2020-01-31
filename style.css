@@ -1501,7 +1501,9 @@ textarea {
 .type-page,
 .type-attachment,
 .comments-area,
-.comment-respond {
+.comment-respond,
+.site-main > article:not(.type-post):not(.type-page):not(.type-attachment),
+.post-wrapper > article:not(.type-post):not(.type-page):not(.type-attachment) {
 	margin: 0 0 2rem;
 	padding: 0;
 	max-width: 100%;
@@ -2426,7 +2428,9 @@ object {
 	.type-page,
 	.type-attachment,
 	.pagination,
-	.comments-area {
+	.comments-area,
+	.site-main > article:not(.type-post):not(.type-page):not(.type-attachment),
+	.post-wrapper > article:not(.type-post):not(.type-page):not(.type-attachment) {
 		margin-bottom: 1.5rem;
 	}
 
