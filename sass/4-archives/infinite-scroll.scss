@@ -1,0 +1,33 @@
+/* Infinite Scroll Pagination */
+.infinite-scroll .pagination {
+	display: none;
+}
+
+.infinite-scroll #infinite-handle,
+.infinite-scroll .infinite-loader {
+	width: 100%;
+	text-align: center;
+	margin-right: 2em;
+}
+
+.infinite-scroll .infinite-loader .spinner {
+	bottom: -0.5em;
+	left: auto;
+	padding-right: 2em;
+	margin: 0 auto;
+}
+
+.infinite-scroll #infinite-handle span {
+	display: inline-block;
+	margin: 0 0 2em;
+	padding: 0.4em 1em;
+	background: #1177aa;
+	text-decoration: none;
+	font-size: 16px;
+	font-size: 1rem;
+	font-weight: bold;
+}
+
+.infinite-scroll #infinite-handle span:hover {
+	background: #454545;
+}

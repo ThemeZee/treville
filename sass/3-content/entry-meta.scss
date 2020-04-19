@@ -1,0 +1,144 @@
+/* Entry Meta */
+.entry-meta {
+	margin: 0.25em 0 0;
+	padding: 0;
+	color: #999;
+	font-size: 15px;
+	font-size: 0.9375rem;
+	font-family: 'Magra', Tahoma, Arial;
+	text-transform: uppercase;
+}
+
+.entry-meta .meta-date,
+.entry-meta .meta-author {
+	margin-right: 1.5em;
+}
+
+.entry-meta a:link,
+.entry-meta a:visited {
+	color: #999;
+}
+
+.entry-meta a:hover,
+.entry-meta a:active {
+	color: #555;
+}
+
+.entry-meta span::before {
+	display: inline-block;
+	margin-right: 0.2em;
+	color: #999;
+	vertical-align: middle;
+	font: normal 20px 'Genericons';
+	-webkit-font-smoothing: antialiased;
+}
+
+.entry-meta .meta-date::before {
+	content: '\f305';
+}
+
+.entry-meta .meta-author::before {
+	content: '\f411';
+}
+
+.entry-meta .meta-comments::before {
+	content: '\f300';
+}
+
+/* Entry Categories */
+.entry-categories {
+	margin: 2em 0 0;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.entry-categories .meta-categories a {
+	display: inline-block;
+	float: left;
+	margin: 0 2px 2px 0;
+	padding: 0.4em 0.8em;
+	background: #1177aa;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-size: 0.875rem;
+}
+
+.entry-categories .meta-categories a:link,
+.entry-categories .meta-categories a:visited {
+	color: #fff;
+}
+
+.entry-categories .meta-categories a:hover,
+.entry-categories .meta-categories a:active {
+	background: #454545;
+}
+
+/* Hide post meta if they are deactivated in settings */
+body.date-hidden .type-post .entry-meta .meta-date,
+body.author-hidden .type-post .entry-meta .meta-author,
+body.comments-hidden .type-post .entry-meta .meta-comments,
+body.date-hidden .post-slider .entry-meta .meta-date,
+body.author-hidden .post-slider .entry-meta .meta-author {
+	position: absolute;
+	clip: rect(1px, 1px, 1px, 1px);
+}
+
+body.date-hidden.author-hidden.comments-hidden .content-area .type-post .entry-meta,
+body.date-hidden.author-hidden .post-slider .entry-meta {
+	display: none;
+}
+
+/* Entry Tags & Tagcloud Widget */
+.entry-tags {
+	margin: 1em 0 0;
+}
+
+.widget_tag_cloud .tagcloud,
+.entry-tags .meta-tags {
+	font-size: 14px;
+	font-size: 0.875rem;
+}
+
+.widget_tag_cloud .tagcloud::before,
+.widget_tag_cloud .tagcloud::after,
+.entry-tags .meta-tags::before,
+.entry-tags .meta-tags::after {
+	display: table;
+	content: "";
+}
+
+.widget_tag_cloud .tagcloud::after,
+.entry-tags .meta-tags::after {
+	clear: both;
+}
+
+.widget_tag_cloud .tagcloud a,
+.entry-tags .meta-tags a {
+	display: inline-block;
+	float: left;
+	margin: 0 2px 2px 0;
+	padding: 0.2em 0.5em;
+	background: #454545;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 13px !important;
+	font-size: 0.8125rem !important;
+	font-weight: normal;
+}
+
+.widget_tag_cloud .tagcloud a:link,
+.widget_tag_cloud .tagcloud a:visited,
+.entry-tags .meta-tags a:link,
+.entry-tags .meta-tags a:visited {
+	color: #fff !important;
+}
+
+.widget_tag_cloud .tagcloud a:hover,
+.widget_tag_cloud .tagcloud a:active,
+.entry-tags .meta-tags a:hover,
+.entry-tags .meta-tags a:active {
+	background: #1177aa;
+}
