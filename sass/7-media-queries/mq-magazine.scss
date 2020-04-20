@@ -1,0 +1,150 @@
+@media only screen and (max-width: 75em) {
+	.widget-magazine-columns .magazine-column-left {
+		padding-right: 0.75rem;
+	}
+
+	.widget-magazine-columns .magazine-column-right {
+		padding-left: 0.75rem;
+	}
+}
+
+@media only screen and (max-width: 60em) {
+	.widget-magazine-posts .large-post .entry-title {
+		font-size: 20px;
+		font-size: 1.25rem;
+	}
+}
+
+@media only screen and (max-width: 50em) {
+	.widget-magazine-posts .large-post .entry-title {
+		font-size: 18px;
+		font-size: 1.125rem;
+	}
+}
+
+@media only screen and (max-width: 45em) {
+	.widget-magazine-posts .small-post .entry-title {
+		font-size: 14px;
+		font-size: 0.875rem;
+	}
+}
+
+@media only screen and (max-width: 40em) {
+
+	/* Magazine Post Widgets */
+	.widget-magazine-posts .magazine-grid-three-columns .post-column {
+		width: 50%;
+	}
+
+	.widget-magazine-posts .large-post .entry-title {
+		font-size: 15px;
+		font-size: 0.9375rem;
+	}
+
+	.widget-magazine-posts .large-post .post-content {
+		padding: 0.5em 1em;
+	}
+
+	.widget-magazine-posts .large-post .entry-meta {
+		display: none;
+	}
+
+	.widget-magazine-posts .small-post .entry-title {
+		font-size: 13px;
+		font-size: 0.8125rem;
+	}
+}
+
+@media only screen and (max-width: 35em) {
+	.widget-magazine-posts .small-post .entry-title {
+		font-size: 15px;
+		font-size: 0.9375rem;
+	}
+
+	/* Magazine Columns Widget */
+	.widget-magazine-columns .magazine-column-left,
+	.widget-magazine-columns .magazine-column-right {
+		float: none;
+		padding: 0;
+		width: 100%;
+	}
+
+	.widget-magazine-columns .magazine-column-left {
+		margin-bottom: 1.5em;
+	}
+
+	.widget-magazine-columns .large-post .entry-title {
+		font-size: 18px;
+		font-size: 1.125rem;
+	}
+
+	.widget-magazine-columns .large-post .entry-meta {
+		display: block;
+	}
+}
+
+@media only screen and (max-width: 30em) {
+
+	/* Magazine Post Widgets */
+	.widget-magazine-posts .magazine-grid-two-columns,
+	.widget-magazine-posts .magazine-grid-three-columns {
+		display: block;
+		margin-right: 0;
+	}
+
+	.widget-magazine-posts .magazine-grid-two-columns .post-column,
+	.widget-magazine-posts .magazine-grid-three-columns .post-column {
+		display: block;
+		padding-right: 0;
+		width: 100%;
+	}
+
+	.widget-magazine-posts .large-post .entry-title,
+	.widget-magazine-posts .medium-post .entry-title {
+		font-size: 17px;
+		font-size: 1.0625rem;
+	}
+
+	.widget-magazine-posts .large-post .entry-meta {
+		display: block;
+	}
+}
+
+@media only screen and (max-width: 25em) {
+	.widget-magazine-posts .type-post {
+		border: none;
+		box-shadow: none;
+	}
+
+	.widget-magazine-posts .type-post .post-content {
+		padding: 0.5em 0 0;
+	}
+
+	.widget-magazine-posts .large-post .entry-title,
+	.widget-magazine-posts .medium-post .entry-title {
+		font-size: 16px;
+		font-size: 1rem;
+	}
+
+	.widget-magazine-posts .small-post .entry-title {
+		font-size: 14px;
+		font-size: 0.875rem;
+	}
+
+	.widget-magazine-posts .small-post .post-content {
+		padding: 0 0 0 0.75em;
+	}
+}
+
+@media only screen and (max-width: 20em) {
+	.widget-magazine-posts .large-post .entry-title,
+	.widget-magazine-posts .medium-post .entry-title {
+		font-size: 15px;
+		font-size: 0.9375rem;
+	}
+
+	.widget-magazine-posts .small-post .entry-title {
+		font-size: 13px;
+		font-size: 0.8125rem;
+	}
+}
