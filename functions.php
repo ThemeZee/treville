@@ -167,6 +167,9 @@ function treville_scripts() {
 	// Register and Enqueue Stylesheet.
 	wp_enqueue_style( 'treville-stylesheet', get_stylesheet_uri(), array(), $theme_version );
 
+	// Register and Enqueue Safari Flexbox CSS fixes.
+	wp_enqueue_style( 'treville-safari-flexbox-fixes', get_template_directory_uri() . '/assets/css/safari-flexbox-fixes.css', array(), '20200420' );
+
 	// Register Genericons.
 	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/assets/genericons/genericons.css', array(), '3.4.1' );
 
