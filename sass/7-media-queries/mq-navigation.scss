@@ -316,3 +316,10 @@
 		font-size: 24px;
 	}
 }
+
+/* Ensure navigation is visible on desktop view */
+@media only screen and (min-width: 60.01em) {
+	.top-navigation-menu-wrap {
+		display: block !important;
+	}
+}
