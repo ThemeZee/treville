@@ -1816,10 +1816,6 @@ body.date-hidden.author-hidden .post-slider .entry-meta {
 	max-width: 100%;
 }
 
-/*--------------------------------------------------------------
-## 11.1 - Default Widgets
---------------------------------------------------------------*/
-
 /* Theme Search Widget */
 .search-form {
 	position: relative;
@@ -1910,7 +1906,7 @@ body.date-hidden.author-hidden .post-slider .entry-meta {
 }
 
 /*--------------------------------------------------------------
-## 11.2 - Magazine Posts Widgets
+# - Magazine Widgets
 --------------------------------------------------------------*/
 .widget-magazine-posts {
 	margin-bottom: -1.5em;
@@ -1948,7 +1944,7 @@ body.date-hidden.author-hidden .post-slider .entry-meta {
 	font-size: 0.8125rem;
 }
 
-.widget-magazine-posts .type-post .entry-meta span:before {
+.widget-magazine-posts .type-post .entry-meta span::before {
 	font-size: 18px;
 }
 
