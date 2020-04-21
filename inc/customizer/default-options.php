@@ -49,6 +49,7 @@ function treville_theme_options() {
 function treville_default_options() {
 
 	$default_options = array(
+		'retina_logo'           => false,
 		'site_title'            => true,
 		'site_description'      => true,
 		'layout'                => 'right-sidebar',
