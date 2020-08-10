@@ -38,58 +38,11 @@
 
 				</div><!-- .site-branding -->
 
-				<div id="header-navigation" class="header-area">
-
-					<?php if ( has_nav_menu( 'secondary' ) ) : ?>
-
-						<nav id="top-navigation" class="secondary-navigation navigation clearfix" role="navigation">
-
-							<?php
-								// Display Top Navigation.
-								wp_nav_menu( array(
-									'theme_location' => 'secondary',
-									'container_class' => 'top-navigation-menu-wrap',
-									'menu_class' => 'top-navigation-menu',
-								) );
-							?>
-
-						</nav><!-- #top-navigation -->
-
-					<?php else :
-
-						// Create empty wrapper for mobile menu.
-						echo '<div class="top-navigation-menu-wrap"></div>';
-
-					endif; ?>
-
-					<?php do_action( 'treville_header_area' ); ?>
-
-				</div>
+				<?php get_template_part( 'template-parts/header/top', 'navigation' ); ?>
 
 			</div><!-- .header-main -->
 
-			<?php if ( has_nav_menu( 'primary' ) ) : ?>
-
-				<div id="main-navigation-wrap" class="main-navigation-wrap clearfix">
-
-					<nav id="main-navigation" class="primary-navigation navigation container clearfix" role="navigation">
-
-						<?php
-							// Display Main Navigation.
-							wp_nav_menu( array(
-								'theme_location' => 'primary',
-								'container' => false,
-								'menu_class' => 'main-navigation-menu',
-							) );
-
-							do_action( 'treville_header_search' );
-						?>
-
-					</nav><!-- #main-navigation -->
-
-				</div>
-
-			<?php endif; ?>
+			<?php get_template_part( 'template-parts/header/main', 'navigation' ); ?>
 
 		</header><!-- #masthead -->
 

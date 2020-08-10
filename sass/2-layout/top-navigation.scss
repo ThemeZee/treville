@@ -1,0 +1,134 @@
+.secondary-navigation {
+	position: relative;
+	width: 100%;
+}
+
+.top-navigation ul {
+	margin: 0;
+	padding: 0;
+	color: #fff;
+	list-style: none;
+	@include font-size(15);
+	font-family: 'Magra', Tahoma, Arial;
+}
+
+.top-navigation > ul {
+	border-top: 4px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Hide the menu on small screens when JavaScript is available. */
+.top-navigation ul,
+.top-navigation .menu-item-has-children > a > .icon,
+.top-navigation ul a > .icon {
+	display: none;
+}
+
+.secondary-navigation.toggled-on .top-navigation > ul.menu {
+	display: block;
+}
+
+/* Menu Items Styling */
+.top-navigation ul li {
+	position: relative;
+	margin: 0;
+}
+
+.top-navigation ul a {
+	display: block;
+	margin: 0;
+	padding: 1em 1.2em;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	text-decoration: none;
+}
+
+.top-navigation ul a:link,
+.top-navigation ul a:visited {
+	color: #fff;
+	text-decoration: none;
+	transition: all 0.2s ease;
+}
+
+.top-navigation ul a:hover,
+.top-navigation ul a:active,
+.top-navigation ul a:focus {
+	color: rgba(255, 255, 255, 0.5);
+}
+
+.top-navigation ul li.current-menu-item > a {
+	text-decoration: underline;
+}
+
+/* Submenus */
+.top-navigation ul ul {
+	@include font-size(14);
+}
+
+.is-amp-page .top-navigation ul ul,
+.top-navigation ul ul.toggled-on {
+	display: block;
+}
+
+.top-navigation ul ul a {
+	padding-left: 2.5em;
+}
+
+.top-navigation ul ul ul a {
+	padding-left: 4em;
+}
+
+.top-navigation ul ul ul ul a {
+	padding-left: 5.5em;
+}
+
+/* Submenu Dropdown Toggles */
+.top-navigation .dropdown-toggle {
+	position: absolute;
+	display: block;
+	top: 0;
+	right: 0;
+	padding: 0.8em 1.2em;
+	background: none;
+	border: none;
+}
+
+.top-navigation .dropdown-toggle:focus {
+	outline: thin dotted;
+	color: #fff;
+	background: none;
+}
+
+.top-navigation .dropdown-toggle:hover,
+.top-navigation .dropdown-toggle:active {
+	background: none;
+}
+
+.top-navigation .dropdown-toggle .icon {
+	margin: 0.25em 0 0;
+	width: 22px;
+	height: 22px;
+	vertical-align: top;
+	fill: #fff;
+	transition: fill 0.2s ease;
+}
+
+.top-navigation .dropdown-toggle:hover .icon,
+.top-navigation .dropdown-toggle:active .icon,
+.top-navigation .dropdown-toggle:focus .icon {
+	fill: rgba(255, 255, 255, 0.5);
+}
+
+.top-navigation .dropdown-toggle.toggled-on .icon {
+	-ms-transform: rotate(-180deg); /* IE 9 */
+	-webkit-transform: rotate(-180deg); /* Chrome, Safari, Opera */
+	transform: rotate(-180deg);
+}
+
+.top-navigation ul ul .dropdown-toggle {
+	padding: 0.7em 1em;
+}
+
+.top-navigation ul ul .dropdown-toggle .icon {
+	margin: 0.35em 0 0;
+	width: 18px;
+	height: 18px;
+}

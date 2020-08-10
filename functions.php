@@ -178,7 +178,15 @@ function treville_scripts() {
 	wp_script_add_data( 'html5shiv', 'conditional', 'lt IE 9' );
 
 	// Register and enqueue navigation.js.
-	wp_enqueue_script( 'treville-jquery-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array( 'jquery' ), '20170619' );
+	if ( has_nav_menu( 'primary' ) || has_nav_menu( 'secondary' ) ) {
+		wp_enqueue_script( 'treville-navigation', get_theme_file_uri( '/assets/js/navigation.js' ), array( 'jquery' ), '20191114', true );
+		$treville_l10n = array(
+			'expand'   => esc_html__( 'Expand child menu', 'treville' ),
+			'collapse' => esc_html__( 'Collapse child menu', 'treville' ),
+			'icon'     => treville_get_svg( 'expand' ),
+		);
+		wp_localize_script( 'treville-navigation', 'trevilleScreenReaderText', $treville_l10n );
+	}
 
 	// Register Comment Reply Script for Threaded Comments.
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

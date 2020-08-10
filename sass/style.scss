@@ -108,9 +108,14 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import "2-layout/header";
 
 /*--------------------------------------------------------------
-# - Navigation
+# - Main Navigation
 --------------------------------------------------------------*/
 @import "2-layout/navigation";
+
+/*--------------------------------------------------------------
+# - Top Navigation
+--------------------------------------------------------------*/
+@import "2-layout/top-navigation";
 
 /*--------------------------------------------------------------
 # - Social Icons Menu
