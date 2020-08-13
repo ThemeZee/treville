@@ -13,8 +13,6 @@
 
 		<div class="primary-navigation container">
 
-			<?php do_action( 'treville_header_search' ); ?>
-
 			<nav id="site-navigation" class="main-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Primary Menu', 'treville' ); ?>">
 
 				<?php
@@ -27,6 +25,8 @@
 				);
 				?>
 			</nav><!-- #site-navigation -->
+
+			<?php do_action( 'treville_header_search' ); ?>
 
 		</div><!-- .primary-navigation -->
 

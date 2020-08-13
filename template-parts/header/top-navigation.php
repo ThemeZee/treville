@@ -36,6 +36,8 @@
 			?>
 		</nav><!-- #site-navigation -->
 
+		<?php do_action( 'treville_header_area' ); ?>
+
 	</div><!-- .secondary-navigation -->
 
 <?php endif; ?>
