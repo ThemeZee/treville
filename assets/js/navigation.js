@@ -7,7 +7,26 @@
 
 (function( $ ) {
 
-	function initNavigation( containerClass, menuToggleClass ) {
+	function initMenuToggle( menuToggleClass ) {
+		var menuToggle  = $( menuToggleClass );
+
+		// Return early if menuToggle is missing.
+		if ( ! menuToggle.length ) {
+			return;
+		}
+
+		// Add an initial value for the attribute.
+		menuToggle.attr( 'aria-expanded', 'false' );
+
+		menuToggle.on( 'click.treville_', function() {
+			$( '.primary-navigation-wrap' ).toggleClass( 'toggled-on' );
+			$( '.secondary-navigation' ).toggleClass( 'toggled-on' );
+
+			$( this ).attr( 'aria-expanded', $( '.primary-navigation-wrap' ).hasClass( 'toggled-on' ) );
+		});
+	}
+
+	function initNavigation( containerClass ) {
 		var container  = $( containerClass );
 		var navigation = container.find( 'nav[role=navigation]' );
 
@@ -15,25 +34,6 @@
 		if ( ! navigation.length || ! container.length ) {
 			return;
 		}
-
-		// Enable menuToggle.
-		(function() {
-			var menuToggle  = $( menuToggleClass );
-
-			// Return early if menuToggle is missing.
-			if ( ! menuToggle.length ) {
-				return;
-			}
-
-			// Add an initial value for the attribute.
-			menuToggle.attr( 'aria-expanded', 'false' );
-
-			menuToggle.on( 'click.treville_', function() {
-				container.toggleClass( 'toggled-on' );
-
-				$( this ).attr( 'aria-expanded', container.hasClass( 'toggled-on' ) );
-			});
-		})();
 
 		// Enable dropdownToggles that displays child menu items.
 		(function() {
@@ -114,9 +114,12 @@
 	}
 
 	// Init Main Navigation.
-	initNavigation( '.primary-navigation-wrap', '.mobile-menu-toggle' );
+	initNavigation( '.primary-navigation-wrap' );
 
 	// Init Top Navigation.
-	initNavigation( '.secondary-navigation', '.mobile-menu-toggle' );
+	initNavigation( '.secondary-navigation' );
+
+	// Init Mobile Menu Toggle
+	initMenuToggle( '.mobile-menu-toggle' );
 
 })( jQuery );

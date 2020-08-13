@@ -178,7 +178,7 @@ function treville_scripts() {
 	wp_script_add_data( 'html5shiv', 'conditional', 'lt IE 9' );
 
 	// Register and enqueue navigation.js.
-	if ( has_nav_menu( 'primary' ) || has_nav_menu( 'secondary' ) ) {
+	if ( has_nav_menu( 'primary' ) || has_nav_menu( 'secondary' ) || has_nav_menu( 'social' ) ) {
 		wp_enqueue_script( 'treville-navigation', get_theme_file_uri( '/assets/js/navigation.js' ), array( 'jquery' ), '20191114', true );
 		$treville_l10n = array(
 			'expand'   => esc_html__( 'Expand child menu', 'treville' ),

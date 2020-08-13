@@ -3,6 +3,10 @@
 	width: 100%;
 }
 
+.secondary-navigation.toggled-on {
+	border-top: 4px solid rgba(255, 255, 255, 0.1);
+}
+
 .top-navigation ul {
 	margin: 0;
 	padding: 0;
@@ -10,10 +14,6 @@
 	list-style: none;
 	@include font-size(15);
 	font-family: 'Magra', Tahoma, Arial;
-}
-
-.top-navigation > ul {
-	border-top: 4px solid rgba(255, 255, 255, 0.1);
 }
 
 /* Hide the menu on small screens when JavaScript is available. */

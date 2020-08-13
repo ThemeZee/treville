@@ -998,6 +998,10 @@ textarea {
 	width: 100%;
 }
 
+.secondary-navigation.toggled-on {
+	border-top: 4px solid rgba(255, 255, 255, 0.1);
+}
+
 .top-navigation ul {
 	margin: 0;
 	padding: 0;
@@ -1006,10 +1010,6 @@ textarea {
 	font-size: 15px;
 	font-size: 0.9375rem;
 	font-family: 'Magra', Tahoma, Arial;
-}
-
-.top-navigation > ul {
-	border-top: 4px solid rgba(255, 255, 255, 0.1);
 }
 
 /* Hide the menu on small screens when JavaScript is available. */
@@ -2965,7 +2965,7 @@ object {
 		border-bottom: none;
 	}
 
-	.top-navigation > ul,
+	.secondary-navigation.toggled-on,
 	.top-navigation > ul > li > a {
 		border: none;
 	}
