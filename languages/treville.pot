@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Treville\n"
 "Report-Msgid-Bugs-To: https://themezee.com/\n"
-"POT-Creation-Date: 2019-10-22 12:56+0200\n"
+"POT-Creation-Date: 2020-08-18 14:10+0200\n"
 "PO-Revision-Date: 2016-09-16 10:21+0100\n"
 "Last-Translator: \n"
 "Language-Team: ThemeZee <support@themezee.com>\n"
@@ -11,7 +11,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2.4\n"
+"X-Generator: Poedit 2.4.1\n"
 "X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
 "_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
 "esc_html_x:1,2c\n"
@@ -31,11 +31,11 @@ msgid ""
 "of the links below?"
 msgstr ""
 
-#: comments.php:29 inc/template-tags.php:252
+#: comments.php:29 inc/template-tags.php:257
 msgid "One comment"
 msgstr ""
 
-#: comments.php:29 inc/template-tags.php:252
+#: comments.php:29 inc/template-tags.php:257
 #, php-format
 msgid "% comments"
 msgstr ""
@@ -95,19 +95,27 @@ msgid ""
 "Magazine widgets here."
 msgstr ""
 
-#: functions.php:228
+#: functions.php:184
+msgid "Expand child menu"
+msgstr ""
+
+#: functions.php:185
+msgid "Collapse child menu"
+msgstr ""
+
+#: functions.php:239
 msgid "Treville Single Post"
 msgstr ""
 
-#: functions.php:229
+#: functions.php:240
 msgid "Treville Magazine Post"
 msgstr ""
 
-#: functions.php:230
+#: functions.php:241
 msgid "Treville Thumbnail"
 msgstr ""
 
-#: header.php:26
+#: header.php:27
 msgid "Skip to content"
 msgstr ""
 
@@ -199,23 +207,15 @@ msgstr ""
 msgid "Learn more about %s Pro"
 msgstr ""
 
-#: inc/customizer/customizer.php:40 inc/theme-info.php:78
+#: inc/customizer/customizer.php:41 inc/theme-info.php:78
 msgid "Theme Options"
 msgstr ""
 
-#: inc/customizer/customizer.php:45
+#: inc/customizer/customizer.php:46
 msgid "Background"
 msgstr ""
 
-#: inc/customizer/customizer.php:69
-msgid "Display Site Title"
-msgstr ""
-
-#: inc/customizer/customizer.php:84
-msgid "Display Tagline"
-msgstr ""
-
-#: inc/customizer/default-options.php:59
+#: inc/customizer/default-options.php:60
 #: inc/customizer/sections/customizer-blog.php:117
 msgid "Continue reading"
 msgstr ""
@@ -374,6 +374,22 @@ msgstr ""
 msgid "Slider Speed (in ms)"
 msgstr ""
 
+#: inc/customizer/sections/customizer-website.php:34
+msgid "Retina Logo"
+msgstr ""
+
+#: inc/customizer/sections/customizer-website.php:50
+msgid "Scale down logo image for retina displays"
+msgstr ""
+
+#: inc/customizer/sections/customizer-website.php:65
+msgid "Display Site Title"
+msgstr ""
+
+#: inc/customizer/sections/customizer-website.php:80
+msgid "Display Tagline"
+msgstr ""
+
 #: inc/magazine.php:47
 msgid ""
 "Please go to Customize &#8594; Widgets and add at least one widget to the "
@@ -390,36 +406,36 @@ msgstr ""
 msgid "View all posts by %s"
 msgstr ""
 
-#: inc/template-tags.php:252
+#: inc/template-tags.php:257
 msgid "Leave a comment"
 msgstr ""
 
-#: inc/template-tags.php:337
+#: inc/template-tags.php:342
 msgctxt "post navigation"
 msgid "Previous Post"
 msgstr ""
 
-#: inc/template-tags.php:338
+#: inc/template-tags.php:343
 msgctxt "post navigation"
 msgid "Next Post"
 msgstr ""
 
-#: inc/template-tags.php:391
+#: inc/template-tags.php:396
 msgctxt "pagination"
 msgid "Previous Posts"
 msgstr ""
 
-#: inc/template-tags.php:392
+#: inc/template-tags.php:397
 msgctxt "pagination"
 msgid "Next Posts"
 msgstr ""
 
-#: inc/template-tags.php:408
+#: inc/template-tags.php:413
 #, php-format
 msgid "WordPress Theme: %1$s by %2$s."
 msgstr ""
 
-#: inc/template-tags.php:409
+#: inc/template-tags.php:414
 msgid "Treville"
 msgstr ""
 
@@ -617,4 +633,16 @@ msgstr ""
 
 #: template-parts/content-page.php:27 template-parts/content-single.php:29
 msgid "Pages:"
+msgstr ""
+
+#: template-parts/header/main-navigation.php:16
+msgid "Primary Menu"
+msgstr ""
+
+#: template-parts/header/top-navigation.php:17
+msgid "Menu"
+msgstr ""
+
+#: template-parts/header/top-navigation.php:28
+msgid "Secondary Menu"
 msgstr ""
