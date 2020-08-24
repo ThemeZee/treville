@@ -26,6 +26,10 @@ For more information about Treville please go to https://themezee.com/themes/tre
 
 == Changelog ==
 
+= 1.8.2 - 2020-04-24 =
+* fixed styling of menu items with empty links
+* fixed undefined naviClass variable warning
+
 = 1.8.1 - 2020-08-21 =
 * added svgxuse polyfill to display SVG icons in Internet Explorer
 
