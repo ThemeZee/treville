@@ -2,14 +2,14 @@
 /**
  * Main Navigation
  *
- * @version 1.0
+ * @version 1.1
  * @package Treville
  */
 ?>
 
 <?php if ( has_nav_menu( 'primary' ) ) : ?>
 
-	<div class="primary-navigation-wrap">
+	<div class="primary-navigation-wrap" <?php treville_amp_primary_menu_is_toggled(); ?>>
 
 		<div class="primary-navigation container">
 

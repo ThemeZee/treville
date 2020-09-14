@@ -2,14 +2,14 @@
 /**
  * Top Navigation
  *
- * @version 1.0
+ * @version 1.1
  * @package Treville
  */
 ?>
 
 <?php if ( has_nav_menu( 'primary' ) || has_nav_menu( 'secondary' ) || has_nav_menu( 'social' ) ) : ?>
 
-	<button class="mobile-menu-toggle menu-toggle" aria-controls="primary-menu secondary-menu" aria-expanded="false">
+	<button class="mobile-menu-toggle menu-toggle" aria-controls="primary-menu secondary-menu" aria-expanded="false" <?php treville_amp_menu_toggle(); ?>>
 		<?php
 		echo treville_get_svg( 'menu' );
 		echo treville_get_svg( 'close' );
@@ -21,7 +21,7 @@
 
 <?php if ( has_nav_menu( 'secondary' ) || has_nav_menu( 'social' ) ) : ?>
 
-	<div class="secondary-navigation">
+	<div class="secondary-navigation" <?php treville_amp_secondary_menu_is_toggled(); ?>>
 
 		<?php if ( has_nav_menu( 'secondary' ) ) : ?>
 

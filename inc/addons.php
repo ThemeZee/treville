@@ -37,6 +37,9 @@ function treville_theme_addons_setup() {
 	// Add Theme Support for wooCommerce.
 	add_theme_support( 'woocommerce' );
 
+	// Add theme support for AMP.
+	add_theme_support( 'amp' );
+
 }
 add_action( 'after_setup_theme', 'treville_theme_addons_setup' );
 
@@ -75,12 +78,10 @@ add_action( 'wp_enqueue_scripts', 'treville_theme_addons_scripts' );
  * Custom render function for Infinite Scroll.
  */
 function treville_infinite_scroll_render() {
-
 	while ( have_posts() ) {
 		the_post();
 		get_template_part( 'template-parts/content' );
 	}
-
 }
 
 
@@ -104,3 +105,42 @@ function treville_wrapper_end() {
 }
 remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10 );
 add_action( 'woocommerce_after_main_content', 'treville_wrapper_end', 10 );
+
+
+/**
+ * Checks if AMP page is rendered.
+ */
+function treville_is_amp() {
+	return function_exists( 'is_amp_endpoint' ) && is_amp_endpoint();
+}
+
+
+/**
+ * Adds amp support for menu toggle.
+ */
+function treville_amp_menu_toggle() {
+	if ( treville_is_amp() ) {
+		echo "[aria-expanded]=\"mobileMenuExpanded? 'true' : 'false'\" ";
+		echo 'on="tap:AMP.setState({mobileMenuExpanded: !mobileMenuExpanded})"';
+	}
+}
+
+
+/**
+ * Adds amp support for mobile dropdown navigation menu.
+ */
+function treville_amp_primary_menu_is_toggled() {
+	if ( treville_is_amp() ) {
+		echo "[class]=\"'primary-navigation-wrap' + ( mobileMenuExpanded ? ' toggled-on' : '' )\"";
+	}
+}
+
+
+/**
+ * Adds amp support for mobile dropdown navigation menu.
+ */
+function treville_amp_secondary_menu_is_toggled() {
+	if ( treville_is_amp() ) {
+		echo "[class]=\"'secondary-navigation' + ( mobileMenuExpanded ? ' toggled-on' : '' )\"";
+	}
+}
