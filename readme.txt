@@ -26,6 +26,11 @@ For more information about Treville please go to https://themezee.com/themes/tre
 
 == Changelog ==
 
+= 1.9.1 - 2020-10-05 =
+* added AMP dropdown toggles for sub menus
+* added CSS variables for typography styling
+* fixed lazy loading bug for slider images
+
 = 1.9 - 2020-09-16 =
 * added support for the official AMP plugin
 
