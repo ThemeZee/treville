@@ -25,11 +25,11 @@
 	color: #1177aa;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
-	font-weight: normal;
-	font-size: 40px;
-	font-size: 2.5rem;
-	font-family: 'Magra', Tahoma, Arial;
-	line-height: 1.4;
+	@include font-size(40);
+	@include font-family(--title-font);
+	@include font-weight(--title-font-weight);
+	@include text-transform(--title-text-transform);
+	@include line-height(--title-line-height);
 }
 
 .entry-title a:link,

@@ -13,7 +13,7 @@
 	color: #fff;
 	list-style: none;
 	@include font-size(15);
-	font-family: 'Magra', Tahoma, Arial;
+	@include font-family(--navi-font);
 }
 
 /* Hide the menu on small screens when JavaScript is available. */

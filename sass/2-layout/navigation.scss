@@ -67,8 +67,9 @@
 	color: #454545;
 	list-style: none;
 	@include font-size(15);
-	font-family: 'Magra', Tahoma, Arial;
-	text-transform: uppercase;
+	@include font-family(--navi-font);
+	@include font-weight(--navi-font-weight);
+	@include text-transform(--navi-text-transform);
 }
 
 /* Hide the menu on small screens when JavaScript is available. */
