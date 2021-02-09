@@ -7,7 +7,7 @@
 	padding: 1em;
 	border: none;
 	background: none;
-	color: #fff;
+	@include color(--top-navi-color);
 	text-decoration: none;
 	@include font-size(17);
 	text-align: left;
@@ -17,13 +17,13 @@
 
 .mobile-menu-toggle:focus {
 	outline: thin dotted;
-	color: #fff;
+	@include color(--top-navi-color);
 	background: none;
 }
 
 .mobile-menu-toggle:hover,
 .mobile-menu-toggle:active {
-	color: rgba(255, 255, 255, 0.5);
+	@include color(--top-navi-hover-color);
 	background: none;
 	cursor: pointer;
 }
@@ -33,13 +33,13 @@
 	width: 28px;
 	height: 28px;
 	vertical-align: top;
-	fill: #fff;
+	@include fill(--top-navi-color);
 	transition: fill 0.2s ease;
 }
 
 .mobile-menu-toggle:hover .icon,
 .mobile-menu-toggle:active .icon {
-	fill: rgba(255, 255, 255, 0.5);
+	@include fill(--top-navi-hover-color);
 }
 
 .mobile-menu-toggle[aria-expanded="true"] .icon-menu,
@@ -53,7 +53,7 @@
 
 /* Primary Navigation */
 .primary-navigation-wrap {
-	background: #fff;
+	@include background(--navi-background-color);
 }
 
 .primary-navigation {
@@ -64,7 +64,7 @@
 .main-navigation ul {
 	margin: 0;
 	padding: 0;
-	color: #454545;
+	@include color(--navi-color);
 	list-style: none;
 	@include font-size(15);
 	@include font-family(--navi-font);
@@ -80,7 +80,8 @@
 }
 
 .primary-navigation-wrap.toggled-on {
-	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+	border-bottom: 1px solid;
+	@include border-color(--navi-border-color);
 }
 
 .primary-navigation-wrap.toggled-on .main-navigation > ul.menu {
@@ -97,7 +98,8 @@
 	display: block;
 	margin: 0;
 	padding: 1.2em;
-	border-top: 1px solid rgba(0, 0, 0, 0.2);
+	border-top: 1px solid;
+	@include border-color(--navi-border-color);
 	text-decoration: none;
 }
 
@@ -108,7 +110,7 @@
 .main-navigation ul a,
 .main-navigation ul a:link,
 .main-navigation ul a:visited {
-	color: #454545;
+	@include color(--navi-color);
 	text-decoration: none;
 	transition: all 0.2s ease;
 }
@@ -116,7 +118,7 @@
 .main-navigation ul a:hover,
 .main-navigation ul a:active,
 .main-navigation ul a:focus {
-	color: rgba(0, 0, 0, 0.5);
+	@include color(--navi-hover-color);
 }
 
 .main-navigation ul li.current-menu-item > a {
@@ -158,7 +160,7 @@
 
 .main-navigation .dropdown-toggle:focus {
 	outline: thin dotted;
-	color: #454545;
+	@include color(--navi-color);
 	background: none;
 }
 
@@ -172,14 +174,14 @@
 	width: 24px;
 	height: 24px;
 	vertical-align: top;
-	fill: #454545;
+	@include fill(--navi-color);
 	transition: fill 0.2s ease;
 }
 
 .main-navigation .dropdown-toggle:hover .icon,
 .main-navigation .dropdown-toggle:active .icon,
 .main-navigation .dropdown-toggle:focus .icon {
-	fill: rgba(0, 0, 0, 0.5);
+	@include fill(--navi-hover-color);
 }
 
 .main-navigation .dropdown-toggle.toggled-on .icon {

@@ -1,6 +1,6 @@
 .site-header {
-	background: #454545;
-	color: #fff;
+	@include background(--header-background-color);
+	@include color(--header-text-color);
 }
 
 .header-main {
@@ -29,7 +29,7 @@
 	display: inline-block;
 	margin: 0;
 	padding: 0;
-	color: #fff;
+	@include color(--site-title-color);
 	text-decoration: none;
 	@include font-size(32);
 	@include font-family(--title-font);
@@ -40,14 +40,14 @@
 
 .site-title a:link,
 .site-title a:visited {
-	color: #fff;
+	@include color(--site-title-color);
 	-webkit-transition: all 0.2s ease;
 	transition: all 0.2s ease;
 }
 
 .site-title a:hover,
 .site-title a:active {
-	color: rgba(255, 255, 255, 0.5);
+	@include color(--site-title-hover-color);
 }
 
 .site-branding .custom-logo-link {

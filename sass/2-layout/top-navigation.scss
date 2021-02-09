@@ -4,13 +4,14 @@
 }
 
 .secondary-navigation.toggled-on {
-	border-top: 4px solid rgba(255, 255, 255, 0.1);
+	border-top: 4px solid;
+	@include border-color(--top-navi-border-color);
 }
 
 .top-navigation ul {
 	margin: 0;
 	padding: 0;
-	color: #fff;
+	@include color(--top-navi-color);
 	list-style: none;
 	@include font-size(15);
 	@include font-family(--navi-font);
@@ -37,14 +38,15 @@
 	display: block;
 	margin: 0;
 	padding: 1em 1.2em;
-	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	border-bottom: 1px solid;
+	@include border-color(--top-navi-border-color);
 	text-decoration: none;
 }
 
 .top-navigation ul a,
 .top-navigation ul a:link,
 .top-navigation ul a:visited {
-	color: #fff;
+	@include color(--top-navi-color);
 	text-decoration: none;
 	transition: all 0.2s ease;
 }
@@ -52,7 +54,7 @@
 .top-navigation ul a:hover,
 .top-navigation ul a:active,
 .top-navigation ul a:focus {
-	color: rgba(255, 255, 255, 0.5);
+	@include color(--top-navi-hover-color);
 }
 
 .top-navigation ul li.current-menu-item > a {
@@ -94,7 +96,7 @@
 
 .top-navigation .dropdown-toggle:focus {
 	outline: thin dotted;
-	color: #fff;
+	@include color(--top-navi-color);
 	background: none;
 }
 
@@ -108,14 +110,14 @@
 	width: 22px;
 	height: 22px;
 	vertical-align: top;
-	fill: #fff;
+	@include fill(--top-navi-color);
 	transition: fill 0.2s ease;
 }
 
 .top-navigation .dropdown-toggle:hover .icon,
 .top-navigation .dropdown-toggle:active .icon,
 .top-navigation .dropdown-toggle:focus .icon {
-	fill: rgba(255, 255, 255, 0.5);
+	@include fill(--top-navi-hover-color);
 }
 
 .top-navigation .dropdown-toggle.toggled-on .icon {

@@ -72,22 +72,25 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	--button-text-color: #fff;
 	--button-hover-color: #454545;
 	--button-hover-text-color: #fff;
-	--page-background-color: #fff;
-	--header-background-color: #111133;
+	--header-background-color: #454545;
+	--header-text-color: #fff;
 	--site-title-color: #fff;
-	--site-title-hover-color: rgba(255, 255, 255, 0.6);
-	--navi-color: #fff;
-	--navi-hover-color: rgba(255, 255, 255, 0.6);
-	--navi-border-color: rgba(255, 255, 255, 0.1);
+	--site-title-hover-color: rgba(255, 255, 255, 0.5);
+	--top-navi-color: #fff;
+	--top-navi-hover-color: rgba(255, 255, 255, 0.5);
+	--top-navi-border-color: rgba(255, 255, 255, 0.1);
+	--navi-background-color: #fff;
+	--navi-color: #454545;
+	--navi-hover-color: rgba(0, 0, 0, 0.5);
+	--navi-border-color: rgba(0, 0, 0, 0.2);
 	--title-color: #111133;
 	--title-hover-color: #4477aa;
 	--widget-title-color: #111133;
 	--widget-title-hover-color: #4477aa;
 	--widget-title-border-color: #111133;
-	--footer-background-color: #111133;
-	--footer-text-color: rgba(255, 255, 255, 0.6);
+	--footer-background-color: #454545;
+	--footer-text-color: #ddd;
 	--footer-link-color: #fff;
-	--footer-link-hover-color: rgba(255, 255, 255, 0.6);
 	--text-font: "Gudea", arial, helvetica, sans-serif;
 	--title-font: "Magra", arial, helvetica, sans-serif;
 	--navi-font: "Magra", arial, helvetica, sans-serif;
@@ -772,8 +775,10 @@ textarea {
 # - Header
 --------------------------------------------------------------*/
 .site-header {
-	background: #454545;
+	background-color: #454545;
+	background-color: var(--header-background-color);
 	color: #fff;
+	color: var(--header-text-color);
 }
 
 .header-main {
@@ -803,6 +808,7 @@ textarea {
 	margin: 0;
 	padding: 0;
 	color: #fff;
+	color: var(--site-title-color);
 	text-decoration: none;
 	font-size: 32px;
 	font-size: 2rem;
@@ -819,6 +825,7 @@ textarea {
 .site-title a:link,
 .site-title a:visited {
 	color: #fff;
+	color: var(--site-title-color);
 	-webkit-transition: all 0.2s ease;
 	transition: all 0.2s ease;
 }
@@ -826,6 +833,7 @@ textarea {
 .site-title a:hover,
 .site-title a:active {
 	color: rgba(255, 255, 255, 0.5);
+	color: var(--site-title-hover-color);
 }
 
 .site-branding .custom-logo-link {
@@ -874,6 +882,7 @@ textarea {
 	border: none;
 	background: none;
 	color: #fff;
+	color: var(--top-navi-color);
 	text-decoration: none;
 	font-size: 17px;
 	font-size: 1.0625rem;
@@ -885,12 +894,14 @@ textarea {
 .mobile-menu-toggle:focus {
 	outline: thin dotted;
 	color: #fff;
+	color: var(--top-navi-color);
 	background: none;
 }
 
 .mobile-menu-toggle:hover,
 .mobile-menu-toggle:active {
 	color: rgba(255, 255, 255, 0.5);
+	color: var(--top-navi-hover-color);
 	background: none;
 	cursor: pointer;
 }
@@ -901,12 +912,14 @@ textarea {
 	height: 28px;
 	vertical-align: top;
 	fill: #fff;
+	fill: var(--top-navi-color);
 	transition: fill 0.2s ease;
 }
 
 .mobile-menu-toggle:hover .icon,
 .mobile-menu-toggle:active .icon {
 	fill: rgba(255, 255, 255, 0.5);
+	fill: var(--top-navi-hover-color);
 }
 
 .mobile-menu-toggle[aria-expanded="true"] .icon-menu,
@@ -920,7 +933,8 @@ textarea {
 
 /* Primary Navigation */
 .primary-navigation-wrap {
-	background: #fff;
+	background-color: #fff;
+	background-color: var(--navi-background-color);
 }
 
 .primary-navigation {
@@ -932,6 +946,7 @@ textarea {
 	margin: 0;
 	padding: 0;
 	color: #454545;
+	color: var(--navi-color);
 	list-style: none;
 	font-size: 15px;
 	font-size: 0.9375rem;
@@ -951,7 +966,9 @@ textarea {
 }
 
 .primary-navigation-wrap.toggled-on {
-	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+	border-bottom: 1px solid;
+	border-color: rgba(0, 0, 0, 0.2);
+	border-color: var(--navi-border-color);
 }
 
 .primary-navigation-wrap.toggled-on .main-navigation > ul.menu {
@@ -968,7 +985,9 @@ textarea {
 	display: block;
 	margin: 0;
 	padding: 1.2em;
-	border-top: 1px solid rgba(0, 0, 0, 0.2);
+	border-top: 1px solid;
+	border-color: rgba(0, 0, 0, 0.2);
+	border-color: var(--navi-border-color);
 	text-decoration: none;
 }
 
@@ -980,6 +999,7 @@ textarea {
 .main-navigation ul a:link,
 .main-navigation ul a:visited {
 	color: #454545;
+	color: var(--navi-color);
 	text-decoration: none;
 	transition: all 0.2s ease;
 }
@@ -988,6 +1008,7 @@ textarea {
 .main-navigation ul a:active,
 .main-navigation ul a:focus {
 	color: rgba(0, 0, 0, 0.5);
+	color: var(--navi-hover-color);
 }
 
 .main-navigation ul li.current-menu-item > a {
@@ -1031,6 +1052,7 @@ textarea {
 .main-navigation .dropdown-toggle:focus {
 	outline: thin dotted;
 	color: #454545;
+	color: var(--navi-color);
 	background: none;
 }
 
@@ -1045,6 +1067,7 @@ textarea {
 	height: 24px;
 	vertical-align: top;
 	fill: #454545;
+	fill: var(--navi-color);
 	transition: fill 0.2s ease;
 }
 
@@ -1052,6 +1075,7 @@ textarea {
 .main-navigation .dropdown-toggle:active .icon,
 .main-navigation .dropdown-toggle:focus .icon {
 	fill: rgba(0, 0, 0, 0.5);
+	fill: var(--navi-hover-color);
 }
 
 .main-navigation .dropdown-toggle.toggled-on .icon {
@@ -1078,13 +1102,16 @@ textarea {
 }
 
 .secondary-navigation.toggled-on {
-	border-top: 4px solid rgba(255, 255, 255, 0.1);
+	border-top: 4px solid;
+	border-color: rgba(255, 255, 255, 0.1);
+	border-color: var(--top-navi-border-color);
 }
 
 .top-navigation ul {
 	margin: 0;
 	padding: 0;
 	color: #fff;
+	color: var(--top-navi-color);
 	list-style: none;
 	font-size: 15px;
 	font-size: 0.9375rem;
@@ -1113,7 +1140,9 @@ textarea {
 	display: block;
 	margin: 0;
 	padding: 1em 1.2em;
-	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	border-bottom: 1px solid;
+	border-color: rgba(255, 255, 255, 0.1);
+	border-color: var(--top-navi-border-color);
 	text-decoration: none;
 }
 
@@ -1121,6 +1150,7 @@ textarea {
 .top-navigation ul a:link,
 .top-navigation ul a:visited {
 	color: #fff;
+	color: var(--top-navi-color);
 	text-decoration: none;
 	transition: all 0.2s ease;
 }
@@ -1129,6 +1159,7 @@ textarea {
 .top-navigation ul a:active,
 .top-navigation ul a:focus {
 	color: rgba(255, 255, 255, 0.5);
+	color: var(--top-navi-hover-color);
 }
 
 .top-navigation ul li.current-menu-item > a {
@@ -1172,6 +1203,7 @@ textarea {
 .top-navigation .dropdown-toggle:focus {
 	outline: thin dotted;
 	color: #fff;
+	color: var(--top-navi-color);
 	background: none;
 }
 
@@ -1186,6 +1218,7 @@ textarea {
 	height: 22px;
 	vertical-align: top;
 	fill: #fff;
+	fill: var(--top-navi-color);
 	transition: fill 0.2s ease;
 }
 
@@ -1193,6 +1226,7 @@ textarea {
 .top-navigation .dropdown-toggle:active .icon,
 .top-navigation .dropdown-toggle:focus .icon {
 	fill: rgba(255, 255, 255, 0.5);
+	fill: var(--top-navi-hover-color);
 }
 
 .top-navigation .dropdown-toggle.toggled-on .icon {
@@ -2537,11 +2571,13 @@ object {
 # - Footer
 --------------------------------------------------------------*/
 .footer-wrap {
-	background: #454545;
+	background-color: #454545;
+	background-color: var(--footer-background-color);
 }
 
 .site-footer {
 	color: #ddd;
+	color: var(--footer-text-color);
 	font-size: 15px;
 	font-size: 0.9375rem;
 }
@@ -2554,6 +2590,7 @@ object {
 .site-footer a:link,
 .site-footer a:visited {
 	color: #fff;
+	color: var(--footer-link-color);
 	text-decoration: underline;
 }
 

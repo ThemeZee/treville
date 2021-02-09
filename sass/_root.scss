@@ -17,12 +17,18 @@
 	@include variable(--button-hover-text-color, $themeColors);
 
 	// Page
-	@include variable(--page-background-color, $themeColors);
 	@include variable(--header-background-color, $themeColors);
+	@include variable(--header-text-color, $themeColors);
 	@include variable(--site-title-color, $themeColors);
 	@include variable(--site-title-hover-color, $themeColors);
 
+	// Top Navigation
+	@include variable(--top-navi-color, $themeColors);
+	@include variable(--top-navi-hover-color, $themeColors);
+	@include variable(--top-navi-border-color, $themeColors);
+
 	// Navigation
+	@include variable(--navi-background-color, $themeColors);
 	@include variable(--navi-color, $themeColors);
 	@include variable(--navi-hover-color, $themeColors);
 	@include variable(--navi-border-color, $themeColors);
@@ -38,7 +44,6 @@
 	@include variable(--footer-background-color, $themeColors);
 	@include variable(--footer-text-color, $themeColors);
 	@include variable(--footer-link-color, $themeColors);
-	@include variable(--footer-link-hover-color, $themeColors);
 
 	// Typography Styling
 	@include variable(--text-font, $themeFonts);
