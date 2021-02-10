@@ -8,14 +8,16 @@
 .comment-reply-title {
 	margin: -1rem -1.5rem 1.5em;
 	box-shadow: inset 0 2px #1177aa;
+	box-shadow: inset 0 2px var(--title-color);
 }
 
 .comments-header .comments-title,
 .comment-reply-title {
 	margin: 0;
 	padding: 0.75em 1em;
-	color: #454545;
-	border-bottom: 1px solid rgba(0,0,0,0.1);
+	@include color(--widget-title-color);
+	border-bottom: 1px solid;
+	@include border-color(--light-border-color);
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 	@include font-size(15);
@@ -40,7 +42,8 @@
 .comment {
 	margin: 0 0 1.5em;
 	padding: 1.5em 0 0;
-	border-top: 1px solid rgba(0,0,0,0.1);
+	border-top: 1px solid;
+	@include border-color(--light-border-color);
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 }
@@ -105,12 +108,12 @@
 	float: right;
 }
 
-.comment-navigation .nav-previous a:before {
+.comment-navigation .nav-previous a::before {
 	margin-right: 3px;
 	content: "\00AB";
 }
 
-.comment-navigation .nav-next a:after {
+.comment-navigation .nav-next a::after {
 	margin-left: 4px;
 	content: "\00BB";
 }
@@ -144,7 +147,8 @@
 /* Comment Reply */
 .comment .comment-respond {
 	margin-top: 1.5em;
-	border: 1px solid #eee;
+	border: 1px solid;
+	@include border-color(--light-border-color);
 	box-shadow: none;
 }
 

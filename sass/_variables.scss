@@ -54,14 +54,17 @@ $themeColors: (
 	--navi-hover-color               : rgba(0, 0, 0, 0.5),
 	--navi-border-color              : rgba(0, 0, 0, 0.2),
 
-	// Posts
-	--title-color                    : #111133,
-	--title-hover-color              : #4477aa,
+	// Content
+	--page-background-color          : #fff,
+	--page-border-color              : rgba(0, 0, 0, 0.2),
+	--title-color                    : #1177aa,
+	--title-hover-color              : #454545,
 
 	// Widgets
-	--widget-title-color             : #111133,
-	--widget-title-hover-color       : #4477aa,
-	--widget-title-border-color      : #111133,
+	--widget-background-color        : #fff,
+	--widget-border-color            : rgba(0, 0, 0, 0.2),
+	--widget-title-color             : #454545,
+	--widget-title-hover-color       : #1177aa,
 
 	// Footer
 	--footer-background-color        : #454545,

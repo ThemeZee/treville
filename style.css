@@ -83,11 +83,14 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	--navi-color: #454545;
 	--navi-hover-color: rgba(0, 0, 0, 0.5);
 	--navi-border-color: rgba(0, 0, 0, 0.2);
-	--title-color: #111133;
-	--title-hover-color: #4477aa;
-	--widget-title-color: #111133;
-	--widget-title-hover-color: #4477aa;
-	--widget-title-border-color: #111133;
+	--page-background-color: #fff;
+	--page-border-color: rgba(0, 0, 0, 0.2);
+	--title-color: #1177aa;
+	--title-hover-color: #454545;
+	--widget-background-color: #fff;
+	--widget-border-color: rgba(0, 0, 0, 0.2);
+	--widget-title-color: #454545;
+	--widget-title-hover-color: #1177aa;
 	--footer-background-color: #454545;
 	--footer-text-color: #ddd;
 	--footer-link-color: #fff;
@@ -1410,10 +1413,13 @@ textarea {
 	margin: 0 0 2rem;
 	padding: 0;
 	max-width: 100%;
-	background: #fff;
+	background-color: #fff;
+	background-color: var(--page-background-color);
 	border: 1px solid rgba(0, 0, 0, 0.2);
+	border: 1px solid var(--page-border-color);
 	border-top: none;
 	box-shadow: inset 0 2px #1177aa;
+	box-shadow: inset 0 2px var(--title-color);
 }
 
 .entry-header {
@@ -1425,6 +1431,7 @@ textarea {
 	margin: 0.15em 0 0.2em;
 	padding: 0;
 	color: #1177aa;
+	color: var(--title-color);
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 	font-size: 40px;
@@ -1442,6 +1449,7 @@ textarea {
 .entry-title a:link,
 .entry-title a:visited {
 	color: #1177aa;
+	color: var(--title-color);
 	text-decoration: none;
 	-webkit-transition: all 0.2s ease;
 	transition: all 0.2s ease;
@@ -1450,6 +1458,7 @@ textarea {
 .entry-title a:hover,
 .entry-title a:active {
 	color: #454545;
+	color: var(--title-hover-color);
 }
 
 .post-content {
@@ -1476,6 +1485,7 @@ textarea {
 .sticky {
 	padding-top: 6px;
 	box-shadow: inset 0 8px #1177aa;
+	box-shadow: inset 0 8px var(--title-color);
 }
 
 /* Page Links | wp_link_pages() */
@@ -1497,6 +1507,7 @@ textarea {
 	margin: 0.25em 0 0;
 	padding: 0;
 	color: #999;
+	color: var(--light-text-color);
 	font-size: 15px;
 	font-size: 0.9375rem;
 	font-family: "Magra", arial, helvetica, sans-serif;
@@ -1512,17 +1523,20 @@ textarea {
 .entry-meta a:link,
 .entry-meta a:visited {
 	color: #999;
+	color: var(--light-text-color);
 }
 
 .entry-meta a:hover,
 .entry-meta a:active {
-	color: #555;
+	color: #666;
+	color: var(--medium-text-color);
 }
 
 .entry-meta span::before {
 	display: inline-block;
 	margin-right: 0.2em;
 	color: #999;
+	color: var(--light-text-color);
 	vertical-align: middle;
 	font: normal 20px 'Genericons';
 	-webkit-font-smoothing: antialiased;
@@ -1554,7 +1568,8 @@ textarea {
 	float: left;
 	margin: 0 2px 2px 0;
 	padding: 0.4em 0.8em;
-	background: #1177aa;
+	background-color: #1177aa;
+	background-color: var(--button-color);
 	text-decoration: none;
 	text-transform: uppercase;
 	font-size: 14px;
@@ -1564,11 +1579,15 @@ textarea {
 .entry-categories .meta-categories a:link,
 .entry-categories .meta-categories a:visited {
 	color: #fff;
+	color: var(--button-text-color);
 }
 
 .entry-categories .meta-categories a:hover,
 .entry-categories .meta-categories a:active {
-	background: #454545;
+	background-color: #454545;
+	background-color: var(--button-hover-color);
+	color: #fff;
+	color: var(--button-hover-text-color);
 }
 
 /* Hide post meta if they are deactivated in settings */
@@ -1616,7 +1635,8 @@ body.date-hidden.author-hidden .post-slider .entry-meta {
 	float: left;
 	margin: 0 2px 2px 0;
 	padding: 0.2em 0.5em;
-	background: #454545;
+	background-color: #454545;
+	background-color: var(--button-hover-color);
 	text-decoration: none;
 	text-transform: uppercase;
 	font-size: 13px !important;
@@ -1629,13 +1649,17 @@ body.date-hidden.author-hidden .post-slider .entry-meta {
 .entry-tags .meta-tags a:link,
 .entry-tags .meta-tags a:visited {
 	color: #fff !important;
+	color: var(--button-hover-text-color) !important;
 }
 
 .widget_tag_cloud .tagcloud a:hover,
 .widget_tag_cloud .tagcloud a:active,
 .entry-tags .meta-tags a:hover,
 .entry-tags .meta-tags a:active {
-	background: #1177aa;
+	background-color: #1177aa;
+	background-color: var(--button-color);
+	color: #fff;
+	color: var(--button-text-color);
 }
 
 /* Read more Link */
@@ -1643,8 +1667,10 @@ body.date-hidden.author-hidden .post-slider .entry-meta {
 	display: inline-block;
 	margin: 0;
 	padding: 0.5em 1em;
-	background: #1177aa;
+	background-color: #1177aa;
+	background-color: var(--button-color);
 	color: #fff;
+	color: var(--button-text-color);
 	text-transform: uppercase;
 	text-decoration: none;
 	font-size: 14px;
@@ -1655,11 +1681,15 @@ body.date-hidden.author-hidden .post-slider .entry-meta {
 .more-link:link,
 .more-link:visited {
 	color: #fff;
+	color: var(--button-text-color);
 }
 
 .more-link:hover,
 .more-link:active {
-	background: #454545;
+	background-color: #454545;
+	background-color: var(--button-hover-color);
+	color: #fff;
+	color: var(--button-hover-text-color);
 	text-decoration: none;
 }
 
@@ -1675,7 +1705,9 @@ body.date-hidden.author-hidden .post-slider .entry-meta {
 .post-navigation {
 	margin: 0;
 	padding: 1.5rem;
-	border-top: 1px solid rgba(0, 0, 0, 0.1);
+	border-top: 1px solid;
+	border-color: rgba(0, 0, 0, 0.15);
+	border-color: var(--light-border-color);
 	font-size: 15px;
 	font-size: 0.9375rem;
 }
@@ -1697,6 +1729,7 @@ body.date-hidden.author-hidden .post-slider .entry-meta {
 .post-navigation .nav-links .nav-link-text {
 	display: block;
 	color: #454545;
+	color: var(--text-color);
 }
 
 .post-navigation .nav-links .nav-previous .nav-link-text::before {
@@ -1716,6 +1749,7 @@ body.date-hidden.author-hidden .post-slider .entry-meta {
 
 .post-navigation .nav-links a:hover .entry-title {
 	color: #454545;
+	color: var(--title-hover-color);
 }
 
 /*--------------------------------------------------------------
@@ -1726,8 +1760,11 @@ body.date-hidden.author-hidden .post-slider .entry-meta {
 .page-header {
 	margin: 0 0 2em 0;
 	padding: 0;
-	background: #fff;
-	border: 1px solid rgba(0, 0, 0, 0.2);
+	background-color: #fff;
+	background-color: var(--page-background-color);
+	border: 1px solid;
+	border-color: rgba(0, 0, 0, 0.2);
+	border-color: var(--page-border-color);
 	border-top: none;
 }
 
@@ -1736,7 +1773,9 @@ body.date-hidden.author-hidden .post-slider .entry-meta {
 	margin: 0;
 	padding: 0.75em 1em;
 	color: #454545;
+	color: var(--widget-title-color);
 	box-shadow: inset 0 2px #1177aa;
+	box-shadow: inset 0 2px var(--title-color);
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 	font-size: 15px;
@@ -1753,7 +1792,9 @@ body.date-hidden.author-hidden .post-slider .entry-meta {
 
 .blog-description,
 .archive-description {
-	border-top: 1px solid rgba(0, 0, 0, 0.1);
+	border-top: 1px solid;
+	border-color: rgba(0, 0, 0, 0.15);
+	border-color: var(--light-border-color);
 	padding: 0.75em 1em;
 }
 
@@ -1770,7 +1811,9 @@ body.date-hidden.author-hidden .post-slider .entry-meta {
 }
 
 .search-form-wrap {
-	border-top: 1px solid rgba(0, 0, 0, 0.1);
+	border-top: 1px solid;
+	border-color: rgba(0, 0, 0, 0.2);
+	border-color: var(--page-border-color);
 	padding: 1.5em;
 }
 
@@ -1784,8 +1827,10 @@ body.date-hidden.author-hidden .post-slider .entry-meta {
 	display: inline-block;
 	margin: 3px 3px 3px 0;
 	padding: 0.2em 0.8em;
+	background-color: #454545;
+	background-color: var(--button-hover-color);
 	color: #fff;
-	background: #454545;
+	color: var(--button-hover-text-color);
 	text-align: center;
 	text-decoration: none;
 }
@@ -1793,12 +1838,16 @@ body.date-hidden.author-hidden .post-slider .entry-meta {
 .pagination a:link,
 .pagination a:visited {
 	color: #fff;
+	color: var(--button-hover-text-color);
 }
 
 .pagination a:hover,
 .pagination a:active,
 .pagination .current {
-	background: #1177aa;
+	background-color: #1177aa;
+	background-color: var(--button-color);
+	color: #fff;
+	color: var(--button-text-color);
 }
 
 /* Infinite Scroll Pagination */
@@ -1824,7 +1873,10 @@ body.date-hidden.author-hidden .post-slider .entry-meta {
 	display: inline-block;
 	margin: 0 0 2em;
 	padding: 0.4em 1em;
-	background: #1177aa;
+	background-color: #1177aa;
+	background-color: var(--button-color);
+	color: #fff;
+	color: var(--button-text-color);
 	text-decoration: none;
 	font-size: 16px;
 	font-size: 1rem;
@@ -1832,7 +1884,10 @@ body.date-hidden.author-hidden .post-slider .entry-meta {
 }
 
 .infinite-scroll #infinite-handle span:hover {
-	background: #454545;
+	background-color: #454545;
+	background-color: var(--button-hover-color);
+	color: #fff;
+	color: var(--button-hover-text-color);
 }
 
 /*--------------------------------------------------------------
@@ -1984,10 +2039,13 @@ body.date-hidden.author-hidden .post-slider .entry-meta {
 	margin: 0 0 2rem;
 	padding: 1rem 1.5rem 1.5rem;
 	max-width: 100%;
-	background: #fff;
+	background-color: #fff;
+	background-color: var(--widget-background-color);
 	border: 1px solid rgba(0, 0, 0, 0.2);
+	border: 1px solid var(--widget-border-color);
 	border-top: none;
 	box-shadow: inset 0 2px #1177aa;
+	box-shadow: inset 0 2px var(--title-color);
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 	font-size: 16px;
@@ -1997,6 +2055,7 @@ body.date-hidden.author-hidden .post-slider .entry-meta {
 .widget-header {
 	margin: -1rem -1.5rem 1.5em;
 	box-shadow: inset 0 2px #1177aa;
+	box-shadow: inset 0 2px var(--title-color);
 }
 
 .widget-title {
@@ -2004,7 +2063,10 @@ body.date-hidden.author-hidden .post-slider .entry-meta {
 	margin: 0;
 	padding: 0.75em 1em;
 	color: #454545;
-	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	color: var(--widget-title-color);
+	border-bottom: 1px solid;
+	border-color: rgba(0, 0, 0, 0.15);
+	border-color: var(--light-border-color);
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 	font-size: 15px;
@@ -2022,18 +2084,21 @@ body.date-hidden.author-hidden .post-slider .entry-meta {
 .widget-title a:link,
 .widget-title a:visited {
 	color: #454545;
+	color: var(--widget-title-color);
 }
 
 .widget-title a:hover,
 .widget-title a:active {
 	color: #1177aa;
+	color: var(--widget-title-hover-color);
 }
 
 .widget ul {
 	margin: 0;
 	padding: 0;
 	list-style: square inside;
-	color: #888;
+	color: #999;
+	color: var(--light-text-color);
 }
 
 .widget ul .children,
@@ -2152,7 +2217,9 @@ body.date-hidden.author-hidden .post-slider .entry-meta {
 	margin: 0 0 1.5em 0;
 	padding: 0;
 	background: none;
-	border: 1px solid rgba(0, 0, 0, 0.1);
+	border: 1px solid;
+	border-color: rgba(0, 0, 0, 0.15);
+	border-color: var(--light-border-color);
 	box-shadow: none;
 }
 
@@ -2253,8 +2320,10 @@ body.date-hidden.author-hidden .post-slider .entry-meta {
 	max-width: 100%;
 	background: #fff;
 	border: 1px solid rgba(0, 0, 0, 0.2);
+	border: 1px solid var(--page-border-color);
 	border-top: none;
 	box-shadow: inset 0 2px #1177aa;
+	box-shadow: inset 0 2px var(--title-color);
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 }
@@ -2314,6 +2383,7 @@ body.date-hidden.author-hidden .post-slider .entry-meta {
 .comment-reply-title {
 	margin: -1rem -1.5rem 1.5em;
 	box-shadow: inset 0 2px #1177aa;
+	box-shadow: inset 0 2px var(--title-color);
 }
 
 .comments-header .comments-title,
@@ -2321,7 +2391,10 @@ body.date-hidden.author-hidden .post-slider .entry-meta {
 	margin: 0;
 	padding: 0.75em 1em;
 	color: #454545;
-	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	color: var(--widget-title-color);
+	border-bottom: 1px solid;
+	border-color: rgba(0, 0, 0, 0.15);
+	border-color: var(--light-border-color);
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 	font-size: 15px;
@@ -2351,7 +2424,9 @@ body.date-hidden.author-hidden .post-slider .entry-meta {
 .comment {
 	margin: 0 0 1.5em;
 	padding: 1.5em 0 0;
-	border-top: 1px solid rgba(0, 0, 0, 0.1);
+	border-top: 1px solid;
+	border-color: rgba(0, 0, 0, 0.15);
+	border-color: var(--light-border-color);
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 }
@@ -2416,12 +2491,12 @@ body.date-hidden.author-hidden .post-slider .entry-meta {
 	float: right;
 }
 
-.comment-navigation .nav-previous a:before {
+.comment-navigation .nav-previous a::before {
 	margin-right: 3px;
 	content: "\00AB";
 }
 
-.comment-navigation .nav-next a:after {
+.comment-navigation .nav-next a::after {
 	margin-left: 4px;
 	content: "\00BB";
 }
@@ -2455,7 +2530,9 @@ body.date-hidden.author-hidden .post-slider .entry-meta {
 /* Comment Reply */
 .comment .comment-respond {
 	margin-top: 1.5em;
-	border: 1px solid #eee;
+	border: 1px solid;
+	border-color: rgba(0, 0, 0, 0.15);
+	border-color: var(--light-border-color);
 	box-shadow: none;
 }
 
@@ -2991,7 +3068,9 @@ object {
 
 	/* Main Navigation */
 	.primary-navigation-wrap {
-		border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+		border-bottom: 1px solid;
+		border-color: rgba(0, 0, 0, 0.2);
+		border-color: var(--navi-border-color);
 	}
 
 	.primary-navigation {
@@ -3021,9 +3100,12 @@ object {
 		left: -999em;
 		top: 100%;
 		z-index: 99999;
-		border: 1px solid rgba(0, 0, 0, 0.2);
-		border-top: 4px solid rgba(0, 0, 0, 0.2);
-		background: #fff;
+		border: 1px solid;
+		border-top: 4px solid;
+		border-color: rgba(0, 0, 0, 0.2);
+		border-color: var(--navi-border-color);
+		background-color: #fff;
+		background-color: var(--navi-background-color);
 	}
 
 	.main-navigation ul li:hover > ul,
@@ -3063,6 +3145,7 @@ object {
 		width: 13px;
 		height: 13px;
 		fill: #454545;
+		fill: var(--navi-color);
 		transition: fill 0.2s ease;
 	}
 
@@ -3079,6 +3162,7 @@ object {
 
 	.main-navigation ul .menu-item-has-children > a:hover > .icon {
 		fill: rgba(0, 0, 0, 0.5);
+		fill: var(--navi-hover-color);
 	}
 
 	/* Top Navigation */
@@ -3115,8 +3199,11 @@ object {
 		left: -999em;
 		top: 100%;
 		z-index: 99999;
-		border-top: 4px solid rgba(255, 255, 255, 0.1);
-		background: #454545;
+		border-top: 4px solid;
+		border-color: rgba(255, 255, 255, 0.1);
+		border-color: var(--top-navi-border-color);
+		background-color: #454545;
+		background-color: var(--header-background-color);
 	}
 
 	.top-navigation ul li:hover > ul,
@@ -3156,6 +3243,7 @@ object {
 		width: 12px;
 		height: 12px;
 		fill: #fff;
+		fill: var(--top-navi-color);
 		transition: fill 0.2s ease;
 	}
 
@@ -3172,6 +3260,7 @@ object {
 
 	.top-navigation ul .menu-item-has-children > a:hover > .icon {
 		fill: rgba(255, 255, 255, 0.5);
+		fill: var(--top-navi-hover-color);
 	}
 }
 

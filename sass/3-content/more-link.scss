@@ -3,8 +3,8 @@
 	display: inline-block;
 	margin: 0;
 	padding: 0.5em 1em;
-	background: #1177aa;
-	color: #fff;
+	@include background(--button-color);
+	@include color(--button-text-color);
 	text-transform: uppercase;
 	text-decoration: none;
 	font-size: 14px;
@@ -14,12 +14,13 @@
 
 .more-link:link,
 .more-link:visited {
-	color: #fff;
+	@include color(--button-text-color);
 }
 
 .more-link:hover,
 .more-link:active {
-	background: #454545;
+	@include background(--button-hover-color);
+	@include color(--button-hover-text-color);
 	text-decoration: none;
 }
 

@@ -2,7 +2,8 @@
 .post-navigation {
 	margin: 0;
 	padding: 1.5rem;
-	border-top: 1px solid rgba(0, 0, 0, 0.1);
+	border-top: 1px solid;
+	@include border-color(--light-border-color);
 	font-size: 15px;
 	font-size: 0.9375rem;
 }
@@ -23,7 +24,7 @@
 
 .post-navigation .nav-links .nav-link-text {
 	display: block;
-	color: #454545;
+	@include color(--text-color);
 }
 
 .post-navigation .nav-links .nav-previous .nav-link-text::before {
@@ -42,5 +43,5 @@
 }
 
 .post-navigation .nav-links a:hover .entry-title {
-	color: #454545;
+	@include color(--title-hover-color);
 }
