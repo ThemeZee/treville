@@ -26,6 +26,10 @@ For more information about Treville please go to https://themezee.com/themes/tre
 
 == Changelog ==
 
+= 2.0 - 2021-02-13 =
+* added WPTT Webfont loader to host theme fonts locally
+* added CSS variables for theme colors
+
 = 1.9.1 - 2020-10-05 =
 * added AMP dropdown toggles for sub menus
 * added CSS variables for typography styling

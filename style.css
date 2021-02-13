@@ -4,7 +4,7 @@ Theme URI: https://themezee.com/themes/treville/
 Author: ThemeZee
 Author URI: https://themezee.com
 Description: An elegant Blogging & Magazine WordPress Theme with subtle colors and great typography. Treville supports two navigation menus, advanced post settings and a post slider with fullscreen images!
-Version: 1.9.1
+Version: 2.0
 Requires at least: 5.2
 Tested up to: 5.5
 Requires PHP: 5.6
@@ -1118,8 +1118,6 @@ textarea {
 	list-style: none;
 	font-size: 15px;
 	font-size: 0.9375rem;
-	font-family: "Magra", arial, helvetica, sans-serif;
-	font-family: var(--navi-font);
 }
 
 /* Hide the menu on small screens when JavaScript is available. */

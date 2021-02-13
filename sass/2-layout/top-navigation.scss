@@ -14,7 +14,6 @@
 	@include color(--top-navi-color);
 	list-style: none;
 	@include font-size(15);
-	@include font-family(--navi-font);
 }
 
 /* Hide the menu on small screens when JavaScript is available. */
