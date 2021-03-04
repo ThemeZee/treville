@@ -57,6 +57,7 @@ $themeColors: (
 	// Content
 	--page-background-color          : #fff,
 	--page-border-color              : rgba(0, 0, 0, 0.2),
+	--content-border-color           : #1177aa,
 	--title-color                    : #1177aa,
 	--title-hover-color              : #454545,
 
@@ -64,12 +65,20 @@ $themeColors: (
 	--widget-background-color        : #fff,
 	--widget-border-color            : rgba(0, 0, 0, 0.2),
 	--widget-title-color             : #454545,
-	--widget-title-hover-color       : #1177aa,
+
+	// Footer Widgets (Pro Version)
+	--footer-widgets-background-color: #454545,
+	--footer-widgets-title-color     : rgba(255, 255, 255, 0.025),
+	--footer-widgets-text-color      : #fff,
+	--footer-widgets-link-color      : #fff,
+	--footer-widgets-link-hover-color: rgba(255, 255, 255, 0.5),
+	--footer-widgets-border-color    : rgba(255, 255, 255, 0.05),
 
 	// Footer
 	--footer-background-color        : #454545,
 	--footer-text-color              : #ddd,
 	--footer-link-color              : #fff,
+	--footer-link-hover-color        : rgba(255, 255, 255, 0.5),
 );
 
 // Theme Fonts

@@ -36,6 +36,7 @@
 	// Content
 	@include variable(--page-background-color, $themeColors);
 	@include variable(--page-border-color, $themeColors);
+	@include variable(--content-border-color, $themeColors);
 	@include variable(--title-color, $themeColors);
 	@include variable(--title-hover-color, $themeColors);
 
@@ -43,12 +44,12 @@
 	@include variable(--widget-background-color, $themeColors);
 	@include variable(--widget-border-color, $themeColors);
 	@include variable(--widget-title-color, $themeColors);
-	@include variable(--widget-title-hover-color, $themeColors);
 
 	// Footer
 	@include variable(--footer-background-color, $themeColors);
 	@include variable(--footer-text-color, $themeColors);
 	@include variable(--footer-link-color, $themeColors);
+	@include variable(--footer-link-hover-color, $themeColors);
 
 	// Typography Styling
 	@include variable(--text-font, $themeFonts);
