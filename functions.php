@@ -78,35 +78,6 @@ if ( ! function_exists( 'treville_setup' ) ) :
 		// Add Theme Support for Selective Refresh in Customizer.
 		add_theme_support( 'customize-selective-refresh-widgets' );
 
-		// Add custom color palette for Gutenberg.
-		add_theme_support( 'editor-color-palette', array(
-			array(
-				'name'  => esc_html_x( 'Primary', 'Gutenberg Color Palette', 'treville' ),
-				'slug'  => 'primary',
-				'color' => apply_filters( 'treville_primary_color', '#1177aa' ),
-			),
-			array(
-				'name'  => esc_html_x( 'White', 'Gutenberg Color Palette', 'treville' ),
-				'slug'  => 'white',
-				'color' => '#ffffff',
-			),
-			array(
-				'name'  => esc_html_x( 'Light Gray', 'Gutenberg Color Palette', 'treville' ),
-				'slug'  => 'light-gray',
-				'color' => '#f0f0f0',
-			),
-			array(
-				'name'  => esc_html_x( 'Dark Gray', 'Gutenberg Color Palette', 'treville' ),
-				'slug'  => 'dark-gray',
-				'color' => '#777777',
-			),
-			array(
-				'name'  => esc_html_x( 'Black', 'Gutenberg Color Palette', 'treville' ),
-				'slug'  => 'black',
-				'color' => '#454545',
-			),
-		) );
-
 		// Add support for responsive embed blocks.
 		add_theme_support( 'responsive-embeds' );
 	}
@@ -237,15 +208,6 @@ function treville_get_fonts_url() {
 
 
 /**
- * Enqueue editor styles for the new Gutenberg Editor.
- */
-function treville_block_editor_assets() {
-	wp_enqueue_style( 'treville-editor-styles', get_theme_file_uri( '/assets/css/gutenberg-styles.css' ), array(), '20191118', 'all' );
-}
-add_action( 'enqueue_block_editor_assets', 'treville_block_editor_assets' );
-
-
-/**
  * Add custom sizes for featured images
  */
 function treville_add_image_sizes() {
@@ -293,6 +255,9 @@ require get_template_directory() . '/inc/extras.php';
 
 // Include Template Functions.
 require get_template_directory() . '/inc/template-tags.php';
+
+// Include Gutenberg Features.
+require get_template_directory() . '/inc/gutenberg.php';
 
 // Include support functions for Theme Addons.
 require get_template_directory() . '/inc/addons.php';
