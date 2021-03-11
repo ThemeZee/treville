@@ -4,7 +4,7 @@ Theme URI: https://themezee.com/themes/treville/
 Author: ThemeZee
 Author URI: https://themezee.com
 Description: An elegant Blogging & Magazine WordPress Theme with subtle colors and great typography. Treville supports two navigation menus, advanced post settings and a post slider with fullscreen images!
-Version: 2.0.1
+Version: 2.0.2
 Requires at least: 5.2
 Tested up to: 5.7
 Requires PHP: 5.6
@@ -2914,14 +2914,22 @@ object {
 	margin: 0;
 	padding: 0.75em 1em;
 	color: #454545;
-	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-	text-transform: uppercase;
+	color: var(--widget-title-color);
+	border-bottom: 1px solid;
+	border-color: rgba(0, 0, 0, 0.15);
+	border-color: var(--light-border-color);
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
-	font-weight: normal;
 	font-size: 15px;
 	font-size: 0.9375rem;
-	font-family: 'Magra', Tahoma, Arial;
+	font-family: "Magra", arial, helvetica, sans-serif;
+	font-family: var(--widget-title-font);
+	font-weight: normal;
+	font-weight: var(--widget-title-font-weight);
+	text-transform: uppercase;
+	text-transform: var(--widget-title-text-transform);
+	line-height: 1.4;
+	line-height: var(--title-line-height);
 }
 
 .related-posts article {
@@ -3249,7 +3257,8 @@ ul.related-posts-list {
 }
 
 .tzwb-comments-list .tzwb-comment-date {
-	color: #454545;
+	color: #999;
+	color: var(--light-text-color);
 	font-size: 12px;
 	font-size: 0.75rem;
 }
@@ -3281,7 +3290,6 @@ ul.related-posts-list {
 	display: block;
 	margin: 0;
 	padding: 0.4em 0.8em;
-	color: #fff;
 	text-decoration: none;
 	font-size: 14px;
 	font-size: 0.875rem;
@@ -3291,20 +3299,28 @@ ul.related-posts-list {
 
 .tzwb-tabbed-content .tzwb-tabnavi li a:link,
 .tzwb-tabbed-content .tzwb-tabnavi li a:visited {
-	background: #454545;
+	background-color: #454545;
+	background-color: var(--button-hover-color);
 	color: #fff;
+	color: var(--button-hover-text-color);
 	-webkit-transition: all 0.2s ease;
 	transition: all 0.2s ease;
 }
 
 .tzwb-tabbed-content .tzwb-tabnavi li a:hover,
 .tzwb-tabbed-content .tzwb-tabnavi li a:active {
-	background: #1177aa;
+	background-color: #1177aa;
+	background-color: var(--button-color);
+	color: #fff;
+	color: var(--button-text-color);
 	text-decoration: none;
 }
 
 .tzwb-tabbed-content .tzwb-tabnavi li a.current-tab {
-	background: #1177aa;
+	background-color: #1177aa;
+	background-color: var(--button-color);
+	color: #fff;
+	color: var(--button-text-color);
 }
 
 .tzwb-tabbed-content .tzwb-tabcontent {
@@ -3323,15 +3339,22 @@ ul.related-posts-list {
 
 .tzwb-social-icons .social-icons-menu li a {
 	padding: 0.75em;
-	background: #1177aa;
+	background-color: #1177aa;
+	background-color: var(--button-color);
+	color: #fff;
+	color: var(--button-text-color);
 }
 
 .tzwb-social-icons .social-icons-menu li a::before {
 	font-size: 24px;
+	color: currentColor;
 }
 
 .tzwb-social-icons .social-icons-menu li a:hover {
-	background: #454545;
+	background-color: #454545;
+	background-color: var(--button-hover-color);
+	color: #fff;
+	color: var(--button-hover-text-color);
 	text-decoration: none;
 }
 
