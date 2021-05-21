@@ -23,25 +23,12 @@
 	@include color(--medium-text-color);
 }
 
-.entry-meta span::before {
-	display: inline-block;
-	margin-right: 0.2em;
-	@include color(--light-text-color);
-	vertical-align: middle;
-	font: normal 20px 'Genericons';
-	-webkit-font-smoothing: antialiased;
-}
-
-.entry-meta .meta-date::before {
-	content: '\f305';
-}
-
-.entry-meta .meta-author::before {
-	content: '\f411';
-}
-
-.entry-meta .meta-comments::before {
-	content: '\f300';
+.entry-meta span .icon {
+	margin: 0.3em 0.4em 0 0;
+	width: 18px;
+	height: 18px;
+	vertical-align: top;
+	fill: currentColor;
 }
 
 /* Entry Categories */

@@ -217,7 +217,9 @@ if ( ! function_exists( 'treville_meta_date' ) ) :
 			esc_html( get_the_date() )
 		);
 
-		return '<span class="meta-date">' . $time_string . '</span>';
+		$posted_on = treville_get_svg( 'day' ) . $time_string;
+
+		return '<span class="meta-date">' . $posted_on . '</span>';
 	}
 endif;
 
@@ -234,7 +236,9 @@ if ( ! function_exists( 'treville_meta_author' ) ) :
 			esc_html( get_the_author() )
 		);
 
-		return '<span class="meta-author"> ' . $author_string . '</span>';
+		$posted_by = treville_get_svg( 'edit' ) . $author_string;
+
+		return '<span class="meta-author"> ' . $posted_by . '</span>';
 	}
 endif;
 
@@ -260,7 +264,7 @@ if ( ! function_exists( 'treville_meta_comments' ) ) :
 		// End Output Buffering.
 		ob_end_clean();
 
-		return '<span class="meta-comments"> ' . $comments . '</span>';
+		return '<span class="meta-comments"> ' . treville_get_svg( 'comment' ) . $comments . '</span>';
 	}
 endif;
 
