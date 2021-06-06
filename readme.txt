@@ -26,6 +26,9 @@ For more information about Treville please go to https://themezee.com/themes/tre
 
 == Changelog ==
 
+= 2.1.1 - 2021-06-06 =
+* fixed styling of Social Icons widget from Widget Bundle plugin
+
 = 2.1 - 2021-06-05 =
 * added SVG icons for all theme icons
 * removed Genericons icon font
