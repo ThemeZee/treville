@@ -14,6 +14,8 @@ get_header(); ?>
 
 			get_template_part( 'template-parts/content', 'single' );
 
+			do_action( 'treville_after_posts' );
+
 			treville_related_posts();
 
 			comments_template();

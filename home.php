@@ -16,6 +16,8 @@ get_header(); ?>
 			// Display Magazine Homepage Widgets.
 			treville_magazine_widgets();
 
+			do_action( 'treville_before_blog' );
+
 			treville_blog_title();
 
 			if ( have_posts() ) : ?>
