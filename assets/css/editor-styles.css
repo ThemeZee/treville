@@ -740,9 +740,13 @@ p.has-background {
 
 /* Editor Block Styles */
 .editor-styles-wrapper .wp-block-heading.is-style-widget-title {
-	padding: 0.5rem 0.75rem;
-	color: var(--widget-title-text-color);
-	background-color: var(--widget-title-background-color);
+	margin-top: 0;
+	padding: 0.75em 1em;
+	color: #454545;
+	color: var(--widget-title-color);
+	border-bottom: 1px solid;
+	border-color: rgba(0, 0, 0, 0.15);
+	border-color: var(--light-border-color);
 	font-size: 15px;
 	font-size: 0.9375rem;
 	font-family: "Magra", arial, helvetica, sans-serif;
@@ -753,6 +757,8 @@ p.has-background {
 	text-transform: var(--widget-title-text-transform);
 	line-height: 1.4;
 	line-height: var(--title-line-height);
+	box-shadow: inset 0 2px #1177aa;
+	box-shadow: inset 0 2px var(--content-border-color);
 }
 
 /*--------------------------------------------------------------

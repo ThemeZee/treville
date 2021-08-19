@@ -26,6 +26,10 @@ For more information about Treville please go to https://themezee.com/themes/tre
 
 == Changelog ==
 
+= 2.1.3 - 2021-08-19 =
+* added Widget Title block style
+* improved Block styling on frontend and Block Editor
+
 = 2.1.2 - 2021-07-20 =
 * added action hooks for additional widget areas
 * fixed broken Customizer panels caused by new block-based Widget Editor in WordPress 5.8
