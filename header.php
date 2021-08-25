@@ -50,12 +50,12 @@
 
 		</header><!-- #masthead -->
 
-		<?php do_action( 'treville_after_header' ); ?>
-
 		<?php treville_header_image(); ?>
 
 		<?php treville_slider(); ?>
 
 		<?php treville_breadcrumbs(); ?>
+
+		<?php do_action( 'treville_after_header' ); ?>
 
 		<div id="content" class="site-content container clearfix">
