@@ -40,37 +40,54 @@ if ( ! function_exists( 'treville_setup' ) ) :
 		set_post_thumbnail_size( 900, 480, true );
 
 		// Register Navigation Menus.
-		register_nav_menus( array(
-			'secondary' => esc_html__( 'Top Navigation', 'treville' ),
-			'primary'   => esc_html__( 'Main Navigation', 'treville' ),
-		) );
+		register_nav_menus(
+			array(
+				'secondary' => esc_html__( 'Top Navigation', 'treville' ),
+				'primary'   => esc_html__( 'Main Navigation', 'treville' ),
+			)
+		);
 
 		// Switch default core markup for search form, comment form, and comments to output valid HTML5.
-		add_theme_support( 'html5', array(
-			'comment-form',
-			'comment-list',
-			'gallery',
-			'caption',
-		) );
+		add_theme_support(
+			'html5',
+			array(
+				'comment-form',
+				'comment-list',
+				'gallery',
+				'caption',
+			)
+		);
 
 		// Set up the WordPress core custom background feature.
 		add_theme_support( 'custom-background', apply_filters( 'treville_custom_background_args', array( 'default-color' => 'dddddd' ) ) );
 
 		// Set up the WordPress core custom logo feature.
-		add_theme_support( 'custom-logo', apply_filters( 'treville_custom_logo_args', array(
-			'height'      => 50,
-			'width'       => 250,
-			'flex-height' => true,
-			'flex-width'  => true,
-		) ) );
+		add_theme_support(
+			'custom-logo',
+			apply_filters(
+				'treville_custom_logo_args',
+				array(
+					'height'      => 50,
+					'width'       => 250,
+					'flex-height' => true,
+					'flex-width'  => true,
+				)
+			)
+		);
 
 		// Set up the WordPress core custom header feature.
-		add_theme_support( 'custom-header', apply_filters( 'treville_custom_header_args', array(
-			'header-text' => false,
-			'width'       => 1920,
-			'height'      => 480,
-			'flex-height' => true,
-		) ) );
+		add_theme_support(
+			'custom-header',
+			apply_filters(
+				'treville_custom_header_args',
+				array(
+					'header-text' => false,
+					'width'       => 1920,
+					'height'      => 480,
+					'flex-height' => true,
+				)
+			)
+		);
 
 		// Add extra theme styling to the visual editor.
 		add_editor_style( array( 'assets/css/editor-style.css' ) );
@@ -104,25 +121,29 @@ add_action( 'after_setup_theme', 'treville_content_width', 0 );
  */
 function treville_widgets_init() {
 
-	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'treville' ),
-		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Appears on posts and pages except the full width template.', 'treville' ),
-		'before_widget' => '<div class="widget-wrap"><aside id="%1$s" class="widget %2$s clearfix">',
-		'after_widget'  => '</aside></div>',
-		'before_title'  => '<div class="widget-header"><h3 class="widget-title">',
-		'after_title'   => '</h3></div>',
-	) );
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Sidebar', 'treville' ),
+			'id'            => 'sidebar-1',
+			'description'   => esc_html__( 'Appears on posts and pages except the full width template.', 'treville' ),
+			'before_widget' => '<div class="widget-wrap"><aside id="%1$s" class="widget %2$s clearfix">',
+			'after_widget'  => '</aside></div>',
+			'before_title'  => '<div class="widget-header"><h3 class="widget-title">',
+			'after_title'   => '</h3></div>',
+		)
+	);
 
-	register_sidebar( array(
-		'name'          => esc_html__( 'Magazine Homepage', 'treville' ),
-		'id'            => 'magazine-homepage',
-		'description'   => esc_html__( 'Appears on blog index and Magazine Homepage template. You can use the Magazine widgets here.', 'treville' ),
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<div class="widget-header"><h3 class="widget-title">',
-		'after_title'   => '</h3></div>',
-	) );
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Magazine Homepage', 'treville' ),
+			'id'            => 'magazine-homepage',
+			'description'   => esc_html__( 'Appears on blog index and Magazine Homepage template. You can use the Magazine widgets here.', 'treville' ),
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<div class="widget-header"><h3 class="widget-title">',
+			'after_title'   => '</h3></div>',
+		)
+	);
 }
 add_action( 'widgets_init', 'treville_widgets_init' );
 
@@ -170,8 +191,8 @@ add_action( 'wp_enqueue_scripts', 'treville_scripts' );
 
 
 /**
-* Enqueue theme fonts.
-*/
+ * Enqueue theme fonts.
+ */
 function treville_theme_fonts() {
 	$fonts_url = treville_get_fonts_url();
 
@@ -224,11 +245,14 @@ add_action( 'after_setup_theme', 'treville_add_image_sizes' );
  * Make custom image sizes available in Gutenberg.
  */
 function treville_add_image_size_names( $sizes ) {
-	return array_merge( $sizes, array(
-		'post-thumbnail'           => esc_html__( 'Treville Single Post', 'treville' ),
-		'treville-thumbnail-large' => esc_html__( 'Treville Magazine Post', 'treville' ),
-		'treville-thumbnail-small' => esc_html__( 'Treville Thumbnail', 'treville' ),
-	) );
+	return array_merge(
+		$sizes,
+		array(
+			'post-thumbnail'           => esc_html__( 'Treville Single Post', 'treville' ),
+			'treville-thumbnail-large' => esc_html__( 'Treville Magazine Post', 'treville' ),
+			'treville-thumbnail-small' => esc_html__( 'Treville Thumbnail', 'treville' ),
+		)
+	);
 }
 add_filter( 'image_size_names_choose', 'treville_add_image_size_names' );
 

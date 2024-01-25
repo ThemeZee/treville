@@ -148,11 +148,14 @@ function treville_theme_info_page() {
 		<div id="theme-author">
 
 			<p>
-				<?php printf( esc_html__( '%1$s is proudly brought to you by %2$s. If you like this theme, %3$s :)', 'treville' ),
+				<?php
+				printf(
+					esc_html__( '%1$s is proudly brought to you by %2$s. If you like this theme, %3$s :)', 'treville' ),
 					$theme->display( 'Name' ),
 					'<a target="_blank" href="' . __( 'https://themezee.com/', 'treville' ) . '?utm_source=theme-info&utm_medium=footer&utm_campaign=treville" title="ThemeZee">ThemeZee</a>',
 					'<a target="_blank" href="' . __( 'https://wordpress.org/support/theme/treville/reviews/', 'treville' ) . '" title="' . esc_attr__( 'Review Treville', 'treville' ) . '">' . esc_html__( 'rate it', 'treville' ) . '</a>'
-				); ?>
+				);
+				?>
 			</p>
 
 		</div>

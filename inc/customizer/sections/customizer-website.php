@@ -19,70 +19,98 @@ function treville_customize_register_website_settings( $wp_customize ) {
 	$wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
 
 	// Add selective refresh for site title and description.
-	$wp_customize->selective_refresh->add_partial( 'blogname', array(
-		'selector'        => '.site-title a',
-		'render_callback' => 'treville_customize_partial_blogname',
-	) );
-	$wp_customize->selective_refresh->add_partial( 'blogdescription', array(
-		'selector'        => '.site-description',
-		'render_callback' => 'treville_customize_partial_blogdescription',
-	) );
+	$wp_customize->selective_refresh->add_partial(
+		'blogname',
+		array(
+			'selector'        => '.site-title a',
+			'render_callback' => 'treville_customize_partial_blogname',
+		)
+	);
+	$wp_customize->selective_refresh->add_partial(
+		'blogdescription',
+		array(
+			'selector'        => '.site-description',
+			'render_callback' => 'treville_customize_partial_blogdescription',
+		)
+	);
 
 	// Add Retina Logo Headline.
-	$wp_customize->add_control( new Treville_Customize_Header_Control(
-		$wp_customize, 'treville_theme_options[retina_logo_title]', array(
-			'label'    => esc_html__( 'Retina Logo', 'treville' ),
-			'section'  => 'title_tagline',
-			'settings' => array(),
-			'priority' => 8,
+	$wp_customize->add_control(
+		new Treville_Customize_Header_Control(
+			$wp_customize,
+			'treville_theme_options[retina_logo_title]',
+			array(
+				'label'    => esc_html__( 'Retina Logo', 'treville' ),
+				'section'  => 'title_tagline',
+				'settings' => array(),
+				'priority' => 8,
+			)
 		)
-	) );
+	);
 
 	// Add Retina Logo Setting.
-	$wp_customize->add_setting( 'treville_theme_options[retina_logo]', array(
-		'default'           => false,
-		'type'              => 'option',
-		'transport'         => 'refresh',
-		'sanitize_callback' => 'treville_sanitize_checkbox',
-	) );
+	$wp_customize->add_setting(
+		'treville_theme_options[retina_logo]',
+		array(
+			'default'           => false,
+			'type'              => 'option',
+			'transport'         => 'refresh',
+			'sanitize_callback' => 'treville_sanitize_checkbox',
+		)
+	);
 
-	$wp_customize->add_control( 'treville_theme_options[retina_logo]', array(
-		'label'    => esc_html__( 'Scale down logo image for retina displays', 'treville' ),
-		'section'  => 'title_tagline',
-		'settings' => 'treville_theme_options[retina_logo]',
-		'type'     => 'checkbox',
-		'priority' => 9,
-	) );
+	$wp_customize->add_control(
+		'treville_theme_options[retina_logo]',
+		array(
+			'label'    => esc_html__( 'Scale down logo image for retina displays', 'treville' ),
+			'section'  => 'title_tagline',
+			'settings' => 'treville_theme_options[retina_logo]',
+			'type'     => 'checkbox',
+			'priority' => 9,
+		)
+	);
 
 	// Add Display Site Title Setting.
-	$wp_customize->add_setting( 'treville_theme_options[site_title]', array(
-		'default'           => true,
-		'type'              => 'option',
-		'transport'         => 'postMessage',
-		'sanitize_callback' => 'treville_sanitize_checkbox',
-	) );
-	$wp_customize->add_control( 'treville_theme_options[site_title]', array(
-		'label'    => esc_html__( 'Display Site Title', 'treville' ),
-		'section'  => 'title_tagline',
-		'settings' => 'treville_theme_options[site_title]',
-		'type'     => 'checkbox',
-		'priority' => 10,
-	) );
+	$wp_customize->add_setting(
+		'treville_theme_options[site_title]',
+		array(
+			'default'           => true,
+			'type'              => 'option',
+			'transport'         => 'postMessage',
+			'sanitize_callback' => 'treville_sanitize_checkbox',
+		)
+	);
+	$wp_customize->add_control(
+		'treville_theme_options[site_title]',
+		array(
+			'label'    => esc_html__( 'Display Site Title', 'treville' ),
+			'section'  => 'title_tagline',
+			'settings' => 'treville_theme_options[site_title]',
+			'type'     => 'checkbox',
+			'priority' => 10,
+		)
+	);
 
 	// Add Display Tagline Setting.
-	$wp_customize->add_setting( 'treville_theme_options[site_description]', array(
-		'default'           => true,
-		'type'              => 'option',
-		'transport'         => 'postMessage',
-		'sanitize_callback' => 'treville_sanitize_checkbox',
-	) );
-	$wp_customize->add_control( 'treville_theme_options[site_description]', array(
-		'label'    => esc_html__( 'Display Tagline', 'treville' ),
-		'section'  => 'title_tagline',
-		'settings' => 'treville_theme_options[site_description]',
-		'type'     => 'checkbox',
-		'priority' => 11,
-	) );
+	$wp_customize->add_setting(
+		'treville_theme_options[site_description]',
+		array(
+			'default'           => true,
+			'type'              => 'option',
+			'transport'         => 'postMessage',
+			'sanitize_callback' => 'treville_sanitize_checkbox',
+		)
+	);
+	$wp_customize->add_control(
+		'treville_theme_options[site_description]',
+		array(
+			'label'    => esc_html__( 'Display Tagline', 'treville' ),
+			'section'  => 'title_tagline',
+			'settings' => 'treville_theme_options[site_description]',
+			'type'     => 'checkbox',
+			'priority' => 11,
+		)
+	);
 }
 add_action( 'customize_register', 'treville_customize_register_website_settings' );
 

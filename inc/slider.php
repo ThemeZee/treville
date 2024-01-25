@@ -69,7 +69,8 @@ if ( ! function_exists( 'treville_slider_image' ) ) :
 				</figure>
 			</a>
 
-		<?php endif;
+			<?php
+		endif;
 	}
 endif;
 
@@ -80,7 +81,7 @@ if ( ! function_exists( 'treville_slider_meta' ) ) :
 	 */
 	function treville_slider_meta() {
 
-		$postmeta = treville_meta_date();
+		$postmeta  = treville_meta_date();
 		$postmeta .= treville_meta_author();
 
 		echo '<div class="entry-meta">' . $postmeta . '</div>';
