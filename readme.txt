@@ -4,7 +4,7 @@ Theme URI: https://themezee.com/themes/treville/
 Contributors: themezee
 Tags: two-columns, blog, news, custom-background, custom-header, custom-menu, grid-layout, entertainment, editor-style, block-styles, rtl-language-support, featured-image-header, featured-images, flexible-header, custom-colors, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, one-column, left-sidebar, right-sidebar, three-columns
 Requires at least: 5.2
-Tested up to: 6.5
+Tested up to: 6.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -25,6 +25,9 @@ For more information about Treville please go to https://themezee.com/themes/tre
 5. Navigate to Appearance > Customize in your admin panel and customize to taste.
 
 == Changelog ==
+
+= 2.2.0 - 2025-01-04 =
+* fixed deprecated warning with PHP 8.2
 
 = 2.1.9 - 2024-01-25 =
 * code cleanup to follow WordPress PHP coding standards
