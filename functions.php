@@ -199,7 +199,7 @@ function treville_theme_fonts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'treville_theme_fonts', 1 );
-add_action( 'enqueue_block_editor_assets', 'treville_theme_fonts', 1 );
+add_action( 'enqueue_block_assets', 'treville_theme_fonts', 1 );
 
 
 /**
